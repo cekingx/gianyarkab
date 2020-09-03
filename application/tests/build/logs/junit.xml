@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Pengumuman_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/controllers/Pengumuman_test.php" tests="10" assertions="13" errors="0" failures="3" skipped="0" time="0.229917">
+    <testcase name="test_WhenYouAccessAllPengumumanThenYouGetAllPengumuman" class="Pengumuman_test" classname="Pengumuman_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/controllers/Pengumuman_test.php" line="8" assertions="2" time="0.008300"/>
+    <testcase name="test_WhenYouAccessSpecificPengumumanThenYouGetThePengumuman" class="Pengumuman_test" classname="Pengumuman_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/controllers/Pengumuman_test.php" line="41" assertions="1" time="0.199531">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">Pengumuman_test::test_WhenYouAccessSpecificPengumumanThenYouGetThePengumuman
+Failed asserting that '&lt;!DOCTYPE html&gt;\n
+\n
+&lt;!--\n
+Template Name: Metronic - Bootstrap 4 HTML, React, Angular 9 &amp; VueJS Admin Dashboard Theme\n
+Author: KeenThemes\n
+Website: http://www.keenthemes.com/\n
+Contact: support@keenthemes.com\n
+Follow: www.twitter.com/keenthemes\n
+Dribbble: www.dribbble.com/keenthemes\n
+Like: www.facebook.com/keenthemes\n
+Purchase: https://1.envato.market/EA4JP\n
+Renew Support: https://1.envato.market/EA4JP\n
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.\n
+--&gt;\n
+&lt;html lang="en"&gt;\n
+\n
+	&lt;!--begin::Head--&gt;\n
+	&lt;head&gt;\n
+		&lt;base href=""&gt;\n
+		&lt;meta charset="utf-8" /&gt;\n
+		&lt;meta name="description" content="Metronic admin dashboard live demo. Check out all the features of the admin panel. A large number of settings, additional services and widgets." /&gt;\n
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /&gt;\n
+		&lt;link rel="canonical" href="https://keenthemes.com/metronic" /&gt;\n
+\n
+		&lt;!--begin::Fonts--&gt;\n
+&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" /&gt;\n
+\n
+&lt;!--end::Fonts--&gt;\n
+\n
+&lt;!--begin::Page Vendors Styles(used by this page)--&gt;\n
+&lt;link href="http://localhost/gianyarkab/assets/admin-assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" /&gt;\n
+\n
+&lt;!--end::Page Vendors Styles--&gt;\n
+\n
+&lt;!--begin::Global Theme Styles(used by all pages)--&gt;\n
+&lt;link href="http://localhost/gianyarkab/assets/admin-assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" /&gt;\n
+&lt;link href="http://localhost/gianyarkab/assets/admin-assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" /&gt;\n
+&lt;link href="http://localhost/gianyarkab/assets/admin-assets/css/style.bundle.css" rel="stylesheet" type="text/css" /&gt;\n
+\n
+&lt;!--end::Global Theme Styles--&gt;\n
+\n
+&lt;!--begin::Layout Themes(used by all pages)--&gt;\n
+&lt;link href="http://localhost/gianyarkab/assets/admin-assets/css/themes/layout/header/base/light.css" rel="stylesheet" type="text/css" /&gt;\n
+&lt;link href="http://localhost/gianyarkab/assets/admin-assets/css/themes/layout/header/menu/light.css" rel="stylesheet" type="text/css" /&gt;\n
+&lt;link href="http://localhost/gianyarkab/assets/admin-assets/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" /&gt;\n
+&lt;link href="http://localhost/gianyarkab/assets/admin-assets/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" /&gt;\n
+&lt;!--end::Layout Themes--&gt;\n
+&lt;link rel="shortcut icon" href="http://localhost/gianyarkab/assets/img/icon.png" /&gt;\n
+&lt;link rel="stylesheet" href="http://localhost/gianyarkab/assets/css/preloaders.css"&gt;		&lt;script&gt;\n
+    var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";\n
+&lt;/script&gt;\n
+&lt;script src="http://localhost/gianyarkab/assets/jquery/jquery-3.5.1.min.js"&gt;&lt;/script&gt;\n
+\n
+&lt;!--begin::Global Config(global config for global JS scripts)--&gt;\n
+&lt;script&gt;\n
+    var KTAppSettings = {\n
+        "breakpoints": {\n
+            "sm": 576,\n
+            "md": 768,\n
+            "lg": 992,\n
+            "xl": 1200,\n
+            "xxl": 1400\n
+        },\n
+        "colors": {\n
+            "theme": {\n
+                "base": {\n
+                    "white": "#ffffff",\n
+                    "primary": "#3699FF",\n
+                    "secondary": "#E5EAEE",\n
+                    "success": "#1BC5BD",\n
+                    "info": "#8950FC",\n
+                    "warning": "#FFA800",\n
+                    "danger": "#F64E60",\n
+                    "light": "#E4E6EF",\n
+                    "dark": "#181C32"\n
+                },\n
+                "light": {\n
+                    "white": "#ffffff",\n
+                    "primary": "#E1F0FF",\n
+                    "secondary": "#EBEDF3",\n
+                    "success": "#C9F7F5",\n
+                    "info": "#EEE5FF",\n
+                    "warning": "#FFF4DE",\n
+                    "danger": "#FFE2E5",\n
+                    "light": "#F3F6F9",\n
+                    "dark": "#D6D6E0"\n
+                },\n
+                "inverse": {\n
+                    "white": "#ffffff",\n
+                    "primary": "#ffffff",\n
+                    "secondary": "#3F4254",\n
+                    "success": "#ffffff",\n
+                    "info": "#ffffff",\n
+                    "warning": "#ffffff",\n
+                    "danger": "#ffffff",\n
+                    "light": "#464E5F",\n
+                    "dark": "#ffffff"\n
+                }\n
+            },\n
+            "gray": {\n
+                "gray-100": "#F3F6F9",\n
+                "gray-200": "#EBEDF3",\n
+                "gray-300": "#E4E6EF",\n
+                "gray-400": "#D1D3E0",\n
+                "gray-500": "#B5B5C3",\n
+                "gray-600": "#7E8299",\n
+                "gray-700": "#5E6278",\n
+                "gray-800": "#3F4254",\n
+                "gray-900": "#181C32"\n
+            }\n
+        },\n
+        "font-family": "Poppins"\n
+    };\n
+&lt;/script&gt;\n
+\n
+&lt;!--end::Global Config--&gt;\n
+\n
+&lt;!--begin::Global Theme Bundle(used by all pages)--&gt;\n
+&lt;script src="http://localhost/gianyarkab/assets/admin-assets/plugins/global/plugins.bundle.js"&gt;&lt;/script&gt;\n
+&lt;script src="http://localhost/gianyarkab/assets/admin-assets/plugins/custom/prismjs/prismjs.bundle.js"&gt;&lt;/script&gt;\n
+&lt;script src="http://localhost/gianyarkab/assets/admin-assets/js/scripts.bundle.js"&gt;&lt;/script&gt;\n
+\n
+&lt;!--end::Global Theme Bundle--&gt;\n
+\n
+&lt;!--begin::Page Vendors(used by this page)--&gt;\n
+&lt;script src="http://localhost/gianyarkab/assets/admin-assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"&gt;&lt;/script&gt;\n
+\n
+&lt;!--end::Page Vendors--&gt;\n
+\n
+&lt;!--begin::Page Scripts(used by this page)--&gt;\n
+&lt;script src="http://localhost/gianyarkab/assets/admin-assets/js/pages/widgets.js"&gt;&lt;/script&gt;\n
+&lt;script src="http://localhost/gianyarkab/assets/js/bootbox.min.js"&gt;&lt;/script&gt;\n
+&lt;!--end::Page Scripts--&gt;\n
+	&lt;/head&gt;\n
+\n
+	&lt;!--end::Head--&gt;\n
+\n
+	&lt;!--begin::Body--&gt;\n
+	&lt;body id="kt_body" class=" header-fixed header-mobile-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading"&gt;\n
+\n
+		&lt;!--[html-partial:include:{"file":"partials/_page-loader.html"}]/--&gt;\n
+		\n
+&lt;!--begin::Page loader--&gt;\n
+    &lt;div class="preloader"&gt;\n
+        &lt;div class="loading"&gt;\n
+          &lt;img src="http://localhost/gianyarkab/assets/img/loader.gif" width="80"&gt;\n
+        &lt;/div&gt;\n
+    &lt;/div&gt;\n
+		&lt;!--end::Page Loader--&gt;\n
+		&lt;!--[html-partial:include:{"file":"layout.html"}]/--&gt;\n
+		\n
+&lt;!--begin::Main--&gt;\n
+\n
+		&lt;!--[html-partial:include:{"file":"partials/_header-mobile.html"}]/--&gt;\n
+		\n
+&lt;!--begin::Header Mobile--&gt;\n
+		&lt;div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed"&gt;\n
+\n
+			&lt;!--begin::Logo--&gt;\n
+			&lt;a href="index.html"&gt;\n
+				&lt;img alt="Logo" src="http://localhost/gianyarkab/assets/admin-assets/media/logos/logo-light.png" /&gt;\n
+			&lt;/a&gt;\n
+\n
+			&lt;!--end::Logo--&gt;\n
+\n
+			&lt;!--begin::Toolbar--&gt;\n
+			&lt;div class="d-flex align-items-center"&gt;\n
+\n
+				&lt;!--begin::Aside Mobile Toggle--&gt;\n
+				&lt;button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle"&gt;\n
+					&lt;span&gt;&lt;/span&gt;\n
+				&lt;/button&gt;\n
+\n
+				&lt;!--end::Aside Mobile Toggle--&gt;\n
+\n
+				&lt;!--begin::Topbar Mobile Toggle--&gt;\n
+				&lt;button class="btn btn-hover-text-primary p-0 ml-2" id="kt_header_mobile_topbar_toggle"&gt;\n
+					&lt;span class="svg-icon svg-icon-xl"&gt;\n
+\n
+						&lt;!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg--&gt;\n
+						&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"&gt;\n
+							&lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"&gt;\n
+								&lt;polygon points="0 0 24 0 24 24 0 24" /&gt;\n
+								&lt;path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" /&gt;\n
+								&lt;path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero" /&gt;\n
+							&lt;/g&gt;\n
+						&lt;/svg&gt;\n
+\n
+						&lt;!--end::Svg Icon--&gt;\n
+					&lt;/span&gt;\n
+				&lt;/button&gt;\n
+\n
+				&lt;!--end::Topbar Mobile Toggle--&gt;\n
+			&lt;/div&gt;\n
+\n
+			&lt;!--end::Toolbar--&gt;\n
+		&lt;/div&gt;\n
+\n
+		&lt;!--end::Header Mobile--&gt;		&lt;div class="d-flex flex-column flex-root"&gt;\n
+\n
+			&lt;!--begin::Page--&gt;\n
+			&lt;div class="d-flex flex-row flex-column-fluid page"&gt;\n
+\n
+				&lt;!--[html-partial:include:{"file":"partials/_aside.html"}]/--&gt;\n
+				\n
+&lt;!--begin::Aside--&gt;\n
+				&lt;div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside"&gt;\n
+\n
+					&lt;!--begin::Brand--&gt;\n
+					&lt;div class="brand flex-column-auto" id="kt_brand"&gt;\n
+\n
+						&lt;!--begin::Logo--&gt;\n
+						&lt;a href="index.html" class="brand-logo"&gt;\n
+							&lt;img alt="Logo" src="http://localhost/gianyarkab/assets/admin-assets/media/logos/pemkab.png" /&gt;\n
+						&lt;/a&gt;\n
+\n
+						&lt;!--end::Logo--&gt;\n
+					&lt;/div&gt;\n
+\n
+					&lt;!--end::Brand--&gt;\n
+\n
+					&lt;!--begin::Aside Menu--&gt;\n
+					&lt;div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper"&gt;\n
+\n
+						&lt;!--begin::Menu Container--&gt;\n
+						&lt;div id="kt_aside_menu" class="aside-menu my-4" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500"&gt;\n
+\n
+							&lt;!--begin::Menu Nav--&gt;\n
+							&lt;ul class="menu-nav"&gt;\n
+								&lt;li class="menu-section"&gt;\n
+									&lt;h4 class="menu-text"&gt;Beranda&lt;/h4&gt;\n
+									&lt;i class="menu-icon ki ki-bold-more-hor icon-md"&gt;&lt;/i&gt;\n
+								&lt;/li&gt;\n
+								&lt;!-- begin::Pengumuman --&gt;\n
+								&lt;li class="menu-item menu-item-active" aria-haspopup="true"&gt;\n
+									&lt;a href="http://localhost/gianyarkab/admin/pengumuman" class="menu-link"&gt;\n
+										&lt;span class="svg-icon menu-icon"&gt;\n
+											&lt;!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-08-25-063451/theme/html/demo1/dist/../src/media/svg/icons/Devices/Mic.svg--&gt;\n
+											&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"&gt;\n
+												&lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"&gt;\n
+													&lt;rect x="0" y="0" width="24" height="24"/&gt;\n
+													&lt;path d="M12.9975507,17.929461 C12.9991745,17.9527631 13,17.9762852 13,18 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,18 C11,17.9762852 11.0008255,17.9527631 11.0024493,17.929461 C7.60896116,17.4452857 5,14.5273206 5,11 L7,11 C7,13.7614237 9.23857625,16 12,16 C14.7614237,16 17,13.7614237 17,11 L19,11 C19,14.5273206 16.3910388,17.4452857 12.9975507,17.929461 Z" fill="#000000" fill-rule="nonzero"/&gt;\n
+													&lt;rect fill="#000000" opacity="0.3" transform="translate(12.000000, 8.000000) rotate(-360.000000) translate(-12.000000, -8.000000) " x="9" y="2" width="6" height="12" rx="3"/&gt;\n
+												&lt;/g&gt;\n
+											&lt;/svg&gt;\n
+											&lt;!--end::Svg Icon--&gt;\n
+										&lt;/span&gt;\n
+										&lt;span class="menu-text"&gt;Pengumuman&lt;/span&gt;\n
+									&lt;/a&gt;\n
+								&lt;/li&gt;\n
+								&lt;!-- end::Pengumuman --&gt;\n
+							&lt;/ul&gt;\n
+\n
+							&lt;!--end::Menu Nav--&gt;\n
+						&lt;/div&gt;\n
+\n
+						&lt;!--end::Menu Container--&gt;\n
+					&lt;/div&gt;\n
+\n
+					&lt;!--end::Aside Menu--&gt;\n
+				&lt;/div&gt;\n
+\n
+				&lt;!--end::Aside--&gt;\n
+				&lt;!--begin::Wrapper--&gt;\n
+				&lt;div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper"&gt;\n
+\n
+					&lt;!--[html-partial:include:{"file":"partials/_header.html"}]/--&gt;\n
+					\n
+&lt;!--begin::Header--&gt;\n
+					&lt;div id="kt_header" class="header header-fixed"&gt;\n
+\n
+						&lt;!--begin::Container--&gt;\n
+						&lt;div class="container-fluid d-flex align-items-stretch justify-content-between"&gt;\n
+							&lt;div&gt;&lt;/div&gt;\n
+\n
+							&lt;!--begin::Topbar--&gt;\n
+							&lt;div class="topbar"&gt;\n
+\n
+								&lt;!--begin::User--&gt;\n
+								&lt;div class="dropdown"&gt;\n
+\n
+									&lt;!--begin::Toggle--&gt;\n
+									&lt;div class="topbar-item" data-toggle="dropdown" data-offset="0px,0px"&gt;\n
+										&lt;div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2"&gt;\n
+											&lt;span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1"&gt;Hi,&lt;/span&gt;\n
+											&lt;span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3"&gt;Sean&lt;/span&gt;\n
+											&lt;span class="symbol symbol-35 symbol-light-success"&gt;\n
+												&lt;span class="symbol-label font-size-h5 font-weight-bold"&gt;S&lt;/span&gt;\n
+											&lt;/span&gt;\n
+										&lt;/div&gt;\n
+									&lt;/div&gt;\n
+\n
+									&lt;!--end::Toggle--&gt;\n
+\n
+									&lt;!--begin::Dropdown--&gt;\n
+									&lt;div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg p-0"&gt;\n
+\n
+										&lt;!--[html-partial:include:{"file":"partials/_extras/dropdown/user.html"}]/--&gt;\n
+										\n
+&lt;!--begin::Header--&gt;\n
+										&lt;div class="d-flex align-items-center justify-content-between flex-wrap p-8 bgi-size-cover bgi-no-repeat rounded-top" style="background-image: url(http://localhost/gianyarkab/assets/admin-assets/media/misc/bg-1.jpg)"&gt;\n
+											&lt;div class="d-flex align-items-center mr-2"&gt;\n
+\n
+												&lt;!--begin::Symbol--&gt;\n
+												&lt;div class="symbol bg-white-o-15 mr-3"&gt;\n
+													&lt;span class="symbol-label text-success font-weight-bold font-size-h4"&gt;S&lt;/span&gt;\n
+												&lt;/div&gt;\n
+\n
+												&lt;!--end::Symbol--&gt;\n
+\n
+												&lt;!--begin::Text--&gt;\n
+												&lt;div class="text-white m-0 flex-grow-1 mr-3 font-size-h5"&gt;Sean Stone&lt;/div&gt;\n
+\n
+												&lt;!--end::Text--&gt;\n
+											&lt;/div&gt;\n
+											&lt;span class="label label-success label-lg font-weight-bold label-inline"&gt;3 messages&lt;/span&gt;\n
+										&lt;/div&gt;\n
+\n
+										&lt;!--end::Header--&gt;\n
+\n
+										&lt;!--begin::Nav--&gt;\n
+										&lt;div class="navi navi-spacer-x-0 pt-5"&gt;\n
+\n
+											&lt;!--begin::Item--&gt;\n
+											&lt;a href="custom/apps/user/profile-1/personal-information.html" class="navi-item px-8"&gt;\n
+												&lt;div class="navi-link"&gt;\n
+													&lt;div class="navi-icon mr-2"&gt;\n
+														&lt;i class="flaticon2-calendar-3 text-success"&gt;&lt;/i&gt;\n
+													&lt;/div&gt;\n
+													&lt;div class="navi-text"&gt;\n
+														&lt;div class="font-weight-bold"&gt;My Profile&lt;/div&gt;\n
+														&lt;div class="text-muted"&gt;Account settings and more\n
+															&lt;span class="label label-light-danger label-inline font-weight-bold"&gt;update&lt;/span&gt;\n
+														&lt;/div&gt;\n
+													&lt;/div&gt;\n
+												&lt;/div&gt;\n
+											&lt;/a&gt;\n
+\n
+											&lt;!--end::Item--&gt;\n
+\n
+											&lt;!--begin::Item--&gt;\n
+											&lt;a href="custom/apps/user/profile-3.html" class="navi-item px-8"&gt;\n
+												&lt;div class="navi-link"&gt;\n
+													&lt;div class="navi-icon mr-2"&gt;\n
+														&lt;i class="flaticon2-mail text-warning"&gt;&lt;/i&gt;\n
+													&lt;/div&gt;\n
+													&lt;div class="navi-text"&gt;\n
+														&lt;div class="font-weight-bold"&gt;My Messages&lt;/div&gt;\n
+														&lt;div class="text-muted"&gt;Inbox and tasks&lt;/div&gt;\n
+													&lt;/div&gt;\n
+												&lt;/div&gt;\n
+											&lt;/a&gt;\n
+\n
+											&lt;!--end::Item--&gt;\n
+\n
+											&lt;!--begin::Item--&gt;\n
+											&lt;a href="custom/apps/user/profile-2.html" class="navi-item px-8"&gt;\n
+												&lt;div class="navi-link"&gt;\n
+													&lt;div class="navi-icon mr-2"&gt;\n
+														&lt;i class="flaticon2-rocket-1 text-danger"&gt;&lt;/i&gt;\n
+													&lt;/div&gt;\n
+													&lt;div class="navi-text"&gt;\n
+														&lt;div class="font-weight-bold"&gt;My Activities&lt;/div&gt;\n
+														&lt;div class="text-muted"&gt;Logs and notifications&lt;/div&gt;\n
+													&lt;/div&gt;\n
+												&lt;/div&gt;\n
+											&lt;/a&gt;\n
+\n
+											&lt;!--end::Item--&gt;\n
+\n
+											&lt;!--begin::Item--&gt;\n
+											&lt;a href="custom/apps/userprofile-1/overview.html" class="navi-item px-8"&gt;\n
+												&lt;div class="navi-link"&gt;\n
+													&lt;div class="navi-icon mr-2"&gt;\n
+														&lt;i class="flaticon2-hourglass text-primary"&gt;&lt;/i&gt;\n
+													&lt;/div&gt;\n
+													&lt;div class="navi-text"&gt;\n
+														&lt;div class="font-weight-bold"&gt;My Tasks&lt;/div&gt;\n
+														&lt;div class="text-muted"&gt;latest tasks and projects&lt;/div&gt;\n
+													&lt;/div&gt;\n
+												&lt;/div&gt;\n
+											&lt;/a&gt;\n
+\n
+											&lt;!--end::Item--&gt;\n
+\n
+											&lt;!--begin::Footer--&gt;\n
+											&lt;div class="navi-separator mt-3"&gt;&lt;/div&gt;\n
+											&lt;div class="navi-footer px-8 py-5"&gt;\n
+												&lt;a href="custom/user/login-v2.html" target="_blank" class="btn btn-light-primary font-weight-bold"&gt;Sign Out&lt;/a&gt;\n
+												&lt;a href="custom/user/login-v2.html" target="_blank" class="btn btn-clean font-weight-bold"&gt;Upgrade Plan&lt;/a&gt;\n
+											&lt;/div&gt;\n
+\n
+											&lt;!--end::Footer--&gt;\n
+										&lt;/div&gt;\n
+\n
+										&lt;!--end::Nav--&gt;									&lt;/div&gt;\n
+\n
+									&lt;!--end::Dropdown--&gt;\n
+								&lt;/div&gt;\n
+\n
+								&lt;!--end::User--&gt;\n
+							&lt;/div&gt;\n
+\n
+							&lt;!--end::Topbar--&gt;\n
+						&lt;/div&gt;\n
+\n
+						&lt;!--end::Container--&gt;\n
+					&lt;/div&gt;\n
+\n
+					&lt;!--end::Header--&gt;\n
+					&lt;!--begin::Content--&gt;\n
+					&lt;div class="content d-flex flex-column flex-column-fluid" id="kt_content"&gt;\n
+\n
+						&lt;!--[html-partial:include:{"file":"partials/_content.html"}]/--&gt;\n
+						&lt;div class="d-flex flex-column-fluid"&gt;\n
+							&lt;div class="container"&gt;\n
+								&lt;title&gt;Pengumuman Satu&lt;/title&gt;\n
+\n
+&lt;div class="card card-custom"&gt;\n
+    &lt;div class="card-body"&gt;\n
+        &lt;table class="table table-bordered"&gt;\n
+            &lt;tbody&gt;\n
+                &lt;tr&gt;\n
+                    &lt;td&gt;Judul&lt;/td&gt;\n
+                    &lt;td&gt;Pengumuman Satu&lt;/td&gt;\n
+                &lt;/tr&gt;\n
+                &lt;tr&gt;\n
+                    &lt;td&gt;Slug&lt;/td&gt;\n
+                    &lt;td&gt;pengumuman-satu&lt;/td&gt;\n
+                &lt;/tr&gt;\n
+                &lt;tr&gt;\n
+                    &lt;td&gt;Isi&lt;/td&gt;\n
+                    &lt;td&gt;Isi pengumuman1&lt;/td&gt;\n
+                &lt;/tr&gt;\n
+                &lt;tr&gt;\n
+                    &lt;td&gt;Tanggal&lt;/td&gt;\n
+                    &lt;td&gt;2020-08-21&lt;/td&gt;\n
+                &lt;/tr&gt;\n
+            &lt;/tbody&gt;\n
+        &lt;/table&gt;\n
+    &lt;/div&gt;\n
+&lt;/div&gt;							&lt;/div&gt;\n
+						&lt;/div&gt;\n
+					&lt;/div&gt;\n
+\n
+					&lt;!--end::Content--&gt;\n
+\n
+					&lt;!--[html-partial:include:{"file":"partials/_footer.html"}]/--&gt;\n
+					\n
+&lt;!--begin::Footer--&gt;\n
+					&lt;div class="footer bg-white py-4 d-flex flex-lg-column" id="kt_footer"&gt;\n
+\n
+						&lt;!--begin::Container--&gt;\n
+						&lt;div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between"&gt;\n
+\n
+							&lt;!--begin::Copyright--&gt;\n
+							&lt;div class="text-dark order-2 order-md-1"&gt;\n
+								&lt;span class="text-muted font-weight-bold mr-2"&gt;2020©&lt;/span&gt;\n
+								&lt;a href="http://keenthemes.com/metronic" target="_blank" class="text-dark-75 text-hover-primary"&gt;Keenthemes&lt;/a&gt;\n
+							&lt;/div&gt;\n
+\n
+							&lt;!--end::Copyright--&gt;\n
+\n
+							&lt;!--begin::Nav--&gt;\n
+							&lt;div class="nav nav-dark"&gt;\n
+								&lt;a href="http://keenthemes.com/metronic" target="_blank" class="nav-link pl-0 pr-5"&gt;About&lt;/a&gt;\n
+								&lt;a href="http://keenthemes.com/metronic" target="_blank" class="nav-link pl-0 pr-5"&gt;Team&lt;/a&gt;\n
+								&lt;a href="http://keenthemes.com/metronic" target="_blank" class="nav-link pl-0 pr-0"&gt;Contact&lt;/a&gt;\n
+							&lt;/div&gt;\n
+\n
+							&lt;!--end::Nav--&gt;\n
+						&lt;/div&gt;\n
+\n
+						&lt;!--end::Container--&gt;\n
+					&lt;/div&gt;\n
+\n
+					&lt;!--end::Footer--&gt;				&lt;/div&gt;\n
+\n
+				&lt;!--end::Wrapper--&gt;\n
+			&lt;/div&gt;\n
+\n
+			&lt;!--end::Page--&gt;\n
+		&lt;/div&gt;\n
+\n
+		&lt;!--end::Main--&gt;\n
+		&lt;title&gt;Metronic Live preview | Keenthemes&lt;/title&gt;\n
+		&lt;!--[html-partial:include:{"file":"partials/_extras/scrolltop.html"}]/--&gt;\n
+		\n
+&lt;!--begin::Scrolltop--&gt;\n
+		&lt;div id="kt_scrolltop" class="scrolltop"&gt;\n
+			&lt;span class="svg-icon"&gt;\n
+\n
+				&lt;!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Up-2.svg--&gt;\n
+				&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"&gt;\n
+					&lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"&gt;\n
+						&lt;polygon points="0 0 24 0 24 24 0 24" /&gt;\n
+						&lt;rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" /&gt;\n
+						&lt;path d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z" fill="#000000" fill-rule="nonzero" /&gt;\n
+					&lt;/g&gt;\n
+				&lt;/svg&gt;\n
+\n
+				&lt;!--end::Svg Icon--&gt;\n
+			&lt;/span&gt;\n
+		&lt;/div&gt;\n
+\n
+		&lt;!--end::Scrolltop--&gt;\n
+	&lt;/body&gt;\n
+\n
+	&lt;!--end::Body--&gt;\n
+&lt;/html&gt;' contains "Pengumuman1".
+
+/opt/lampp/htdocs/gianyarkab/application/tests/controllers/Pengumuman_test.php:62
+</failure>
+    </testcase>
+    <testcase name="test_WhenYouAccessNotExistedPengumumanThenYouGet404" class="Pengumuman_test" classname="Pengumuman_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/controllers/Pengumuman_test.php" line="66" assertions="1" time="0.002097"/>
+    <testcase name="test_WhenYouSuccessAddPengumumanThenYouGetSuccessMessage" class="Pengumuman_test" classname="Pengumuman_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/controllers/Pengumuman_test.php" line="83" assertions="1" time="0.002710"/>
+    <testcase name="test_WhenYouFailedAddPengumumanThenYouRedirectedToCreate" class="Pengumuman_test" classname="Pengumuman_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/controllers/Pengumuman_test.php" line="107" assertions="2" time="0.002310"/>
+    <testcase name="test_WhenYouSuccessUpdatePengumumanThenYouRedirectedToIndex" class="Pengumuman_test" classname="Pengumuman_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/controllers/Pengumuman_test.php" line="129" assertions="1" time="0.002402">
+      <failure type="PHPUnit\Framework\AssertionFailedError">Pengumuman_test::test_WhenYouSuccessUpdatePengumumanThenYouRedirectedToIndex
+redirect() is not called.
+
+/home/cekingx/Coding/php/admin-gianyarkab/application/tests/_ci_phpunit_test/CIPHPUnitTestCase.php:414
+/opt/lampp/htdocs/gianyarkab/application/tests/controllers/Pengumuman_test.php:150
+</failure>
+    </testcase>
+    <testcase name="test_WhenYouFailedUpdatePengumumanThenYouRedirectedToEdit" class="Pengumuman_test" classname="Pengumuman_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/controllers/Pengumuman_test.php" line="153" assertions="2" time="0.002661"/>
+    <testcase name="test_WhenYouEditNotExistedPengumumanThenYouGet404" class="Pengumuman_test" classname="Pengumuman_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/controllers/Pengumuman_test.php" line="177" assertions="1" time="0.004344"/>
+    <testcase name="test_WhenYouSuccessDeletePengumumanThenYouRedirectedToIndex" class="Pengumuman_test" classname="Pengumuman_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/controllers/Pengumuman_test.php" line="194" assertions="1" time="0.003392">
+      <failure type="PHPUnit\Framework\AssertionFailedError">Pengumuman_test::test_WhenYouSuccessDeletePengumumanThenYouRedirectedToIndex
+redirect() is not called.
+
+/home/cekingx/Coding/php/admin-gianyarkab/application/tests/_ci_phpunit_test/CIPHPUnitTestCase.php:414
+/opt/lampp/htdocs/gianyarkab/application/tests/controllers/Pengumuman_test.php:218
+</failure>
+    </testcase>
+    <testcase name="test_WhenYouDeleteNotExistedPengumumanThenYouGet404" class="Pengumuman_test" classname="Pengumuman_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/controllers/Pengumuman_test.php" line="221" assertions="1" time="0.002170"/>
+  </testsuite>
+</testsuites>

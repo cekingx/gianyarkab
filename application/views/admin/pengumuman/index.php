@@ -1,17 +1,54 @@
 <title>Pengumuman</title>
 
+<?php if(isset($message)) {
+    echo('
+    <div class="alert alert-custom alert-outline-2x alert-outline-primary fade show mb-5" id="message" role="alert">
+        <div class="alert-icon"><i class="flaticon2-checkmark"></i></div>
+        <div class="alert-text">'
+        .$message.
+        '</div>
+        <div class="alert-close">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true"><i class="ki ki-close"></i></span>
+            </button>
+        </div>
+    </div>
+    ');
+} ?>
+
 <div class="card card-custom gutter-b">
+    
     <div class="card-header">
         <div class="card-title">
             <h3 class="card-label">
                 Pengumuman
             </h3>
         </div>
+        <div class="card-toolbar">
+            <!--begin::Button-->
+            <a href="#" class="btn btn-primary font-weight-bolder btnNew">
+                <span class="svg-icon svg-icon-md">
+                    <!--begin::Svg Icon | path:../../../../../../../../metronic/themes/metronic/theme/html/demo2/dist/assets/media/svg/icons/Design/Flatten.svg-->
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                        height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24" />
+                            <circle fill="#000000" cx="9" cy="15" r="6" />
+                            <path
+                                d="M8.8012943,7.00241953 C9.83837775,5.20768121 11.7781543,4 14,4 C17.3137085,4 20,6.6862915 20,10 C20,12.2218457 18.7923188,14.1616223 16.9975805,15.1987057 C16.9991904,15.1326658 17,15.0664274 17,15 C17,10.581722 13.418278,7 9,7 C8.93357256,7 8.86733422,7.00080962 8.8012943,7.00241953 Z"
+                                fill="#000000" opacity="0.3" />
+                        </g>
+                    </svg>
+                    <!--end::Svg Icon-->
+                </span>Tambah Pengumuman</a>
+            <!--end::Button-->
+        </div>
     </div>
     <div class="card-body">
         <div class="datatable datatable-bordered datatable-head-custom" id="kt_datatable"></div>
     </div>
 </div>
+
 
 <script>
     $('.preloader').fadeOut();
@@ -22,7 +59,7 @@
                     type: 'remote',
                     source: {
                         read: {
-                            url: '<?= base_url('api/pengumuman') ?>',
+                            url: '<?= base_url('admin/pengumuman/data') ?>',
                             map: function(raw) {
                                 var dataset = raw;
                                 if(typeof raw.data !== 'undefined') {
@@ -33,19 +70,25 @@
                         }
                     },
                     pageSize: 10,
-                    serverPaging: true,
-                    serverSorting: true
+                    serverSorting: false
                 },
                 layout: {
                     scroll: false,
                     footer: false
                 },
-                sortable: true,
                 pagnation: true,
                 columns: [
                     {
                         field: 'pengumuman_judul',
-                        title: 'Pengumuman'
+                        title: 'Pengumuman',
+                        sortable: true,
+                        template: function(row) {
+                            return '<a href="<?= base_url('admin/pengumuman/') ?>'+row.pengumuman_id+'">'+row.pengumuman_judul+'</a>';
+                        }
+                    },
+                    {
+                        field: 'pengumuman_tanggal',
+                        title: 'Tanggal'
                     },
                     {
                         field: 'Actions',
@@ -56,7 +99,7 @@
                         autoHide: false,
                         template: function(row) {
                             return '\
-                                <button data-id="'+row.pengumuman_id+'" data-pengumuman="'+row.pengumuman_data+'" class="btn btn-sm btn-clean btn-icon mr-2 btnEdit" title="Edit details">\
+                                <button data-id="'+row.pengumuman_id+'" class="btn btn-sm btn-clean btn-icon mr-2 btnEdit" title="Edit details">\
                                     <span class="svg-icon svg-icon-md">\
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">\
                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">\
@@ -82,7 +125,48 @@
                         }
                     }
                 ]
-            })
+            });
+
+            $(document).on("click", ".btnDelete", function() {
+                let id = $(this).data('id');
+                bootbox.confirm({
+                    title: "Hapus Pengumuman",
+                    message: "Apakah anda yakin menghapus pengumuman?",
+                    buttons: {
+                        cancel: {
+                            label: "Batal"
+                        },
+                        confirm: {
+                            label: "Hapus",
+                            className: 'btn-primary'
+                        }
+                    },
+                    callback: function(result) {
+                        if(result) {
+                            $('.preloader').fadeIn();
+                            $.ajax({
+                                type: 'GET',
+                                url: "<?= base_url('admin/pengumuman/delete/') ?>" + id,
+                                dataType: 'json',
+                                success: function(data) {
+                                    $('.preloader').fadeOut();
+                                    window.location.replace('<?= base_url('admin/pengumuman') ?>')
+                                },
+                                error: function(xhr, desc, err) {
+                                    console.log(xhr.responseText);
+                                }
+                            });
+                        }
+                    }
+                });
+            });
+
+            $(document).on("click", ".btnEdit", function() {
+                let id = $(this).data('id');
+                
+                // console.log("<?= base_url('admin/pengumuman/edit/') ?>" + id)
+                window.location.replace("<?= base_url('admin/pengumuman/edit/') ?>" + id);
+            });
         }
 
         return {
@@ -95,4 +179,8 @@
     $(document).ready(function() {
         KTDatatablePengumuman.init()
     });
+
+    $('.btnNew').click(function() {
+        window.location = '<?= base_url('admin/pengumuman/create') ?>'
+    })
 </script>

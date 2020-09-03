@@ -81,5 +81,5 @@
 
 <!--begin::Page Scripts(used by this page)-->
 <script src="<?= base_url('assets/admin-assets/js/pages/widgets.js') ?>"></script>
-
+<script src="<?php echo base_url('assets/js/bootbox.min.js') ?>"></script>
 <!--end::Page Scripts-->

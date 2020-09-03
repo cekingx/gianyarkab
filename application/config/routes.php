@@ -55,6 +55,17 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['dashboard'] = 'welcome/dashboard';
 
-$route['admin/pengumuman'] = 'welcome/index';
-$route['admin/pengumuman/create'] = 'welcome/create';
-$route['api/pengumuman'] = 'welcome/data';
+// $route['admin/pengumuman'] = 'welcome/index';
+// $route['admin/pengumuman/create'] = 'welcome/create';
+// $route['api/pengumuman'] = 'welcome/data';
+
+$route['pengumuman'] = 'pengumuman/index_user';
+$route['pengumuman/(:any)'] = 'pengumuman/show_user/$1';
+$route['admin/pengumuman'] = 'pengumuman/index';
+$route['admin/pengumuman/data'] = 'pengumuman/pengumuman_data';
+$route['admin/pengumuman/create'] = 'pengumuman/create';
+$route['admin/pengumuman/store'] = 'pengumuman/store';
+$route['admin/pengumuman/update'] = 'pengumuman/update';
+$route['admin/pengumuman/edit/(:any)'] = 'pengumuman/edit/$1';
+$route['admin/pengumuman/delete/(:any)'] = 'pengumuman/delete/$1';
+$route['admin/pengumuman/(:any)'] = 'pengumuman/show/$1';
