@@ -36,16 +36,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-                               
-                                <tr>
-                                    <td>1</td>
-                                    <td>Wintddddddddddddddddddddssssssssssers</td>
-                                    <td>Accountasdddsssssssssssssssssssssssant</td>
-                                    <td>Winasdddddddddddddddddddddddddddddddddters</td>
-                                    <td>Accountant</td>
-                                   
-                                </tr>
-
+								<?php foreach($alamat_instansi as $key => $alamat_instansi): ?>
+								<tr>
+									<td><?= $key+1 ?></td>
+									<td><?= $alamat_instansi['alamat_instansi_nama'] ?></td>
+									<td><?= $alamat_instansi['alamat_instansi_alamat'] ?></td>
+									<td><?= $alamat_instansi['alamat_instansi_telp'] ?></td>
+									<td><?= $alamat_instansi['alamat_instansi_email'] ?></td>
+								</tr>
+								<?php endforeach;?>
                             </tbody>
                         </table>
                     </div>
@@ -56,7 +55,7 @@
 
 			</div>
 
-			<?php $this->load->view('layouts/partials/side.php'); ?>
+			<?php $this->load->view('user-views/layouts/partials/side.php'); ?>
 
 		</div>
 		<!--end::Row-->

@@ -59,6 +59,7 @@ $route['dashboard'] = 'welcome/dashboard';
 // $route['admin/pengumuman/create'] = 'welcome/create';
 // $route['api/pengumuman'] = 'welcome/data';
 
+// pengumuman
 $route['pengumuman'] = 'pengumuman/index_user';
 $route['pengumuman/(:any)'] = 'pengumuman/show_user/$1';
 $route['admin/pengumuman'] = 'pengumuman/index';
@@ -69,3 +70,14 @@ $route['admin/pengumuman/update'] = 'pengumuman/update';
 $route['admin/pengumuman/edit/(:any)'] = 'pengumuman/edit/$1';
 $route['admin/pengumuman/delete/(:any)'] = 'pengumuman/delete/$1';
 $route['admin/pengumuman/(:any)'] = 'pengumuman/show/$1';
+
+// alamat instansi
+$route['alamatinstansi'] = 'alamat_instansi/index_user';
+$route['admin/alamat-instansi'] = 'alamat_instansi/index';
+$route['admin/alamat-instansi/data'] = 'alamat_instansi/alamat_instansi_data';
+$route['admin/alamat-instansi/create'] = 'alamat_instansi/create';
+$route['admin/alamat-instansi/store'] = 'alamat_instansi/store';
+$route['admin/alamat-instansi/update'] = 'alamat_instansi/update';
+$route['admin/alamat-instansi/edit/(:any)'] = 'alamat_instansi/edit/$1';
+$route['admin/alamat-instansi/delete/(:any)'] = 'alamat_instansi/delete/$1';
+$route['admin/alamat-instansi/(:any)'] = 'alamat_instansi/show/$1';

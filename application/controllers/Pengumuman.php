@@ -11,34 +11,6 @@ class Pengumuman extends CI_Controller
         $this->load->library('form_validation');
     }
 
-    public function index()
-    {
-        if(!empty($this->session->flashdata('message'))) {
-            $data['message'] = $this->session->flashdata('message');
-        }
-
-        $data['content'] = 'admin/pengumuman/index';
-		$this->load->view('admin/index', $data);
-    }
-
-    public function pengumuman_data()
-    {
-        $data = $this->pengumuman_model->getAll();
-        echo json_encode($data);
-    }
-
-    public function show($pengumuman_id)
-    {
-        $data['pengumuman'] = $this->pengumuman_model->getById($pengumuman_id);
-        if (empty($data['pengumuman'])) {
-            show_404();
-        }
-
-        $data['content'] = 'admin/pengumuman/show';
-        $data['title'] = $data['pengumuman']['pengumuman_judul'];
-        $this->load->view('admin/index', $data);
-    }
-
     public function index_user()
     {
         $data['content'] = 'user-views/beranda/pengumuman';
@@ -56,6 +28,34 @@ class Pengumuman extends CI_Controller
 
         $data['content'] = 'user-views/detail/pengumuman';
         $this->load->view('user-views/layouts/master', $data);
+    }
+
+    public function pengumuman_data()
+    {
+        $data = $this->pengumuman_model->getAll();
+        echo json_encode($data);
+    }
+
+    public function index()
+    {
+        if(!empty($this->session->flashdata('message'))) {
+            $data['message'] = $this->session->flashdata('message');
+        }
+
+        $data['content'] = 'admin/pengumuman/index';
+		$this->load->view('admin/index', $data);
+    }
+
+    public function show($pengumuman_id)
+    {
+        $data['pengumuman'] = $this->pengumuman_model->getById($pengumuman_id);
+        if (empty($data['pengumuman'])) {
+            show_404();
+        }
+
+        $data['content'] = 'admin/pengumuman/show';
+        $data['title'] = $data['pengumuman']['pengumuman_judul'];
+        $this->load->view('admin/index', $data);
     }
 
     public function create()
