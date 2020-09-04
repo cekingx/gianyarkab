@@ -23,23 +23,19 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Nama</th>
+                                    <th>Link</th>
                                     <th>Deskripsi</th>
                                     
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Tiger</td>
-                                    <td>Nixonsddddddddddddddsdsdsdssssssss</td>
-                                    <td>Sysdddddddddddddddddddddddddddddddddddddddddddddddtem Architect</td>                                  
-                                </tr>
-                                <tr>
-                                    <td>Garrett</td>
-                                    <td>Winters</td>
-                                    <td>Accountant</td>                                  
-                                </tr>
-
+                                <?php foreach($subdomain as $key => $subdomain): ?>
+                                    <tr>
+                                        <td><?= $key+1 ?></td>
+                                        <td><?= $subdomain['sub_domain_link'] ?>h</td>
+                                        <td><?= $subdomain['sub_domain_deskripsi'] ?></td>
+                                    </tr>
+                                <?php endforeach;?>
                             </tbody>
                         </table>
                     </div>
@@ -47,7 +43,7 @@
                             <!--end::Card-->
 
             </div>
-            <?php $this->load->view('layouts/partials/side.php'); ?>
+            <?php $this->load->view('user-views/layouts/partials/side.php'); ?>
 
         </div>
         <!--end::Row-->

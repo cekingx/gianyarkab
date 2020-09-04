@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Alamat_instansi_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Alamat_instansi_model_test.php" tests="5" assertions="9" errors="0" failures="0" skipped="0" time="0.334328">
-    <testcase name="test_WhenGetAllAlamatInstansiThenGetOneAlamatInstansi" class="Alamat_instansi_model_test" classname="Alamat_instansi_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Alamat_instansi_model_test.php" line="24" assertions="1" time="0.010523"/>
-    <testcase name="test_WhenSetAlamatInstansiThenGetTwoAlamatInstansi" class="Alamat_instansi_model_test" classname="Alamat_instansi_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Alamat_instansi_model_test.php" line="30" assertions="2" time="0.066939"/>
-    <testcase name="test_WhenGetAlamatInstansiByIdThenGetTheSpecificAlamatInstansi" class="Alamat_instansi_model_test" classname="Alamat_instansi_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Alamat_instansi_model_test.php" line="44" assertions="2" time="0.002621"/>
-    <testcase name="test_WhenUpdateAlamatInstansiThenAlamatInstansiChanged" class="Alamat_instansi_model_test" classname="Alamat_instansi_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Alamat_instansi_model_test.php" line="51" assertions="2" time="0.141701"/>
-    <testcase name="test_WhenDeleteAlamatInstansiThenGetOneAlamatInstansi" class="Alamat_instansi_model_test" classname="Alamat_instansi_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Alamat_instansi_model_test.php" line="71" assertions="2" time="0.112544"/>
+  <testsuite name="Subdomain_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Subdomain_model_test.php" tests="5" assertions="9" errors="0" failures="0" skipped="0" time="0.333121">
+    <testcase name="test_WhenGetAllSubdomainThenGetOneSubdomain" class="Subdomain_model_test" classname="Subdomain_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Subdomain_model_test.php" line="24" assertions="1" time="0.032065"/>
+    <testcase name="test_WhenSetSubdomainThenGetTwoSubdomain" class="Subdomain_model_test" classname="Subdomain_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Subdomain_model_test.php" line="30" assertions="2" time="0.056125"/>
+    <testcase name="test_WhenGetSubdomainByIdThenGetTheSpecificSubdomain" class="Subdomain_model_test" classname="Subdomain_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Subdomain_model_test.php" line="42" assertions="2" time="0.051008"/>
+    <testcase name="test_WhenUpdateSubdomainThenSubdomainChanged" class="Subdomain_model_test" classname="Subdomain_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Subdomain_model_test.php" line="50" assertions="2" time="0.139128"/>
+    <testcase name="test_WhenDeleteSubdomainThenGetOneSubdomain" class="Subdomain_model_test" classname="Subdomain_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Subdomain_model_test.php" line="68" assertions="2" time="0.054795"/>
   </testsuite>
 </testsuites>
