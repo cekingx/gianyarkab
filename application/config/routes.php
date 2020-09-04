@@ -81,3 +81,17 @@ $route['admin/alamat-instansi/update'] = 'alamat_instansi/update';
 $route['admin/alamat-instansi/edit/(:any)'] = 'alamat_instansi/edit/$1';
 $route['admin/alamat-instansi/delete/(:any)'] = 'alamat_instansi/delete/$1';
 $route['admin/alamat-instansi/(:any)'] = 'alamat_instansi/show/$1';
+
+//banner
+$route['admin/banner'] = 'Banner/index';
+$route['admin/banner/data'] = 'Banner/banner_data';
+$route['admin/banner/create'] = 'Banner/create';
+$route['admin/banner/store'] = 'Banner/store';
+$route['admin/banner/update'] = 'Banner/update';
+$route['admin/banner/edit/(:any)'] = 'Banner/edit/$1';
+$route['admin/banner/delete/(:any)'] = 'banner/delete/$1';
+$route['admin/banner/(:any)'] = 'banner/show/$1';
+
+
+//user
+$route['home'] = 'Beranda';
