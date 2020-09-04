@@ -81,3 +81,13 @@ $route['admin/alamat-instansi/update'] = 'alamat_instansi/update';
 $route['admin/alamat-instansi/edit/(:any)'] = 'alamat_instansi/edit/$1';
 $route['admin/alamat-instansi/delete/(:any)'] = 'alamat_instansi/delete/$1';
 $route['admin/alamat-instansi/(:any)'] = 'alamat_instansi/show/$1';
+
+// sub domain
+$route['subdomain'] = 'subdomain/index_user';
+$route['admin/subdomain'] = 'subdomain/index';
+$route['admin/subdomain/data'] = 'subdomain/subdomain_data';
+$route['admin/subdomain/create'] = 'subdomain/create';
+$route['admin/subdomain/store'] = 'subdomain/store';
+$route['admin/subdomain/update'] = 'subdomain/update';
+$route['admin/subdomain/edit/(:any)'] = 'subdomain/edit/$1';
+$route['admin/subdomain/delete/(:any)'] = 'subdomain/delete/$1';

@@ -51,6 +51,20 @@
 									</a>
 								</li>
 								<!-- end::Alamat Instansi -->
+								<!-- begin::Sub Domain -->
+								<li class="menu-section">
+									<h4 class="menu-text">Sub Domain</h4>
+									<i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+								</li>
+								<!-- end::Pemerintahan -->
+								<!-- begin::Alamat Instansi -->
+								<li class="menu-item <?php if($this->uri->segment(2) == 'subdomain') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
+									<a href="<?= site_url('/admin/subdomain') ?>" class="menu-link">
+										<span class="menu-icon"><i class="flaticon2-website"></i></span>
+										<span class="menu-text">Sub Domain</span>
+									</a>
+								</li>
+								<!-- end::Sub Domain -->
 							</ul>
 
 							<!--end::Menu Nav-->
