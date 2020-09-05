@@ -20,7 +20,7 @@
 
                             <div class="carousel-item active ">
                                 <a href="<?php echo site_url('/') ?>">
-                                    <img src="assets/img/berita/a.jpg" class="d-block w-100  rounded" alt="...">
+                                    <img src="assets/user-assets/img/berita/a.jpg" class="d-block w-100  rounded" alt="...">
                                     <div class="carousel-caption  d-md-block">
                                         <h5>Second slide label</h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -29,7 +29,7 @@
                             </div>
                             <div class="carousel-item ">
                                 <a href="<?php echo site_url('/') ?>">
-                                    <img src="assets/img/berita/b.jpg" class="d-block w-100 rounded" alt="...">
+                                    <img src="assets/user-assets/img/berita/b.jpg" class="d-block w-100 rounded" alt="...">
                                     <div class="carousel-caption  d-md-block">
                                         <h5>Second slide label</h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -38,7 +38,7 @@
                             </div>
                             <div class="carousel-item">
                                 <a href="<?php echo site_url('/') ?>">
-                                    <img src="assets/img/berita/c.jpg" class="d-block w-100 rounded" alt="...">
+                                    <img src="assets/user-assets/img/berita/c.jpg" class="d-block w-100 rounded" alt="...">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h5>Third slide label</h5>
                                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -47,8 +47,8 @@
                             </div>
                             <div class="carousel-item">
                                 <a href="<?php echo site_url('/') ?>">
-                                    <img src="assets/img/berita/d.jpg" class="d-block w-100 rounded"
-                                        alt="assets/img/berita/b.jpg">
+                                    <img src="assets/user-assets/img/berita/d.jpg" class="d-block w-100 rounded"
+                                        alt="assets/user-assets/img/berita/b.jpg">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h5>Third slide label</h5>
                                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -57,7 +57,7 @@
                             </div>
                             <div class="carousel-item">
                                 <a href="<?php echo site_url('/') ?>">
-                                    <img src="assets/img/berita/e.jpg" class="d-block w-100 rounded" alt="...">
+                                    <img src="assets/user-assets/img/berita/e.jpg" class="d-block w-100 rounded" alt="...">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h5>Third slide label</h5>
                                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -81,17 +81,35 @@
             </div>
             <div class="col-xl-6" style="margin-top: 0px;">
                 <!--begin::Tiles Widget 13-->
+                <?php foreach($banner_besar as $data): ?>
                 <div class="card card-custom bgi-no-repeat gutter-b"
                     style="height: auto; background-color: #663259; background-position: calc(100% + 0.5rem) 100%; background-size: 100% auto; background-image: url(assets/media/svg/patterns/taieri.svg)">
                     <a href="google.com">
                         <!--begin::Body-->
-                        <img src="assets/img/kpk.jpg" class="d-block w-100 rounded" alt="...">
+                        <img src="<?= base_url('/assets/upload/banner/'.$data->banner_file) ?>" class="d-block w-100 rounded" alt="...">
                     </a>
                     <!--end::Body-->
                 </div>
+                <?php endforeach; ?>
                 <!--end::Tiles Widget 13-->
 
                 <div class="row">
+                    <?php foreach($banner_kecil as $data): ?>
+                    <div class="col-xl-6">                        
+                        <!--begin::Engage Widget 4-->
+                        <div class="card card-custom bgi-no-repeat gutter-b"
+                            style="height: auto; background-color: #663259; background-position: calc(100% + 0.5rem) 100%; background-size: 100% auto; background-image: url(assets/media/svg/patterns/taieri.svg)">
+                            <a href="google.com">
+
+                                <!--begin::Body-->
+                                <img src="<?= base_url('/assets/upload/banner/'.$data->banner_file) ?>" class="d-block w-100 rounded" alt="...">
+                            </a>
+                            <!--end::Body-->
+                        </div>                        
+                        <!--end::Engage Widget 4-->
+                    </div>
+                    <?php endforeach; ?>                    
+
                     <div class="col-xl-6">
                         <!--begin::Engage Widget 4-->
                         <div class="card card-custom bgi-no-repeat gutter-b"
@@ -99,7 +117,7 @@
                             <a href="google.com">
 
                                 <!--begin::Body-->
-                                <img src="assets/img/bahan.jpg" class="d-block w-100 rounded" alt="...">
+                                <img src="assets/user-assets/img/ppid.jpg" class="d-block w-100 rounded" alt="...">
                             </a>
                             <!--end::Body-->
                         </div>
@@ -112,34 +130,7 @@
                             <a href="google.com">
 
                                 <!--begin::Body-->
-                                <img src="assets/img/paswara.jpg" class="d-block w-100 rounded" alt="...">
-                            </a>
-                            <!--end::Body-->
-                        </div>
-                        <!--end::Engage Widget 4-->
-                    </div>
-
-                    <div class="col-xl-6">
-                        <!--begin::Engage Widget 4-->
-                        <div class="card card-custom bgi-no-repeat gutter-b"
-                            style="height: auto; background-color: #663259; background-position: calc(100% + 0.5rem) 100%; background-size: 100% auto; background-image: url(assets/media/svg/patterns/taieri.svg)">
-                            <a href="google.com">
-
-                                <!--begin::Body-->
-                                <img src="assets/img/ppid.jpg" class="d-block w-100 rounded" alt="...">
-                            </a>
-                            <!--end::Body-->
-                        </div>
-                        <!--end::Engage Widget 4-->
-                    </div>
-                    <div class="col-xl-6">
-                        <!--begin::Engage Widget 4-->
-                        <div class="card card-custom bgi-no-repeat gutter-b"
-                            style="height: auto; background-color: #663259; background-position: calc(100% + 0.5rem) 100%; background-size: 100% auto; background-image: url(assets/media/svg/patterns/taieri.svg)">
-                            <a href="google.com">
-
-                                <!--begin::Body-->
-                                <img src="assets/img/paswara.jpg" class="d-block w-100 rounded" alt="...">
+                                <img src="assets/user-assets/img/paswara.jpg" class="d-block w-100 rounded" alt="...">
                             </a>
                             <!--end::Body-->
                         </div>
@@ -500,7 +491,7 @@
                 </div>
 
             </div>
-            <?php $this->load->view('layouts/partials/side.php'); ?>
+            <?php $this->load->view('user-views/layouts/partials/side.php'); ?>
         </div>
         <!--end::Row-->
 

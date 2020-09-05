@@ -35,6 +35,12 @@
 										<span class="menu-text">Pengumuman</span>
 									</a>
 								</li>
+								<li class="menu-item <?php if($this->uri->segment(2) == 'banner') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
+									<a href="<?= site_url('/admin/banner') ?>" class="menu-link">
+										<span class="menu-icon"><i class="flaticon-tabs"></i></span>
+										<span class="menu-text">Banner Acara</span>
+									</a>
+								</li>
 								<!-- end::Pengumuman -->
 								<!-- end::Beranda -->
 								<!-- begin::Profile -->
