@@ -28,7 +28,6 @@
 									<h4 class="menu-text">Beranda</h4>
 									<i class="menu-icon ki ki-bold-more-hor icon-md"></i>
 								</li>
-								<!-- end::Beranda -->
 								<!-- begin::Pengumuman -->
 								<li class="menu-item <?php if($this->uri->segment(2) == 'pengumuman') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/pengumuman') ?>" class="menu-link">
@@ -37,12 +36,26 @@
 									</a>
 								</li>
 								<!-- end::Pengumuman -->
+								<!-- end::Beranda -->
+								<!-- begin::Profile -->
+								<li class="menu-section">
+									<h4 class="menu-text">Profile</h4>
+									<i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+								</li>
+								<!-- begin::Jabatan Bupati -->
+								<li class="menu-item <?php if($this->uri->segment(2) == 'jabatan-bupati') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
+									<a href="<?= site_url('/admin/jabatan-bupati') ?>" class="menu-link">
+										<span class="menu-icon"><i class="flaticon2-speaker"></i></span>
+										<span class="menu-text">Bupati Masa ke Masa</span>
+									</a>
+								</li>
+								<!-- end::Jabatan Bupati -->
+								<!-- end::Profile -->
 								<!-- begin::Pemerintahan -->
 								<li class="menu-section">
 									<h4 class="menu-text">Pemerintahan</h4>
 									<i class="menu-icon ki ki-bold-more-hor icon-md"></i>
 								</li>
-								<!-- end::Pemerintahan -->
 								<!-- begin::Alamat Instansi -->
 								<li class="menu-item <?php if($this->uri->segment(2) == 'alamat-instansi') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/alamat-instansi') ?>" class="menu-link">
@@ -51,13 +64,12 @@
 									</a>
 								</li>
 								<!-- end::Alamat Instansi -->
+								<!-- end::Pemerintahan -->
 								<!-- begin::Sub Domain -->
 								<li class="menu-section">
 									<h4 class="menu-text">Sub Domain</h4>
 									<i class="menu-icon ki ki-bold-more-hor icon-md"></i>
 								</li>
-								<!-- end::Pemerintahan -->
-								<!-- begin::Alamat Instansi -->
 								<li class="menu-item <?php if($this->uri->segment(2) == 'subdomain') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/subdomain') ?>" class="menu-link">
 										<span class="menu-icon"><i class="flaticon2-website"></i></span>

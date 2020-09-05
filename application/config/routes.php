@@ -91,3 +91,14 @@ $route['admin/subdomain/store'] = 'subdomain/store';
 $route['admin/subdomain/update'] = 'subdomain/update';
 $route['admin/subdomain/edit/(:any)'] = 'subdomain/edit/$1';
 $route['admin/subdomain/delete/(:any)'] = 'subdomain/delete/$1';
+
+// jabatan bupati
+$route['bupatidarimasa'] = 'jabatanbupati/index_user';
+$route['admin/jabatan-bupati'] = 'jabatanbupati/index';
+$route['admin/jabatan-bupati/data'] = 'jabatanbupati/jabatan_bupati_data';
+$route['admin/jabatan-bupati/create'] = 'jabatanbupati/create';
+$route['admin/jabatan-bupati/store'] = 'jabatanbupati/store';
+$route['admin/jabatan-bupati/update'] = 'jabatanbupati/update';
+$route['admin/jabatan-bupati/edit/(:any)'] = 'jabatanbupati/edit/$1';
+$route['admin/jabatan-bupati/delete/(:any)'] = 'jabatanbupati/delete/$1';
+$route['admin/jabatan-bupati/(:any)'] = 'jabatanbupati/show/$1';
