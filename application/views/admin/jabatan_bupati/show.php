@@ -28,7 +28,7 @@
                 </tr>
                 <tr>
                     <td>Foto</td>
-                    <td><img src="<?= base_url('assets/upload/jabatanbupati/') . $jabatanbupati['jabatan_bupati_foto'] ?>" alt="" class="img-fluid"></td>
+                    <td><img src="<?= base_url('assets/upload/jabatanbupati/') . $jabatanbupati['jabatan_bupati_foto'] ?>" alt="" class="img-thumbnail"></td>
                 </tr>
                 <tr>
                     <td>Masa Jabatan</td>

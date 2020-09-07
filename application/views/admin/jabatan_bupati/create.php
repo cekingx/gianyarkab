@@ -83,10 +83,6 @@
 <script type='text/javascript'>
 $('.preloader').fadeOut();
 
-let nama = $('#jabatan_bupati_nama').val();
-let file = $('#jabatan_bupati_foto').val();
-let masa_jabatan = $('#jabatan_bupati_masa_jabatan').val();
-
 $('#jabatan_bupati_nama').keyup(function() {
     if($('#jabatan_bupati_nama').val() == '') {
         $('#jabatan_bupati_nama').addClass('is-invalid');
@@ -98,13 +94,13 @@ $('#jabatan_bupati_nama').keyup(function() {
 });
 
 $('#send').click(function(e) {
-    if(nama == '') {
+    if($('#jabatan_bupati_nama') == '') {
         $('#jabatan_bupati_nama').addClass('is-invalid');
         $('#need-nama').fadeIn(3);
-    } else if(file == '') {
+    } else if($('#jabatan_bupati_foto') == '') {
         $('#jabatan_bupati_foto').addClass('is-invalid');
         $('#need-foto').fadeIn(3);
-    } else if(masa_jabatan == '') {
+    } else if($('#jabatan_bupati_masa_jabatan') == '') {
         $('#jabatan_bupati_masa_jabatan').addClass('is-invalid');
         $('need-masa-jabatan').fadeIn(3);
     } else {

@@ -11,6 +11,14 @@ class Jabatanbupati extends CI_Controller
         $this->load->library('form_validation');
     }
 
+    public function index_user()
+    {
+        $data['jabatanbupati'] = $this->jabatanbupati_model->getAll();
+        $data['content'] = 'user-views/profile/bupatidarimasa';
+
+        $this->load->view('user-views/layouts/master', $data);
+    }
+
     public function jabatan_bupati_data()
     {
         $jabatan_bupati = $this->jabatanbupati_model->getAll();

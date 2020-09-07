@@ -22,6 +22,7 @@
                                 <div class="card-body ">
                                     <!--begin::Row-->
                                     <div class="row">
+                                        <?php foreach($jabatanbupati as $jabatanbupati): ?>
                                         <!--begin::Column-->
                                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
                                             <!--begin::Card-->
@@ -35,7 +36,7 @@
                                                         style="height: auto; background-position: calc(100% + 0.5rem) 100%; background-size: 100% auto; ">
 
                                                         <!--begin::Body-->
-                                                        <img src="assets/img/bupati/1.png" class="d-block w-100 rounded"
+                                                        <img src="<?= base_url('assets/upload/jabatanbupati/') . $jabatanbupati['jabatan_bupati_foto'] ?>" class="d-block w-100 rounded"
                                                             alt="...">
 
                                                         <!--end::Body-->
@@ -44,8 +45,8 @@
 
                                                     <!--begin::Name-->
                                                     <blockquote class="blockquote text-center">
-                                                        <p class="mb-0">A. A. Gde Oka</p>
-                                                        <p class="text-dark-75 font-size-xs">1950-1958 dan 1958-1960</p>
+                                                        <p class="mb-0"><?= $jabatanbupati['jabatan_bupati_nama'] ?></p>
+                                                        <p class="text-dark-75 font-size-xs"><?= $jabatanbupati['jabatan_bupati_masa_jabatan'] ?></p>
                                                     </blockquote>
                                                     <!--end::Name-->
 
@@ -55,106 +56,7 @@
                                             <!--end::Card-->
                                         </div>
                                         <!--end::Column-->
-                                        <!--begin::Column-->
-                                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
-                                            <!--begin::Card-->
-                                            <div class="card card-custom gutter-b card-stretch">
-                                                <!--begin::Body-->
-                                                <div class="card-body text-center pt-4">
-
-
-                                                    <!--begin::User-->
-                                                    <div class="card card-custom bgi-no-repeat gutter-b"
-                                                        style="height: auto; background-position: calc(100% + 0.5rem) 100%; background-size: 100% auto; ">
-
-                                                        <!--begin::Body-->
-                                                        <img src="assets/img/bupati/1.png" class="d-block w-100 rounded"
-                                                            alt="...">
-
-                                                        <!--end::Body-->
-                                                    </div>
-                                                    <!--end::User-->
-
-                                                    <!--begin::Name-->
-                                                    <blockquote class="blockquote text-center">
-                                                        <p class="mb-0">A. A. Gde Oka</p>
-                                                        <p class="text-dark-75 font-size-xs">1950-1958 dan 1958-1960</p>
-                                                    </blockquote>
-                                                    <!--end::Name-->
-
-                                                </div>
-                                                <!--end::Body-->
-                                            </div>
-                                            <!--end::Card-->
-                                        </div>
-                                        <!--end::Column-->
-                                        <!--begin::Column-->
-                                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
-                                            <!--begin::Card-->
-                                            <div class="card card-custom gutter-b card-stretch">
-                                                <!--begin::Body-->
-                                                <div class="card-body text-center pt-4">
-
-
-                                                    <!--begin::User-->
-                                                    <div class="card card-custom bgi-no-repeat gutter-b"
-                                                        style="height: auto; background-position: calc(100% + 0.5rem) 100%; background-size: 100% auto; ">
-
-                                                        <!--begin::Body-->
-                                                        <img src="assets/img/bupati/1.png" class="d-block w-100 rounded"
-                                                            alt="...">
-
-                                                        <!--end::Body-->
-                                                    </div>
-                                                    <!--end::User-->
-
-                                                    <!--begin::Name-->
-                                                    <blockquote class="blockquote text-center">
-                                                        <p class="mb-0">A. A. Gde Oka</p>
-                                                        <p class="text-dark-75 font-size-xs">1950-1958 dan 1958-1960</p>
-                                                    </blockquote>
-                                                    <!--end::Name-->
-
-                                                </div>
-                                                <!--end::Body-->
-                                            </div>
-                                            <!--end::Card-->
-                                        </div>
-                                        <!--end::Column-->
-                                        <!--begin::Column-->
-                                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
-                                            <!--begin::Card-->
-                                            <div class="card card-custom gutter-b card-stretch">
-                                                <!--begin::Body-->
-                                                <div class="card-body text-center pt-4">
-
-
-                                                    <!--begin::User-->
-                                                    <div class="card card-custom bgi-no-repeat gutter-b"
-                                                        style="height: auto; background-position: calc(100% + 0.5rem) 100%; background-size: 100% auto; ">
-
-                                                        <!--begin::Body-->
-                                                        <img src="assets/img/bupati/1.png" class="d-block w-100 rounded"
-                                                            alt="...">
-
-                                                        <!--end::Body-->
-                                                    </div>
-                                                    <!--end::User-->
-
-                                                    <!--begin::Name-->
-                                                    <blockquote class="blockquote text-center">
-                                                        <p class="mb-0">A. A. Gde Oka</p>
-                                                        <p class="text-dark-75 font-size-xs">1950-1958 dan 1958-1960</p>
-                                                    </blockquote>
-                                                    <!--end::Name-->
-
-                                                </div>
-                                                <!--end::Body-->
-                                            </div>
-                                            <!--end::Card-->
-                                        </div>
-                                        <!--end::Column-->
-
+                                        <?php endforeach; ?>
                                     </div>
                                     <!--end::Row-->
                                 </div>
@@ -168,7 +70,7 @@
                 <!--end::Card-->
 
             </div>
-            <?php $this->load->view('layouts/partials/side.php'); ?>
+            <?php $this->load->view('user-views/layouts/partials/side.php'); ?>
 
         </div>
         <!--end::Row-->

@@ -91,7 +91,7 @@ class Jabatanbupati_model extends CI_Model
         $jabatan_bupati = $this->getById($jabatan_bupati_id);
         if($jabatan_bupati['jabatan_bupati_foto'] != 'default.jpg') {
             $file_name = explode('.', $jabatan_bupati['jabatan_bupati_foto'])[0];
-            return array_map('unlink', glob(FCPATH . "assets/upload/jabatan_bupati/$file_name.*"));
+            return array_map('unlink', glob(FCPATH . "/assets/upload/jabatanbupati/$file_name.*"));
         }
     }
 }
