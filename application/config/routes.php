@@ -107,3 +107,15 @@ $route['admin/subdomain/update'] = 'subdomain/update';
 $route['admin/subdomain/edit/(:any)'] = 'subdomain/edit/$1';
 $route['admin/subdomain/delete/(:any)'] = 'subdomain/delete/$1';
 
+// galeri
+$route['admin/galeri'] = 'Galeri/index';
+$route['admin/galeri/data'] = 'Galeri/galeri_data';
+$route['admin/galeri/create'] = 'Galeri/create';
+$route['admin/galeri/store'] = 'Galeri/store';
+$route['admin/galeri/edit/(:any)'] = 'Galeri/edit/$1';
+$route['admin/galeri/update'] = 'Galeri/update';
+$route['admin/galeri/delete/(:any)'] = 'Galeri/delete/$1';
+$route['admin/galeri/(:any)'] = 'Galeri/show/$1';
+$route['admin/galeri/media/data/(:any)'] = 'Galeri/galeri_media_data/$1';
+$route['admin/galeri/media/store/(:any)'] = 'Galeri/store_media/$1';
+
