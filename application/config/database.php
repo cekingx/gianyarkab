@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '127.0.0.1',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'db_gianyarkab',
+	'hostname' => 'cekingx.my.id',
+	'username' => 'cekingxm_admin',
+	'password' => 'admingianyar',
+	'database' => 'cekingxm_gianyarkab',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

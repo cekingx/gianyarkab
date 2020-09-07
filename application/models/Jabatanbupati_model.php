@@ -71,18 +71,18 @@ class Jabatanbupati_model extends CI_Model
     private function uploadImage()
     {
         $file_name = url_title($this->jabatan_bupati_nama, 'dash', true) . "-" . date("Ymd-Hms");
-        $config['upload_path'] = '/var/www/html/upload/jabatan_bupati/';
+        $config['upload_path'] = './assets/upload/jabatanbupati';
         $config['allowed_types'] = 'gif|png|jpg';
         $config['file_name'] = $file_name;
         $config['overwrite'] = true;
-        $config['max_size'] = 2048;
+        $config['max_size'] = 0;
 
-        $this->load->library('upload', $config);
+        $this->load->library('upload', $config); 
         if($this->upload->do_upload('jabatan_bupati_foto')) {
             return $this->upload->data('file_name');
         }
 
-        // die($this->upload->display_errors());
+        die($this->upload->display_errors());
         return 'default.jpg';
     }
 
@@ -91,7 +91,7 @@ class Jabatanbupati_model extends CI_Model
         $jabatan_bupati = $this->getById($jabatan_bupati_id);
         if($jabatan_bupati['jabatan_bupati_foto'] != 'default.jpg') {
             $file_name = explode('.', $jabatan_bupati['jabatan_bupati_foto'])[0];
-            return array_map('unlink', glob("/var/www/html/upload/jabatan_bupati/$file_name.*"));
+            return array_map('unlink', glob(FCPATH . "assets/upload/jabatan_bupati/$file_name.*"));
         }
     }
 }

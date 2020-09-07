@@ -36,10 +36,10 @@ class Jabatanbupati extends CI_Controller
             show_404();
         }
 
-        $data['content'] = 'jabatanbupati/show';
+        $data['content'] = 'admin/jabatan_bupati/show';
         $data['title'] = $data['jabatanbupati']['jabatan_bupati_nama'];
 
-        $this->load->view('layouts/master', $data);
+        $this->load->view('admin/index', $data);
     }
 
     public function create()
@@ -48,8 +48,8 @@ class Jabatanbupati extends CI_Controller
             $data['error'] = $this->session->flashdata('error');
         }
 
-        $data['content'] = 'jabatanbupati/create';
-        $this->load->view('layouts/master', $data);
+        $data['content'] = 'admin/jabatan_bupati/create';
+        $this->load->view('admin/index', $data);
     }
 
     public function store()
@@ -61,10 +61,10 @@ class Jabatanbupati extends CI_Controller
         if($validation->run()) {
             $jabatanbupati->save();
             $this->session->set_flashdata('message', 'Data berhasil dibuat');
-            redirect('/admin/jabatan-bupati');
+            return redirect('admin/jabatan-bupati');
         } else {
             $this->session->set_flashdata('error', validation_errors());
-            redirect('/admin/jabatan-bupati/create');
+            return redirect('admin/jabatan-bupati/create');
         }
     }
 
@@ -79,9 +79,9 @@ class Jabatanbupati extends CI_Controller
             $data['error'] = $this->session->flashdata('error');
         }
 
-        $data['content'] = 'jabatanbupati/edit';
+        $data['content'] = 'admin/jabatan_bupati/edit';
         $data['title'] = $data['jabatanbupati']['jabatan_bupati_nama'];
-        $this->load->view('layouts/master', $data);
+        $this->load->view('admin/index', $data);
     }
 
     public function update()
@@ -107,7 +107,7 @@ class Jabatanbupati extends CI_Controller
         if(!empty($this->jabatanbupati_model->getById($jabatan_bupati_id))) {
             $this->jabatanbupati_model->delete($jabatan_bupati_id);
             $this->session->set_flashdata('message', 'Data berhasil dihapus');
-            redirect('/admin/jabatan-bupati');
+            echo json_encode('success');
         } else {
             show_404();
         }
