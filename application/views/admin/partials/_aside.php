@@ -83,6 +83,18 @@
 									</a>
 								</li>
 								<!-- end::Sub Domain -->
+								<!-- begin::Kontak -->
+								<li class="menu-section">
+									<h4 class="menu-text">Kontak</h4>
+									<i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+								</li>
+								<li class="menu-item <?php if($this->uri->segment(2) == 'kontak') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
+									<a href="<?= site_url('/admin/kontak') ?>" class="menu-link">
+										<span class="menu-icon"><i class="flaticon2-website"></i></span>
+										<span class="menu-text">Kontak dan Aduan</span>
+									</a>
+								</li>
+								<!-- end::Kontak -->
 							</ul>
 
 							<!--end::Menu Nav-->
