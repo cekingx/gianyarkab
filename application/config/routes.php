@@ -117,3 +117,17 @@ $route['admin/jabatan-bupati/update'] = 'jabatanbupati/update';
 $route['admin/jabatan-bupati/edit/(:any)'] = 'jabatanbupati/edit/$1';
 $route['admin/jabatan-bupati/delete/(:any)'] = 'jabatanbupati/delete/$1';
 $route['admin/jabatan-bupati/(:any)'] = 'jabatanbupati/show/$1';
+
+// galeri
+$route['admin/galeri'] = 'Galeri/index';
+$route['admin/galeri/data'] = 'Galeri/galeri_data';
+$route['admin/galeri/create'] = 'Galeri/create';
+$route['admin/galeri/store'] = 'Galeri/store';
+$route['admin/galeri/edit/(:any)'] = 'Galeri/edit/$1';
+$route['admin/galeri/update'] = 'Galeri/update';
+$route['admin/galeri/delete/(:any)'] = 'Galeri/delete/$1';
+$route['admin/galeri/(:any)'] = 'Galeri/show/$1';
+$route['admin/galeri/media/data/(:any)'] = 'Galeri/galeri_media_data/$1';
+$route['admin/galeri/media/store/(:any)'] = 'Galeri/store_media/$1';
+
+

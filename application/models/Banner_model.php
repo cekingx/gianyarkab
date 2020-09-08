@@ -18,7 +18,7 @@ class banner_model extends CI_Model
 	{
 		return [
 			
-			['field' => 'judul', 
+			['field' => 'judul_banner', 
 			'label' => 'banner_judul', 
 			'rules' => 'required'],									
 		];						
@@ -57,9 +57,9 @@ class banner_model extends CI_Model
 	{
 		// return print_r($this->upload_image());				
 		$post = $this->input->post();		
-		$this->banner_judul = $post["judul"];		
+		$this->banner_judul = $post["judul_banner"];		
 		$this->banner_file = $this->upload_file();
-		$this->banner_jenis = $post["banner_jenis"];				
+		$this->banner_jenis = $post["jenis_banner"];				
 		$this->db->set('banner_tanggal', 'NOW()', FALSE);			
 		return $this->db->insert($this->_table, $this);
 	}
@@ -68,7 +68,7 @@ class banner_model extends CI_Model
 	{
 		$post = $this->input->post();
 		$this->banner_id = $post["id"];
-		$this->banner_judul = $post["judul"];		
+		$this->banner_judul = $post["judul_banner"];		
 
 		if (!empty($_FILES["file_banner"]["name"])){
 			$this->_deleteFile($post["id"]);			
@@ -76,8 +76,8 @@ class banner_model extends CI_Model
 		} else {
 			$this->banner_file = $post["old_files"];
 		}
-		$this->banner_jenis = $post["banner_jenis"];
-		$this->banner_tanggal = $post["tanggal"];
+		$this->banner_jenis = $post["jenis_banner"];
+		$this->banner_tanggal = $post["tanggal_banner"];
 		return $this->db->update($this->_table, $this, array('banner_id' => $post["id"]));
 	}
 

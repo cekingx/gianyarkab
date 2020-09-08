@@ -23,6 +23,14 @@
 
 							<!--begin::Menu Nav-->
 							<ul class="menu-nav">
+								<!-- begin::foto&video -->
+								<li class="menu-item <?php if($this->uri->segment(2) == 'galeri') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
+									<a href="<?= site_url('/admin/galeri') ?>" class="menu-link">
+										<span class="menu-icon"><i class="flaticon2-speaker"></i></span>
+										<span class="menu-text">Galeri</span>
+									</a>
+								</li>
+
 								<!-- begin::Beranda -->
 								<li class="menu-section">
 									<h4 class="menu-text">Beranda</h4>
