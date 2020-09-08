@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Subdomain_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Subdomain_model_test.php" tests="5" assertions="9" errors="0" failures="0" skipped="0" time="2.733442">
-    <testcase name="test_WhenGetAllSubdomainThenGetOneSubdomain" class="Subdomain_model_test" classname="Subdomain_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Subdomain_model_test.php" line="24" assertions="1" time="0.510934"/>
-    <testcase name="test_WhenSetSubdomainThenGetTwoSubdomain" class="Subdomain_model_test" classname="Subdomain_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Subdomain_model_test.php" line="30" assertions="2" time="0.538315"/>
-    <testcase name="test_WhenGetSubdomainByIdThenGetTheSpecificSubdomain" class="Subdomain_model_test" classname="Subdomain_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Subdomain_model_test.php" line="42" assertions="2" time="0.489761"/>
-    <testcase name="test_WhenUpdateSubdomainThenSubdomainChanged" class="Subdomain_model_test" classname="Subdomain_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Subdomain_model_test.php" line="50" assertions="2" time="0.630081"/>
-    <testcase name="test_WhenDeleteSubdomainThenGetOneSubdomain" class="Subdomain_model_test" classname="Subdomain_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Subdomain_model_test.php" line="68" assertions="2" time="0.564351"/>
+  <testsuite name="Narahubung_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Narahubung_model_test.php" tests="3" assertions="4" errors="0" failures="0" skipped="0" time="2.363672">
+    <testcase name="test_WhenGetDataThenGetEmpty" class="Narahubung_model_test" classname="Narahubung_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Narahubung_model_test.php" line="20" assertions="1" time="0.662814"/>
+    <testcase name="test_WhenSaveNarahubungThenGetOneNarahubung" class="Narahubung_model_test" classname="Narahubung_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Narahubung_model_test.php" line="26" assertions="1" time="0.698710"/>
+    <testcase name="test_WhenSaveNewNarahubungThenOldNarahubungChanged" class="Narahubung_model_test" classname="Narahubung_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Narahubung_model_test.php" line="39" assertions="2" time="1.002148"/>
   </testsuite>
 </testsuites>

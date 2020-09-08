@@ -131,3 +131,11 @@ $route['admin/galeri/media/data/(:any)'] = 'Galeri/galeri_media_data/$1';
 $route['admin/galeri/media/store/(:any)'] = 'Galeri/store_media/$1';
 
 
+// kontak person
+$route['admin/kontak'] = 'kontak/index';
+$route['admin/kontak/data'] = 'kontak/kontak_data';
+$route['admin/kontak/narahubung/store'] = 'kontak/save_narahubung';
+$route['kontak'] = 'kontak/create';
+$route['kontak/store'] = 'kontak/store';
+$route['admin/kontak/delete/(:any)'] = 'kontak/delete/$1';
+$route['admin/kontak/(:any)'] = 'kontak/show/$1';
