@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @group model
+ */
 class Narahubung_model_test extends TestCase
 {
     public static function setUpBeforeClass()
