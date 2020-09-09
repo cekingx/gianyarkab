@@ -3,7 +3,7 @@
 <div class="card card-custom">
     <div class="card-header">
         <div class="card-title">
-            <a href="<?= base_url('admin/pengumuman') ?>" class="btn btn-primary font-weight-bold">
+            <a href="<?= base_url('admin/kontak') ?>" class="btn btn-primary font-weight-bold">
                 <i class="flaticon2-left-arrow"></i> Kembali
             </a>
         </div>

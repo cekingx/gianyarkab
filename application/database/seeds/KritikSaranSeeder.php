@@ -13,6 +13,7 @@ class KritikSaranSeeder extends Seeder
             'kritik_saran_email' => 'test@example.com',
             'kritik_saran_judul' => 'Kurang Responsif',
             'kritik_saran_isi' => 'Admin kurang responsif',
+            'kritik_saran_foto' => 'default.jpg',
             'kritik_saran_tanggal' => '2020-09-07'
         ];
 

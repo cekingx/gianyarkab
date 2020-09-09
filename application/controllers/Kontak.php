@@ -38,7 +38,7 @@ class Kontak extends CI_Controller
         }
 
         $data['content'] = 'admin/kontak/show';
-        $data['title'] = $data['kontak']['kontak_person_isi_aduan'];
+        $data['title'] = $data['kontak']['kontak_person_judul'];
 
         $this->load->view('admin/index', $data);
     }

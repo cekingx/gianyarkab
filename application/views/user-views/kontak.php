@@ -3,6 +3,36 @@
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
     <div class=" container">
+        <!-- begin::notification -->
+        <?php if(isset($error)) {
+            echo('
+            <div class="alert alert-danger alert-dismissable fade show" role="alert">
+                <h4 class="alert-heading">Error</h4>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <hr>'
+                . $error .
+            '</div>
+            ');
+        } ?>
+
+        <?php if(isset($message)) {
+            echo('
+            <div class="alert alert-custom alert-outline-2x alert-outline-primary fade show mb-5" id="message" role="alert">
+                <div class="alert-icon"><i class="flaticon2-checkmark"></i></div>
+                <div class="alert-text">'
+                .$message.
+                '</div>
+                <div class="alert-close">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true"><i class="ki ki-close"></i></span>
+                    </button>
+                </div>
+            </div>
+            ');
+        } ?>
+        <!-- end::notification -->
         <!--begin::Row-->
         <div class="row">
             <div class="col-xl-9">
