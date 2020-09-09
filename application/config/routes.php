@@ -139,3 +139,11 @@ $route['kontak'] = 'kontak/create';
 $route['kontak/store'] = 'kontak/store';
 $route['admin/kontak/delete/(:any)'] = 'kontak/delete/$1';
 $route['admin/kontak/(:any)'] = 'kontak/show/$1';
+
+// kritik saran
+$route['admin/kritik-saran'] = 'kritik_saran/index';
+$route['admin/kritik-saran/data'] = 'kritik_saran/kritik_saran_data';
+$route['admin/kritik-saran/delete/(:any)'] = 'kritik_saran/delete/$1';
+$route['admin/kritik-saran/(:any)'] = 'kritik_saran/show/$1';
+$route['kirimsaran'] = 'kritik_saran/create';
+$route['kirimsaran/store'] = 'kritik_saran/store';

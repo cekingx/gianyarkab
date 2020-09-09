@@ -30,6 +30,15 @@
 										<span class="menu-text">Galeri</span>
 									</a>
 								</li>
+								<!-- end::foto&video -->
+								<!-- begin::kritik_saran -->
+								<li class="menu-item <?php if($this->uri->segment(2) == 'kritik-saran') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
+									<a href="<?= site_url('/admin/kritik-saran') ?>" class="menu-link">
+										<span class="menu-icon"><i class="flaticon2-speaker"></i></span>
+										<span class="menu-text">Kritik Saran</span>
+									</a>
+								</li>
+								<!-- end::kritik_saran -->
 
 								<!-- begin::Beranda -->
 								<li class="menu-section">
