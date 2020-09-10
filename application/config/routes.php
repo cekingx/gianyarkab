@@ -147,3 +147,4 @@ $route['admin/kritik-saran/delete/(:any)'] = 'kritik_saran/delete/$1';
 $route['admin/kritik-saran/(:any)'] = 'kritik_saran/show/$1';
 $route['kirimsaran'] = 'kritik_saran/create';
 $route['kirimsaran/store'] = 'kritik_saran/store';
+$route['daftarsaran'] = 'kritik_saran/index_user';

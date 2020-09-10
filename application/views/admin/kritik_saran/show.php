@@ -38,7 +38,7 @@
                 </tr>
                 <tr>
                     <td>Gambar</td>
-                    <td><img src="<?= base_url('assets/upload/kritiksaran/') . $kritik_saran['kritik_saran_foto'] ?>" alt="<?= $kritik_saran['kritik_saran_judul'] ?>"></td>
+                    <td><img class="img-fluid" src="<?= base_url('assets/upload/kritiksaran/') . $kritik_saran['kritik_saran_foto'] ?>" alt="<?= $kritik_saran['kritik_saran_judul'] ?>"></td>
                 </tr>
                 <tr>
                     <td>Tanggal</td>

@@ -17,6 +17,14 @@ class Kritik_saran extends CI_Controller
         echo json_encode($data);
     }
 
+    public function index_user()
+    {
+        $data['content'] = 'user-views/saran/daftarsaran';
+        $data['kritik_saran'] = $this->kritik_saran_model->getAll();
+
+        $this->load->view('user-views/layouts/master', $data);
+    }
+
     public function index()
     {
         if(!empty($this->session->flashdata('message'))) {
@@ -84,6 +92,12 @@ class Kritik_saran extends CI_Controller
 
     public function delete($kritik_saran_id)
     {
-
+        if(!empty($this->kritik_saran_model->getById($kritik_saran_id))) {
+            $this->kritik_saran_model->delete($kritik_saran_id);
+            $this->session->set_flashdata('message', 'Data berhasil dihapus');
+            echo json_encode('success');
+        } else {
+            show_404();
+        }
     }
 }

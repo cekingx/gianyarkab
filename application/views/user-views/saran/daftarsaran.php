@@ -19,6 +19,8 @@
 
                     </div>
                     <!-- foreach -->
+
+                    <?php foreach($kritik_saran as $kritik_saran): ?>
                     <!-- berita 1 -->
                     <div class="card-body" style="
                             padding-top: 0px;
@@ -42,7 +44,7 @@
                                                     <!--begin::Pic-->
                                                     <div class="flex-shrink-0 mr-7">
                                                         <div class="symbol symbol-150 symbol-lg-150">
-                                                            <img alt="Pic" src="assets/media//users/300_1.jpg" />
+                                                            <img class="img-thumbnail" src="<?= base_url('assets/upload/kritiksaran/') . $kritik_saran['kritik_saran_foto'] ?>" alt="">
                                                         </div>
                                                     </div>
                                                     <!--end::Pic-->
@@ -61,10 +63,7 @@
                                                             <div class="mr-3">
                                                                 <!--begin::Name-->
                                                                 <div class="h2">
-                                                                    Gianyar Segera Miliki Amdk Plat Merah Terbesar
-                                                                    Di
-                                                                    Indonesia
-
+                                                                    <?= $kritik_saran['kritik_saran_judul'] ?>
                                                                 </div>
                                                                 <!--end::Name-->
                                                             </div>
@@ -80,20 +79,7 @@
                                                                 class="text-box flex-grow-1 font-weight-bold text-dark-50 py-2 py-lg-2 mr-5"
                                                                 style="width:100%">
                                                                 <p>
-                                                                    Lorem Ipsum is simply dummy text of the printing
-                                                                    and
-                                                                    typesetting industry. Lorem Ipsum has been the
-                                                                    industry's standard dummy text ever since the
-                                                                    1500s,
-                                                                    when an unknown printer took a galley of type
-                                                                    and
-                                                                    scrambled it to make a type specimen book. It
-                                                                    has
-                                                                    survived not only five centuries, but also the
-                                                                    leap
-                                                                    into electronic typesetting,
-                                                                    remaining essentially unchanged.
-
+                                                                    <?= $kritik_saran['kritik_saran_isi'] ?>
                                                                 </p>
                                                             </div>
                                                             <!--end::Description-->
@@ -113,12 +99,12 @@
                                                     <div class="example-preview">
                                                         <!-- Button trigger modal-->
                                                         <button type="button" class="btn btn-sm btn-light"
-                                                            data-toggle="modal" data-target="#exampleModalCenter">
+                                                            data-toggle="modal" data-target="#isi-<?= $kritik_saran['kritik_saran_id'] ?>">
                                                             Lihat Selengkapnya
                                                         </button>
 
                                                         <!-- Modal-->
-                                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1"
+                                                        <div class="modal fade" id="isi-<?= $kritik_saran['kritik_saran_id'] ?>" tabindex="-1"
                                                             role="dialog" aria-labelledby="exampleModalLabel"
                                                             aria-hidden="true">
                                                             <div class="modal-dialog modal-dialog-centered"
@@ -126,7 +112,8 @@
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
                                                                         <h5 class="modal-title" id="exampleModalLabel">
-                                                                            KK Miskin</h5>
+                                                                            <?= $kritik_saran['kritik_saran_judul'] ?>
+                                                                        </h5>
                                                                         <button type="button" class="close"
                                                                             data-dismiss="modal" aria-label="Close">
                                                                             <i aria-hidden="true"
@@ -134,19 +121,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                        Lorem Ipsum is simply dummy text of the printing
-                                                                        and
-                                                                        typesetting industry. Lorem Ipsum has been the
-                                                                        industry's standard dummy text ever since the
-                                                                        1500s,
-                                                                        when an unknown printer took a galley of type
-                                                                        and
-                                                                        scrambled it to make a type specimen book. It
-                                                                        has
-                                                                        survived not only five centuries, but also the
-                                                                        leap
-                                                                        into electronic typesetting,
-                                                                        remaining essentially unchanged.
+                                                                        <?= $kritik_saran['kritik_saran_isi'] ?>
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                         <button type="button"
@@ -161,9 +136,9 @@
                                                     <!-- end modal -->
                                                     <!--begin::Date-->
                                                     <div class="d-flex flex-column flex-grow-1 mr-2">
-                                                        <span class="text font-weight-light text-right font-size-xs">
-                                                            12
-                                                            April 2020</span>
+                                                        <span
+                                                            class="text font-weight-light text-right font-size-xs"
+                                                            ><?= parseDate($kritik_saran['kritik_saran_tanggal']); ?></span>
                                                     </div>
                                                 </div>
                                                 <!--end::Bottom-->
@@ -173,16 +148,14 @@
                                 </div>
                             </div>
                             <!--end::Card-->
-
-
                         </div>
                     </div>
                     <!-- end berita 1 -->
-
+                    <?php endforeach; ?>
                 </div>
                 <!--end::Card-->
             </div>
-            <?php $this->load->view('layouts/partials/side.php'); ?>
+            <?php $this->load->view('user-views/layouts/partials/side.php'); ?>
         </div>
         <!--end::Row-->
     </div>
@@ -198,4 +171,8 @@
             return currentText
         }
     });
+    
+    $(function() {
+        console.log($('.display-dates').text());
+    })
 </script>

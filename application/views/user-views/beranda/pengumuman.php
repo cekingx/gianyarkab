@@ -86,9 +86,8 @@
                                                     <!--begin::Date-->
                                                     <div class="d-flex flex-column flex-grow-1 mr-2">
                                                         <span
-                                                            id="display-date"
                                                             class="text text-dark-65 font-weight-light text-right font-size-xs">
-                                                            <?= $pengumuman['pengumuman_tanggal'] ?>
+                                                            <?= parseDate($pengumuman['pengumuman_tanggal']); ?>
                                                             </span>
                                                     </div>
                                                     <!--end::Bottom-->
