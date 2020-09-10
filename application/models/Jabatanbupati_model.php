@@ -82,7 +82,7 @@ class Jabatanbupati_model extends CI_Model
             return $this->upload->data('file_name');
         }
 
-        die($this->upload->display_errors());
+        // die($this->upload->display_errors());
         return 'default.jpg';
     }
 
