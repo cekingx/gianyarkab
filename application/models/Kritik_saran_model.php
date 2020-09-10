@@ -43,6 +43,15 @@ class Kritik_saran_model extends CI_Model
         ];
     }
 
+    public function getLast($number)
+    {
+        $this->db->select('*');
+        $this->db->from($this->table);
+        $this->db->order_by('kritik_saran_id', 'DESC');
+        $this->db->limit("$number");
+        return $this->db->get()->result_array();
+    }
+
     public function getAll()
     {
         return $this->db->get($this->table)->result_array();

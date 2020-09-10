@@ -7,6 +7,7 @@ class Kontak extends CI_Controller
     {
         parent::__construct();
 
+        $this->load->model('kritik_saran_model');
         $this->load->model('kontak_model');
         $this->load->model('narahubung_model');
         $this->load->library('form_validation');
