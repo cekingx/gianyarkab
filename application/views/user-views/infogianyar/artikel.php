@@ -2,7 +2,6 @@
 <!--begin::Entry-->
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
-
     <div class=" container">
         <!--begin::Row-->
         <div class="row">
@@ -14,7 +13,7 @@
                             <h3 class="card-label">
                                 Artikel
                                 <!-- <span class="d-block text-muted pt-2 font-size-sm">Datatable initialized
-												from HTML table</span> -->
+                                                from HTML table</span> -->
                             </h3>
                         </div>
 
@@ -23,18 +22,18 @@
 
                     <!-- foreach -->
                     <!-- berita 1 -->
+                    <?php foreach($artikel_berita as $data): ?>
                     <div class="card-body" style="
                             padding-top: 0px;
                             padding-bottom: 0px;
                         ">
                         <div class="row">
                             <!--begin::Card-->
-                            <div class="card card-custom gutter-b">
-                                <div class="card-body" style="
+                                <div class="card card-custom gutter-b">
+                                    <div class="card-body" style="
                                             border-top-width: 5px;
                                         ">
-                                    <a href="<?php echo site_url('/detailartikel') ?>">
-
+                                        <a href ="<?php echo site_url('/arsip/artikel/'.$data->artikel_berita_slug) ?>">
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-xl-3" style="
@@ -47,7 +46,7 @@
                                                         <!--begin::Pic-->
                                                         <div class="flex-shrink-0 mr-7">
                                                             <div class="symbol symbol-150 symbol-lg-150">
-                                                                <img alt="Pic" src="assets/media//users/300_1.jpg" />
+                                                                <img alt="Pic" src="<?= base_url('assets/upload/artikel_berita/'.$data->artikel_berita_media_media) ?>" />
                                                             </div>
                                                         </div>
                                                         <!--end::Pic-->
@@ -66,37 +65,23 @@
                                                                 <div class="mr-3">
                                                                     <!--begin::Name-->
                                                                     <div class="h2 text-dark-65 text-hover-primary">
-                                                                        Gianyar Segera Miliki Amdk Plat Merah Terbesar
-                                                                        Di
-                                                                        Indonesia
+                                                                       <?= $data->artikel_berita_judul ?>
 
-                                                                    </div>
-                                                                    <!--end::Name-->
+                                                                    </div> <!--end::Name-->
                                                                 </div>
                                                                 <!--begin::User-->
                                                             </div>
                                                             <!--end::Title-->
 
-                                                            <!--begin::Content-->
-                                                            <div
+                                                           <!--begin::Content-->
+                                                           <div
                                                                 class="d-flex align-items-center flex-wrap justify-content-between">
                                                                 <!--begin::Description-->
                                                                 <div data-maxlength="700"
                                                                     class="text-box flex-grow-1 font-weight-bold text-dark-50 py-2 py-lg-2 mr-5"
                                                                     style="width:100%">
                                                                     <p>
-                                                                        I distinguish three main text objectives could
-                                                                        be
-                                                                        merely
-                                                                        I distinguish three main text objectives could
-                                                                        be
-                                                                        merely
-                                                                        I distinguish three main text objectives could
-                                                                        be
-                                                                        merely
-                                                                        I distinguish three main text objectives could
-                                                                        be
-                                                                        merely
+                                                                       <?= character_limiter($data->artikel_berita_isi, 240) ?>
                                                                     </p>
                                                                 </div>
                                                                 <!--end::Description-->
@@ -113,30 +98,27 @@
 
                                                     <!--begin::Date-->
                                                     <div class="d-flex flex-column flex-grow-1 mr-2">
-                                                        <span
-                                                            class="text text-dark-65 font-weight-light text-right font-size-xs">
-                                                            12
-                                                            April 2020</span>
+                                                        <span class="text text-dark-65 font-weight-light text-right font-size-xs">
+                                                            <?= date('d F, Y (l)', strtotime($data->artikel_berita_tanggal)) ?></span></span>
                                                     </div>
                                                     <!--end::Bottom-->
                                                 </div>
                                             </div>
                                         </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
                             <!--end::Card-->
 
 
                         </div>
                     </div>
                     <!-- end berita 1 -->
-
-
+                    <?php endforeach; ?>                    
                 </div>
                 <!--end::Card-->
             </div>
-            <?php $this->load->view('layouts/partials/side.php'); ?>
+            <?php $this->load->view('user-views/layouts/partials/side.php'); ?>
         </div>
         <!--end::Row-->
     </div>

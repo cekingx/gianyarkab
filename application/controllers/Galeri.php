@@ -10,8 +10,7 @@ class Galeri extends CI_Controller
 		$this->load->model("Galeri_model");		
 		$this->load->library('form_validation');
 	}
-
-	//menampilkan galeri
+	
 	public function index()
 	{
 		if(!empty($this->session->flashdata('message'))) {
@@ -20,10 +19,51 @@ class Galeri extends CI_Controller
 
         $data['content'] = 'admin/galeri/index';
 		$this->load->view('admin/index', $data);
+		
+	}
 
-		// $data['content'] = 'galeri/show';
-		// $data["galeri"] = $this->Galeri_model->getAll();
-		// $this->load->view('layouts/master', $data);
+	//show foto di user
+	public function index_foto_user()
+	{			
+		$data['galeri'] = $this->Galeri_model->showFotoUser();
+		
+		$data['content'] = 'user-views/galeri/foto';		
+		$this->load->view('user-views/layouts/master', $data);
+	}
+
+	public function index_video_user()
+	{			
+		$data['galeri'] = $this->Galeri_model->showVideoUser();
+		$data['tubmnail'] = $this->Galeri_model->tubmnailVideo(1);		
+				
+		$data['content'] = 'user-views/galeri/video';		
+		$this->load->view('user-views/layouts/master', $data);
+	}
+
+	//show detail video
+	public function detail_video_user($slug)
+	{
+		$data['galeri'] = $this->Galeri_model->detailVideoUser($slug);
+		$data['galeri_detail'] = $this->Galeri_model->getBySlug($slug);		
+		
+		$data['title'] = $data['galeri_detail']->galeri_judul;	
+		$data['tanggal'] = $data['galeri_detail']->galeri_tanggal;
+
+		$data['content'] = 'user-views/detail/video';		
+		$this->load->view('user-views/layouts/master', $data);
+	}
+
+	//show detail foto
+	public function detail_foto_user($slug)
+	{
+		$data['galeri'] = $this->Galeri_model->detailFotoUser($slug);
+		$data['galeri_detail'] = $this->Galeri_model->getBySlug($slug);		
+		
+		$data['title'] = $data['galeri_detail']->galeri_judul;	
+		$data['tanggal'] = $data['galeri_detail']->galeri_tanggal;	
+
+		$data['content'] = 'user-views/detail/foto';
+		$this->load->view('user-views/layouts/master', $data);
 	}
 
 	public function show($id)
@@ -38,6 +78,7 @@ class Galeri extends CI_Controller
         $this->load->view('admin/index', $data);
 	}
 
+	//index data galeri
 	public function galeri_data()
 	{
 		$data = $this->Galeri_model->getAll();
@@ -76,20 +117,17 @@ class Galeri extends CI_Controller
 
 			$galeri->save();
 			$id_galeri = $this->db->insert_id($galeri);
-			$galeri_media->save($id_galeri);						
-			// $this->session->set_flashdata('success', 'Data Berhasil disimpan');
+			$slug_galeri = $galeri->galeri_slug;						
+			$galeri_media->save($id_galeri, $slug_galeri);									
 			$data_galeri = [
 				'galeri' => $galeri,
-				'galeri_media'=> $galeri_media
+				'galeri_media'=> $galeri_media,
+				'slug' => $slug_galeri
 			];
 			echo json_encode($data_galeri);		
 					
 		}
-
-		// $data['content'] = 'galeri/create';
-		// $data["galeri"] = $this->Galeri_model->getAll();			
-		// $this->load->view('layouts/master', $data);
-		// redirect(site_url('admin/Galeri/create'));
+		
 	}
 
 	//menampilkan halaman edit galeri
@@ -107,15 +145,15 @@ class Galeri extends CI_Controller
 	public function update()
 	{		
 
-		$galeri = $this->Galeri_model;		
+		$galeri = $this->Galeri_model;	
+		$galeri_media = $this->Galeri_media_model;	
 		$validation = $this->form_validation;
 		$validation->set_rules($galeri->rules());
 
 		if ($validation->run()) {
-			$galeri->update();
+			$galeri->update();						
 
-			echo json_encode($galeri);
-			// $this->session->set_flashdata('success', 'Data Berhasil di Update');
+			echo json_encode($galeri);			
 		}			
 	}
 
@@ -128,8 +166,7 @@ class Galeri extends CI_Controller
 		$this->Galeri_media_model->deleteAll($id);
 		$this->session->set_flashdata('hapus', 'Data Berhasil di Hapus');			
 		
-		echo json_encode($this);
-		// redirect(site_url('admin/galeri'));
+		echo json_encode($this);		
 	}
 
 	//menampilkan media berdasarkan data galeri
@@ -142,22 +179,15 @@ class Galeri extends CI_Controller
 	}	
 
 	//input data/store media berdasarkan id galeri
-	public function store_media($id)
+	public function store_media($id, $slug)
 	{
 		$galeri_media = $this->Galeri_media_model;		
 		$validation = $this->form_validation;			
 		
-		$galeri_media->save($id);	
+		$galeri_media->save($id, $slug);	
 
 		echo json_encode($galeri_media);	
-
-		// redirect('/admin/galeri/media/'.$id);			
-		// $this->session->set_flashdata('success', 'Data Berhasil disimpan');		
-
-		// $data['content'] = 'galeri/show_detail';
-		// $data["galeri"] = $this->Galeri_model->getById($id);
-		// $data["galeri_media"] = $this->Galeri_media_model->getAll($id);		
-		// $this->load->view('layouts/master', $data);
+		
 	}
 
 	//delete media berdasarkan id galeri
@@ -177,11 +207,7 @@ class Galeri extends CI_Controller
 		$this->Galeri_media_model->delete($id);
 		$this->session->set_flashdata('hapus', 'Data Berhasil di Hapus');				
 		
-		echo json_encode($data);
-		// $data['content'] = 'galeri/show_detail';
-		// $data["galeri"] = $this->Galeri_model->getById($id_galeri);
-		// $data["galeri_media"] = $this->Galeri_media_model->getAll($id_galeri);		
-		// $this->load->view('layouts/master', $data);
+		echo json_encode($data);		
 	}	
 	
 }

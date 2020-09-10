@@ -12,13 +12,13 @@
         <form method="POST" id="form_galeri" enctype="multipart/form-data" role="form">
           <div class="form-group">
             <input type="hidden" id="id_galeri" name="id" value="<?php echo $galeri->galeri_id ?>">
+            <input type="hidden" id="slug_galeri" name="id" value="<?php echo $galeri->galeri_slug ?>">            
             <label for="nama">Judul Media</label> 
             <input type="text" class="form-control" id="judul_galeri" name="judul_galeri" placeholder = "Judul Kegiatan" value="<?php echo $galeri->galeri_judul ?>" >
             <span style="display: none;" class="form-text text-muted" id="need-judul" >
               Judul masih kosong
             </span> 
           </div>
-
           <div class="form-group">
             <label for="kegiatan_isi">Deskripsi Media</label>
              <textarea class="form-control" name="deskripsi_galeri" id="deskripsi_galeri" rows="3" placeholder="Enter ..." required><?php echo $galeri->galeri_deskripsi ?></textarea>
@@ -89,6 +89,7 @@ $('#deskripsi_galeri').keyup( function() {
   // var data = $("#testForm").serialize();
     var fileToUpload = $('input:file').val();
     var id = $('#id_galeri').val();
+    var slug = $('#slug_galeri').val();
     var formData = new FormData($("#form_galeri")[0]);
     var galeriDesk = (CKEDITOR.instances['deskripsi_galeri'].getData());
     formData.append('deskripsi_galeri',CKEDITOR.instances['deskripsi_galeri'].getData());              

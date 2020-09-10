@@ -1,10 +1,10 @@
-<title>Edit Pengumuman</title>
+<title>Edit Banner</title>
 
 <div class="card card-custom gutter-b">
     <div class="card-header">
         <div class="card-title">
             <h3 class="card-label">
-                Pengumuman
+                Banner
             </h3>
         </div>
     </div>

@@ -97,6 +97,8 @@ $route['admin/banner/(:any)'] = 'banner/show/$1';
 //user
 $route['home'] = 'Beranda';
 
+
+
 // sub domain
 $route['subdomain'] = 'subdomain/index_user';
 $route['admin/subdomain'] = 'subdomain/index';
@@ -118,16 +120,36 @@ $route['admin/jabatan-bupati/edit/(:any)'] = 'jabatanbupati/edit/$1';
 $route['admin/jabatan-bupati/delete/(:any)'] = 'jabatanbupati/delete/$1';
 $route['admin/jabatan-bupati/(:any)'] = 'jabatanbupati/show/$1';
 
-// galeri
+// galeri users
+$route['galeri/foto'] = 'Galeri/index_foto_user';
+$route['galeri/foto/(:any)'] = 'Galeri/detail_foto_user/$1';
+$route['galeri/video'] = 'Galeri/index_video_user';
+$route['galeri/video/(:any)'] = 'Galeri/detail_video_user/$1';
+
+//galeri admin
 $route['admin/galeri'] = 'Galeri/index';
 $route['admin/galeri/data'] = 'Galeri/galeri_data';
 $route['admin/galeri/create'] = 'Galeri/create';
 $route['admin/galeri/store'] = 'Galeri/store';
 $route['admin/galeri/edit/(:any)'] = 'Galeri/edit/$1';
 $route['admin/galeri/update'] = 'Galeri/update';
-$route['admin/galeri/delete/(:any)'] = 'Galeri/delete/$1';
 $route['admin/galeri/(:any)'] = 'Galeri/show/$1';
 $route['admin/galeri/media/data/(:any)'] = 'Galeri/galeri_media_data/$1';
-$route['admin/galeri/media/store/(:any)'] = 'Galeri/store_media/$1';
+$route['admin/galeri/media/store/(:any)/(:any)'] = 'Galeri/store_media/$1/$2';
 
+// galeri users
+$route['arsip/artikel'] = 'Artikel_berita/index_artikel_user';
+$route['arsip/artikel/(:any)'] = 'Artikel_berita/detail_artikel_user/$1';
+$route['arsip/berita'] = 'Artikel_berita/index_berita_user';
+$route['arsip/berita/(:any)'] = 'Artikel_berita/detail_berita_user/$1';
 
+//artikel berita admin
+$route['admin/artikel_berita'] = 'Artikel_berita/index';
+$route['admin/artikel_berita/data'] = 'Artikel_berita/artikel_berita_data';
+$route['admin/artikel_berita/create'] = 'Artikel_berita/create';
+$route['admin/artikel_berita/store'] = 'Artikel_berita/store';
+$route['admin/artikel_berita/edit/(:any)'] = 'Artikel_berita/edit/$1';
+$route['admin/artikel_berita/update'] = 'Artikel_berita/update';
+$route['admin/artikel_berita/(:any)'] = 'Artikel_berita/show/$1';
+$route['admin/artikel_berita/media/data/(:any)'] = 'Artikel_berita/artikel_berita_media_data/$1';
+$route['admin/artikel_berita/media/store/(:any)/(:any)'] = 'Artikel_berita/store_media/$1/$2';

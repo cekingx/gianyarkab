@@ -29,10 +29,10 @@
               </span> 
             </div>
             <div class="form-group">
-              <label for="nama">Link Youtube Video</label> 
+              <label for="nama">ID Youtube Video</label> 
               <input type="text" class="form-control" id="video_galeri" name="video_galeri" placeholder = "Link video">
               <span style="display: none;" class="form-text text-muted" id="need-link" >
-                link masih kosong
+                ID masih kosong
               </span> 
             </div>
             <div class="form-group">

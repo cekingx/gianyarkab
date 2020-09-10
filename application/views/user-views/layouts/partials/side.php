@@ -6,7 +6,7 @@
         <!--begin::Body-->
         <div class="card-body d-flex align-items-center">
             <!--begin::Body-->
-            <a href="<?php echo site_url('/foto') ?>">
+            <a href="<?php echo site_url('galeri/foto/') ?>">
                 <div class="card-body bg-gray-300 rounded" style="
                                     padding-top: 10px;
                                     padding-bottom: 10px;
@@ -24,7 +24,7 @@
 
                         <!--begin:Title-->
                         <div class="d-flex flex-column flex-grow-1 my-lg-0 my-2 pr-3">
-                            <a href="<?php echo site_url('/foto') ?>"
+                            <a href="<?php echo site_url('galeri/foto') ?>"
                                 class="text-dark font-weight-bolder font-size-h5">
                                 Galeri Foto
                             </a>
@@ -38,7 +38,7 @@
         <!--begin::Body-->
         <div class="card-body d-flex align-items-center">
             <!--begin::Body-->
-            <a href="<?php echo site_url('/video') ?>">
+            <a href="<?php echo site_url('galeri/video/') ?>">
 
                 <div class="card-body bg-gray-300 rounded" style="
                                     padding-top: 10px;
@@ -57,7 +57,7 @@
 
                         <!--begin:Title-->
                         <div class="d-flex flex-column flex-grow-1 my-lg-0 my-2 pr-3">
-                            <a href="<?php echo site_url('/video') ?>"
+                            <a href="<?php echo site_url('galeri/video') ?>"
                                 class="text-dark font-weight-bolder  font-size-h5">
                                 Galeri Video
                             </a>

@@ -20,6 +20,18 @@ class Beranda extends CI_Controller
 		$this->load->view('user-views/layouts/master', $data);
 	}
 
+	public function galeri_foto()
+	{
+		$data['content'] = 'user-views/galeri/foto';		
+		$this->load->view('user-views/layouts/master', $data);
+	}
+
+	public function detail_foto()
+	{
+		$data['content'] = 'user-views/detail/foto';		
+		$this->load->view('user-views/layouts/master', $data);
+	}
+
 	public function add_view()
 	{
 		$data['content'] = 'admin/kegiatan/create';

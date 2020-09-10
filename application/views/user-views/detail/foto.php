@@ -1,4 +1,4 @@
-<title>detail foto</title>
+<title><?= $title ?></title>
 <!--begin::Entry-->
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
@@ -10,12 +10,12 @@
                     <div class="card-header">
                         <div class="card-title">
                             <h3 class="card-label">
-                                foto
+                                Detail Foto
                             </h3>
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="h1 text-center">judul detail foto</div>
+                        <div class="h1 text-center"><?= $title ?></div>
                     </div>
 
                     <!--begin::Footer-->
@@ -28,13 +28,12 @@
                             class=" container  d-flex flex-column flex-md-row align-items-center justify-content-between">
                             <!--begin::Copyright-->
                             <div class="text-dark order-2 order-md-1">
-                                <span class="text-dark font-weight-bold mr-2">Jumat, 20 Juli 2020</span>
-
+                                <span class="text-dark font-weight-bold mr-2"><?= date('d F, Y (l)', strtotime($tanggal)) ?></span>
                             </div>
                             <!--end::Copyright-->
 
                             <!--begin::Nav-->
-                            <?php $this->load->view('layouts/partials/sosial') ?>
+                            <?php $this->load->view('user-views/layouts/partials/sosial') ?>
 
                             <!--end::Nav-->
                         </div>
@@ -47,93 +46,24 @@
                             padding-top: 0px;
                         ">
                         <div class="row">
+                            <?php foreach($galeri as $data): ?>
                             <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up" style="
-                                                    padding-left: 0px;
-                                                    padding-right: 0px;
-                                                ">
-                                <a href="assets/img/berita/1.jpg" class="d-block photo-item" data-fancybox="gallery">
-                                    <img src="assets/img/berita/1.jpg" alt="Image" class="img-fluid">
+                                    padding-left: 0px;
+                                    padding-right: 0px;
+                                ">
+                                <a href="<?= base_url('assets/upload/galeri_foto/'.$data->galeri_media_media) ?>" class="d-block photo-item" data-fancybox="gallery">
+                                    <img src="<?= base_url('assets/upload/galeri_foto/'.$data->galeri_media_media) ?>" alt="Image" class="img-fluid">
                                     <div class="photo-text-more">
                                         <span class="icon icon-search"></span>
                                     </div>
                                 </a>
-                            </div>
-                            <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up" style="
-                                                    padding-left: 0px;
-                                                    padding-right: 0px;
-                                                ">
-                                <a href="assets/img/berita/1.jpg" class="d-block photo-item" data-fancybox="gallery">
-                                    <img src="assets/img/berita/1.jpg" alt="Image" class="img-fluid">
-                                    <div class="photo-text-more">
-                                        <span class="icon icon-search"></span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up" style="
-                                                    padding-left: 0px;
-                                                    padding-right: 0px;
-                                                ">
-                                <a href="assets/img/berita/1.jpg" class="d-block photo-item" data-fancybox="gallery">
-                                    <img src="assets/img/berita/1.jpg" alt="Image" class="img-fluid">
-                                    <div class="photo-text-more">
-                                        <span class="icon icon-search"></span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up" style="
-                                                    padding-left: 0px;
-                                                    padding-right: 0px;
-                                                ">
-                                            <a href="assets/img/berita/1.jpg" class="d-block photo-item"
-                                                data-fancybox="gallery">
-                                                <img src="assets/img/berita/1.jpg" alt="Image" class="img-fluid">
-                                                <div class="photo-text-more">
-                                                    <span class="icon icon-search"></span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up" style="
-                                                    padding-left: 0px;
-                                                    padding-right: 0px;
-                                                ">
-                                            <a href="assets/img/berita/1.jpg" class="d-block photo-item"
-                                                data-fancybox="gallery">
-                                                <img src="assets/img/berita/1.jpg" alt="Image" class="img-fluid">
-                                                <div class="photo-text-more">
-                                                    <span class="icon icon-search"></span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up" style="
-                                                    padding-left: 0px;
-                                                    padding-right: 0px;
-                                                ">
-                                            <a href="assets/img/berita/1.jpg" class="d-block photo-item"
-                                                data-fancybox="gallery">
-                                                <img src="assets/img/berita/1.jpg" alt="Image" class="img-fluid">
-                                                <div class="photo-text-more">
-                                                    <span class="icon icon-search"></span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up" style="
-                                                    padding-left: 0px;
-                                                    padding-right: 0px;
-                                                ">
-                                            <a href="assets/img/berita/1.jpg" class="d-block photo-item"
-                                                data-fancybox="gallery">
-                                                <img src="assets/img/berita/1.jpg" alt="Image" class="img-fluid">
-                                                <div class="photo-text-more">
-                                                    <span class="icon icon-search"></span>
-                                                </div>
-                                            </a>
-                                        </div>
-
+                            </div>                            
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
             </div>
-            <?php $this->load->view('layouts/partials/side.php'); ?>
+            <?php $this->load->view('user-views/layouts/partials/side.php'); ?>
         </div>
         <!--end::Row-->
     </div>

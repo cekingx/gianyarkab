@@ -11,7 +11,7 @@
             <a target="_blank" href="" class="btn btn-icon btn-light-info mr-2">
                 <i class="flaticon-eye"></i>
             </a>
-            <a href="<?= base_url('admin/galeri/edit/') . $galeri->galeri_id ?>" class="btn btn-icon btn-light-warning mr-2">
+            <a href="<?= base_url('admin/artikel_berita/edit/') . $artikel_berita->artikel_berita_id ?>" class="btn btn-icon btn-light-warning mr-2">
                 <i class="flaticon2-edit"></i>
             </a>
             <a class="btn btn-icon btn-light-danger btn-delete">
@@ -25,41 +25,43 @@
             <tbody>
                 <tr>
                     <td>Judul</td>
-                    <td><?= $galeri->galeri_judul ?></td>
+                    <td><?= $artikel_berita->artikel_berita_judul ?></td>
+                </tr>
+                <tr>
+                    <td>Jenis</td>
+                    <td><?php if($artikel_berita->artikel_berita_jenis == 0 ):?>
+                           <?= 'Artikel'; ?>
+                        <?php else : ?>
+                           <?= 'Berita'; ?>
+                        <?php endif; ?>
+                    </td>
                 </tr>                              
                 <tr>
                     <td>Deskripsi</td>
-                    <td><?= $galeri->galeri_deskripsi ?></td>
+                    <td><?= $artikel_berita->artikel_berita_isi ?></td>
                 </tr>
                 <tr>
                     <td>Tanggal</td>
-                    <td><?= $galeri->galeri_tanggal ?></td>
+                    <td><?= $artikel_berita->artikel_berita_tanggal ?></td>
                 </tr>
             </tbody>
         </table>
-        <form id="form_galeri" method="POST" enctype="multipart/form-data" role="form">
+        <form id="form_artikel_berita" method="POST" enctype="multipart/form-data" role="form">
           <div class="form-group">
             <label>Foto</label>
             <div></div>
-            <input type="hidden" name="id_galeri" id="id_galeri" value="<?php echo $galeri->galeri_id ?>">
-            <input type="hidden" name="slug_galeri" id="slug_galeri" value="<?php echo $galeri->galeri_slug ?>">
+            <input type="hidden" name="id_artikel_berita" id="id_artikel_berita" value="<?php echo $artikel_berita->artikel_berita_id ?>">
+            <input type="hidden" name="slug_artikel_berita" id="slug_artikel_berita" value="<?php echo $artikel_berita->artikel_berita_slug ?>">
             <div class="custom-file">
-              <input type="file" class="custom-file-input" id="foto_galeri" name = "foto_galeri[]" multiple="">
+              <input type="file" class="custom-file-input" id="media_artikel_berita" name = "media_artikel_berita[]" multiple="">
               <label class="custom-file-label" for="customFile">Choose file</label>      
             </div>
             <span style="display: none;" class="form-text text-muted" id="need-foto" >
                 foto masih kosong
             </span> 
-          </div>
-          <div class="form-group">
-            <label for="nama">Link Youtube Video</label> 
-            <input type="text" class="form-control" id="video_galeri" name="video_galeri" placeholder = "Link Video">
-            <span style="display: none;" class="form-text text-muted" id="need-link" >
-              link masih kosong
-            </span> 
-          </div>
+          </div>          
           <button type="button" class="btn btn-success" id="validasi">Simpan</button>
-          <a type="button" class="btn btn-secondary" href ="<?php echo site_url('admin/galeri') ?>">Back</a>
+          <a type="button" class="btn btn-secondary" href ="<?php echo site_url('admin/artikel_berita') ?>">Back</a>
       </form>
     </div>
 </div>
@@ -85,27 +87,8 @@
     <div class="card-header">
         <div class="card-title">
             <h3 class="card-label">
-                Media Galeri
+                Media Artikel/Berita
             </h3>
-        </div>
-        <div class="card-toolbar">
-            <!--begin::Button-->
-            <a href="#" class="btn btn-primary font-weight-bolder btnNew">
-                <span class="svg-icon svg-icon-md">
-                    <!--begin::Svg Icon | path:../../../../../../../../metronic/themes/metronic/theme/html/demo2/dist/assets/media/svg/icons/Design/Flatten.svg-->
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-                        height="24px" viewBox="0 0 24 24" version="1.1">
-                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <rect x="0" y="0" width="24" height="24" />
-                            <circle fill="#000000" cx="9" cy="15" r="6" />
-                            <path
-                                d="M8.8012943,7.00241953 C9.83837775,5.20768121 11.7781543,4 14,4 C17.3137085,4 20,6.6862915 20,10 C20,12.2218457 18.7923188,14.1616223 16.9975805,15.1987057 C16.9991904,15.1326658 17,15.0664274 17,15 C17,10.581722 13.418278,7 9,7 C8.93357256,7 8.86733422,7.00080962 8.8012943,7.00241953 Z"
-                                fill="#000000" opacity="0.3" />
-                        </g>
-                    </svg>
-                    <!--end::Svg Icon-->
-                </span>Tambah Galeri</a>
-            <!--end::Button-->
         </div>
     </div>
     <div class="card-body">
@@ -116,14 +99,14 @@
 
 <script>
     $('.preloader').fadeOut();
-    var KTDatatablePengumuman = function () {
+    var KTDatatableArtikelBerita = function () {
         var demo = function() {
             var datatable = $('#kt_datatable').KTDatatable({
                 data: {
                     type: 'remote',
                     source: {
                         read: {
-                            url: '<?= base_url('admin/galeri/media/data/'.$galeri->galeri_id) ?>',
+                            url: '<?= base_url('admin/artikel_berita/media/data/'.$artikel_berita->artikel_berita_id) ?>',
                             map: function(raw) {
                                 var dataset = raw;
                                 if(typeof raw.data !== 'undefined') {
@@ -143,29 +126,13 @@
                 pagnation: true,
                 columns: [
                     {
-                        field: 'galeri_media_media',
+                        field: 'artikel_berita_media_media',
                         title: 'Media',
                         sortable: true,
-                        template: function(row) {
-                            if(row.galeri_media_jenis == 0){
-                                return '<img src="<?php echo base_url("/assets/upload/galeri_foto/")?>'+row.galeri_media_media+ '"'+'width="200"/>';            
-                            }else{
-                                return row.galeri_media_media
-                            }
-                                           
+                        template: function(row) {                            
+                            return '<img src="<?php echo base_url("/assets/upload/artikel_berita/")?>'+row.artikel_berita_media_media+ '"'+'width="200"/>';                                    
                         }
                     },
-                    {
-                        field: 'galeri_media_jenis',
-                        title: 'Jenis Media',
-                        template: function(row){
-                            if(row.galeri_media_jenis == 0){
-                                return 'Foto';
-                            }else{
-                                return 'Video';
-                            }
-                        }
-                    },                    
                     {
                         field: 'Actions',
                         title: 'Actions',
@@ -175,7 +142,7 @@
                         autoHide: false,
                         template: function(row) {
                             return '\
-                                <button data-id_galeri="'+row.galeri_media_galeri_id+'" data-id_media="'+row.galeri_media_id+'" class="btn btn-sm btn-clean btn-icon btnDelete" title="Delete">\
+                                <button data-id_artikel="'+row.artikel_berita_media_artikel_berita_id+'" data-id_media="'+row.artikel_berita_media_id+'" class="btn btn-sm btn-clean btn-icon btnDelete" title="Delete">\
                                     <span class="svg-icon svg-icon-md">\
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">\
                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">\
@@ -193,7 +160,7 @@
             });
 
             $(document).on("click", ".btnDelete", function() {
-                let id_galeri = $(this).data('id_galeri');
+                let id_artikel = $(this).data('id_artikel');
                 let id_media = $(this).data('id_media');
                 bootbox.confirm({
                     title: "Hapus Pengumuman",
@@ -212,7 +179,7 @@
                             $('.preloader').fadeIn();
                             $.ajax({
                                 type: 'GET',
-                                url: "<?= base_url('galeri/delete_media/') ?>" + id_media + "/" + id_galeri,
+                                url: "<?= base_url('artikel_berita/delete_media/') ?>" + id_media + "/" + id_artikel,
                                 dataType: 'json',
                                 success: function(data) {
                                     $('.preloader').fadeOut();
@@ -231,7 +198,7 @@
                 let id = $(this).data('id');
                 
                 // console.log("<?= base_url('admin/banner/edit/') ?>" + id)
-                window.location.replace("<?= base_url('admin/banner/edit/') ?>" + id);
+                window.location.replace("<?= base_url('admin/artikel_berita/edit/') ?>" + id);
             });
         }
 
@@ -243,39 +210,27 @@
     }();
 
     $(document).ready(function() {
-        KTDatatablePengumuman.init()
+        KTDatatableArtikelBerita.init()
     });
 
     $('.btnNew').click(function() {
-        window.location = '<?= base_url('admin/banner/create') ?>'
+        window.location = '<?= base_url('admin/artikel_berita/create') ?>'
     })
-
-
-$('#link_video').keyup( function() {
-  if($('#link_video').val() == '') {
-      $('#link_video').addClass('is-invalid');
-      $('#need-link').fadeIn(3);
-  } else {
-      $('#link_video').removeClass('is-invalid');
-      $('#need-link').fadeOut(3);
-  }
-  });
 
 $("#validasi").on('click',function(){
   // e.preventDefault(); 
   // var data = $("#testForm").serialize();
     var fileToUpload = $('input:file').val();
-    var formData = new FormData($("#form_galeri")[0]);
-    var id = $('#id_galeri').val();
-    var slug = $('#slug_galeri').val();       
-    if(fileToUpload == '' && $('#video_galeri').val() == ''){
-      $('#foto_galeri').addClass('is-invalid');
+    var formData = new FormData($("#form_artikel_berita")[0]);
+    var id = $('#id_artikel_berita').val();
+    var slug = $('#slug_artikel_berita').val();       
+    if(fileToUpload == ''){
+      $('#media_artikel_berita').addClass('is-invalid');
       $('#need-foto').fadeIn(3);
-      $('#video_galeri').addClass('is-invalid');
-      $('#need-link').fadeIn(3);
+      
     }else{
       $.ajax({
-        url : '<?php echo site_url('admin/galeri/media/store/')?>'+id+'/'+slug,
+        url : '<?php echo site_url('admin/artikel_berita/media/store/')?>'+id+'/'+slug,
         type : 'POST',  
         data: formData,
         processData:false,

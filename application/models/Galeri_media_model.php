@@ -8,10 +8,10 @@ class galeri_media_model extends CI_Model
 
 	private $_table = "ref_galeri_media";	
 
-	public $galeri_media_id;
 	public $galeri_media_media = "default.png";
 	public $galeri_media_galeri_id;	
-	public $galeri_media_jenis;		
+	public $galeri_media_jenis;
+	public $galeri_media_galeri_slug;		
 
 	//ambil data seluruh media berdasarkan id galeri
 	public function getAll($id)
@@ -26,8 +26,15 @@ class galeri_media_model extends CI_Model
 		return $this->db->get_where($this->_table, ["galeri_media_id" => $id])->row();
 	}
 
+	public function getFotoBySlug($slug)
+	{
+		$this->db->select('*');		
+		$this->db->where($_table, $slug);		
+		return $this->db->get($this->_table)->result();	
+	}
+
 	//save upload foto_galeri dan link
-	public function save($id)
+	public function save($id, $slug)
 	{						 
     	$this->load->library('upload');			
 		$files = $_FILES;
@@ -53,6 +60,7 @@ class galeri_media_model extends CI_Model
 	        	$data1 = array(
 					'galeri_media_media'=>$file_name,
 					'galeri_media_galeri_id'=>$id,
+					'galeri_media_galeri_slug'=>$slug,
 					'galeri_media_jenis'=> 0
 				);	  	    				  				   
 				$this->db->insert($this->_table, $data1);	
@@ -60,13 +68,14 @@ class galeri_media_model extends CI_Model
 	        	$post = $this->input->post();		
 				$this->galeri_media_media = $post["video_galeri"];
 				$this->galeri_media_galeri_id = $id;
+				$this->galeri_media_galeri_slug = $slug;
 				$this->galeri_media_jenis = 1;
 		    	$this->db->insert($this->_table, $this);	 	    		
 	        }
 	        
     	}	    	
     	
-	}
+	}	
 	
 	//hapus data media
 	public function delete($id)
