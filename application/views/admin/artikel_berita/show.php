@@ -8,9 +8,15 @@
             </a>
         </div>
         <div class="card-toolbar">
-            <a target="_blank" href="" class="btn btn-icon btn-light-info mr-2">
-                <i class="flaticon-eye"></i>
-            </a>
+            <?php if($artikel_berita->artikel_berita_jenis == 0):?>
+                <a target="_blank" href="<?= base_url('arsip/artikel/') . $artikel_berita->artikel_berita_slug ?>" class="btn btn-icon btn-light-info mr-2">
+                    <i class="flaticon-eye"></i>
+                </a>
+            <?php else :?>
+                <a target="_blank" href="<?= base_url('arsip/berita/') . $artikel_berita->artikel_berita_slug ?>" class="btn btn-icon btn-light-info mr-2">
+                    <i class="flaticon-eye"></i>
+                </a>
+            <?php endif?>
             <a href="<?= base_url('admin/artikel_berita/edit/') . $artikel_berita->artikel_berita_id ?>" class="btn btn-icon btn-light-warning mr-2">
                 <i class="flaticon2-edit"></i>
             </a>

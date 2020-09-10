@@ -8,8 +8,11 @@
             </a>
         </div>
         <div class="card-toolbar">
-            <a target="_blank" href="" class="btn btn-icon btn-light-info mr-2">
-                <i class="flaticon-eye"></i>
+            <a target="_blank" href="<?= base_url('/galeri/foto/') . $galeri->galeri_slug ?>" class="btn btn-icon btn-light-info mr-2">
+                <i class="flaticon2-photograph"></i>
+            </a>
+            <a target="_blank" href="<?= base_url('/galeri/video/') . $galeri->galeri_slug ?>" class="btn btn-icon btn-light-info mr-2">
+                <i class="flaticon2-arrow"></i>
             </a>
             <a href="<?= base_url('admin/galeri/edit/') . $galeri->galeri_id ?>" class="btn btn-icon btn-light-warning mr-2">
                 <i class="flaticon2-edit"></i>
