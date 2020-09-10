@@ -20,7 +20,7 @@ class Kritik_saran extends CI_Controller
     public function index_user()
     {
         $data['content'] = 'user-views/saran/daftarsaran';
-        $data['kritik_saran'] = $this->kritik_saran_model->getAll();
+        $data['kritik_saran'] = $this->kritik_saran_model->getAllDesc();
 
         $this->load->view('user-views/layouts/master', $data);
     }

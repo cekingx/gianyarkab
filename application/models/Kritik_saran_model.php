@@ -52,6 +52,14 @@ class Kritik_saran_model extends CI_Model
         return $this->db->get()->result_array();
     }
 
+    public function getAllDesc()
+    {
+        $this->db->select('*');
+        $this->db->from($this->table);
+        $this->db->order_by('kritik_saran_id', 'DESC');
+        return $this->db->get()->result_array();
+    }
+
     public function getAll()
     {
         return $this->db->get($this->table)->result_array();

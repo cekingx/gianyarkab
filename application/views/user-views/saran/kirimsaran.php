@@ -19,15 +19,17 @@
 
         <?php if(isset($message)) {
             echo('
-            <div class="alert alert-custom alert-outline-2x alert-outline-primary fade show mb-5" id="message" role="alert">
-                <div class="alert-icon"><i class="flaticon2-checkmark"></i></div>
-                <div class="alert-text">'
-                .$message.
-                '</div>
-                <div class="alert-close">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true"><i class="ki ki-close"></i></span>
-                    </button>
+            <div class="container pr-0">
+                <div class="alert alert-custom alert-notice alert-light-primary fade show" role="alert">
+                    <div class="alert-icon"><i class="flaticon2-checkmark"></i></div>
+                    <div class="alert-text">'
+                    .$message.
+                    '</div>
+                    <div class="alert-close">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true"><i class="ki ki-close"></i></span>
+                        </button>
+                    </div>
                 </div>
             </div>
             ');
