@@ -23,6 +23,14 @@
 
 							<!--begin::Menu Nav-->
 							<ul class="menu-nav">
+								<!-- begin::dashboard -->
+								<li class="menu-item <?php if($this->uri->segment(2) == '') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
+									<a href="<?= site_url('/admin') ?>" class="menu-link">
+										<span class="menu-icon"><i class="flaticon2-menu-2 <?php if($this->uri->segment(2) == '') : ?>text-success<?php endif; ?>"></i></span>
+										<span class="menu-text">Dashboard</span>
+									</a>
+								</li>
+								<!-- end::dashboard -->
 								<!-- begin::foto&video -->
 								<li class="menu-item <?php if($this->uri->segment(2) == 'galeri') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/galeri') ?>" class="menu-link">

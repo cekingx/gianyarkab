@@ -59,6 +59,9 @@ $route['dashboard'] = 'welcome/dashboard';
 // $route['admin/pengumuman/create'] = 'welcome/create';
 // $route['api/pengumuman'] = 'welcome/data';
 
+// admin dashboard
+$route['admin'] = 'admin_dashboard/index';
+
 // pengumuman
 $route['pengumuman'] = 'pengumuman/index_user';
 $route['pengumuman/(:any)'] = 'pengumuman/show_user/$1';
