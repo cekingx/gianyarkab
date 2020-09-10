@@ -171,8 +171,4 @@
             return currentText
         }
     });
-    
-    $(function() {
-        console.log($('.display-dates').text());
-    })
 </script>
