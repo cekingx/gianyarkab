@@ -143,6 +143,7 @@ $route['arsip/artikel/(:any)'] = 'Artikel_berita/detail_artikel_user/$1';
 $route['arsip/berita'] = 'Artikel_berita/index_berita_user';
 $route['arsip/berita/(:any)'] = 'Artikel_berita/detail_berita_user/$1';
 
+
 //artikel berita admin
 $route['admin/artikel_berita'] = 'Artikel_berita/index';
 $route['admin/artikel_berita/data'] = 'Artikel_berita/artikel_berita_data';
@@ -153,3 +154,13 @@ $route['admin/artikel_berita/update'] = 'Artikel_berita/update';
 $route['admin/artikel_berita/(:any)'] = 'Artikel_berita/show/$1';
 $route['admin/artikel_berita/media/data/(:any)'] = 'Artikel_berita/artikel_berita_media_data/$1';
 $route['admin/artikel_berita/media/store/(:any)/(:any)'] = 'Artikel_berita/store_media/$1/$2';
+
+// kontak person
+$route['admin/kontak'] = 'kontak/index';
+$route['admin/kontak/data'] = 'kontak/kontak_data';
+$route['admin/kontak/narahubung/store'] = 'kontak/save_narahubung';
+$route['kontak'] = 'kontak/create';
+$route['kontak/store'] = 'kontak/store';
+$route['admin/kontak/delete/(:any)'] = 'kontak/delete/$1';
+$route['admin/kontak/(:any)'] = 'kontak/show/$1';
+

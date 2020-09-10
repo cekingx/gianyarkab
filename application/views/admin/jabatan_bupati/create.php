@@ -69,7 +69,7 @@
                         </span>
                     </div>
                     <!-- end::masa-jabatan -->
-                    <button type="button" class="btn btn-success" id="send">Simpan</button>
+                    <button type="button" class="btn btn-primary" id="send">Submit</button>
                 <?= form_close(); ?>
             </div>
         </div>
