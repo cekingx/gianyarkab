@@ -11,6 +11,7 @@ class Beranda extends CI_Controller
 		$this->load->model('pengumuman_model');
 		$this->load->model('kegiatan_model');
 		$this->load->model('carousel_model');
+		$this->load->model('ucapan_perayaan_model');
 		$this->load->library('form_validation');
 	}
 

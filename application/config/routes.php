@@ -185,3 +185,12 @@ $route['admin/carousel/update'] = 'carousel/update';
 $route['admin/carousel/edit/(:any)'] = 'carousel/edit/$1';
 $route['admin/carousel/delete/(:any)'] = 'carousel/delete/$1';
 $route['admin/carousel/(:any)'] = 'carousel/show/$1';
+
+// ucapan perayaan
+$route['admin/ucapan-perayaan'] = 'ucapan_perayaan/index';
+$route['admin/ucapan-perayaan/data'] = 'ucapan_perayaan/ucapan_perayaan_data';
+$route['admin/ucapan-perayaan/create'] = 'ucapan_perayaan/create';
+$route['admin/ucapan-perayaan/store'] = 'ucapan_perayaan/store';
+$route['admin/ucapan-perayaan/update'] = 'ucapan_perayaan/update';
+$route['admin/ucapan-perayaan/edit/(:any)'] = 'ucapan_perayaan/edit/$1';
+$route['admin/ucapan-perayaan/delete/(:any)'] = 'ucapan_perayaan/delete/$1';
