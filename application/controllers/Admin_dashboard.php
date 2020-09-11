@@ -6,6 +6,13 @@ class Admin_dashboard extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+
+        $this->load->model('kritik_saran_model');
+        $this->load->model('pengumuman_model');
+        $this->load->model('jabatanbupati_model');
+        $this->load->model('alamat_instansi_model');
+        $this->load->model('subdomain_model');
+        $this->load->model('kontak_model');
     }
 
     public function index()
@@ -18,33 +25,58 @@ class Admin_dashboard extends CI_Controller
 
     private function getDashboardData()
     {
+        $kritik_saran_count = $this->kritik_saran_model->getNumRows();
+        $pengumuman_count = $this->pengumuman_model->getNumRows();
+        $jabatanbupati_count = $this->jabatanbupati_model->getNumRows();
+        $alamat_instansi_count = $this->alamat_instansi_model->getNumRows();
+        $subdomain_count = $this->subdomain_model->getNumRows();
+        $kontak_count = $this->kontak_model->getNumRows();
+
         return [
             [
                 'count' => 2,
                 'content' => 'Galeri',
-                'icon' => 'orang',
+                'icon' => 'picture',
                 'link' => base_url('admin/galeri')
             ],
             [
-                'count' => 3,
+                'count' => $kritik_saran_count,
                 'content' => 'Kritik Saran',
-                'icon' => 'orang',
+                'icon' => 'people',
                 'link' => base_url('admin/kritik-saran')
 
             ],
             [
-                'count' => 4,
+                'count' => $pengumuman_count,
                 'content' => 'Pengumuman',
-                'icon' => 'orang',
+                'icon' => 'broadcast',
                 'link' => base_url('admin/pengumuman')
 
             ],
             [
-                'count' => 9,
-                'content' => 'Subdomain',
-                'icon' => 'sinyal',
+                'count' => $jabatanbupati_count,
+                'content' => 'Bupati',
+                'icon' => 'person',
+                'link' => base_url('admin/jabatan-bupati')
+            ],
+            [
+                'count' => $alamat_instansi_count,
+                'content' => 'Alamat Instansi',
+                'icon' => 'location',
+                'link' => base_url('admin/alamat-instansi')
+            ],
+            [
+                'count' => $subdomain_count,
+                'content' => 'Sub Domain',
+                'icon' => 'website',
                 'link' => base_url('admin/subdomain')
             ],
+            [
+                'count' => $kontak_count,
+                'content' => 'Kontak dan Pesan',
+                'icon' => 'people',
+                'link' => base_url('admin/kontak')
+            ]
         ];
     }
 }

@@ -130,7 +130,7 @@
 								<li class="menu-item <?php if($this->uri->segment(2) == 'kontak') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/kontak') ?>" class="menu-link">
 										<span class="menu-icon"><i class="flaticon2-website"></i></span>
-										<span class="menu-text">Kontak dan Aduan</span>
+										<span class="menu-text">Kontak dan Pesan</span>
 									</a>
 								</li>
 								<!-- end::Kontak -->
