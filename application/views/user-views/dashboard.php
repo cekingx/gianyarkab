@@ -10,60 +10,25 @@
                     <!--begin::Engage Widget 4-->
                     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                            <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
-                            <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+                        <?php foreach($carousels as $key => $carousel): ?>
+                            <li 
+                                data-target="#carouselExampleCaptions" 
+                                data-slide-to="<?= $key?>" 
+                                <?php if($key == 0): ?>class="active"<?php endif; ?>></li>
+                        <?php endforeach; ?>
                         </ol>
                         <div class="carousel-inner">
-
-                            <div class="carousel-item active ">
-                                <a href="<?php echo site_url('/') ?>">
-                                    <img src="assets/user-assets/img/berita/a.jpg" class="d-block w-100  rounded" alt="...">
+                        <?php foreach($carousels as $key => $carousel): ?>
+                            <div class="carousel-item <?php if($key == 0): ?>active<?php endif; ?>">
+                                <a href="<?= $carousel['carousel_link'] ?>">
+                                    <img src="<?= base_url('assets/upload/carousel/') . $carousel['carousel_foto'] ?>" class="d-block w-100  rounded" alt="...">
                                     <div class="carousel-caption  d-md-block">
-                                        <h5>Second slide label</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <h5><?= $carousel['carousel_judul'] ?></h5>
+                                        <p><?= $carousel['carousel_caption'] ?></p>
                                     </div>
                                 </a>
                             </div>
-                            <div class="carousel-item ">
-                                <a href="<?php echo site_url('/') ?>">
-                                    <img src="assets/user-assets/img/berita/b.jpg" class="d-block w-100 rounded" alt="...">
-                                    <div class="carousel-caption  d-md-block">
-                                        <h5>Second slide label</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="carousel-item">
-                                <a href="<?php echo site_url('/') ?>">
-                                    <img src="assets/user-assets/img/berita/c.jpg" class="d-block w-100 rounded" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Third slide label</h5>
-                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="carousel-item">
-                                <a href="<?php echo site_url('/') ?>">
-                                    <img src="assets/user-assets/img/berita/d.jpg" class="d-block w-100 rounded"
-                                        alt="assets/user-assets/img/berita/b.jpg">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Third slide label</h5>
-                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="carousel-item">
-                                <a href="<?php echo site_url('/') ?>">
-                                    <img src="assets/user-assets/img/berita/e.jpg" class="d-block w-100 rounded" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Third slide label</h5>
-                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
-                                </a>
-                            </div>
+                        <?php endforeach; ?>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button"
                             data-slide="prev">

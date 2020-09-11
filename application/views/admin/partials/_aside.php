@@ -53,6 +53,14 @@
 									<h4 class="menu-text">Beranda</h4>
 									<i class="menu-icon ki ki-bold-more-hor icon-md"></i>
 								</li>
+								<!-- begin::Carousel -->
+								<li class="menu-item <?php if($this->uri->segment(2) == 'carousel') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
+									<a href="<?= site_url('/admin/carousel') ?>" class="menu-link">
+										<span class="menu-icon"><i class="flaticon2-speaker"></i></span>
+										<span class="menu-text">Carousel</span>
+									</a>
+								</li>
+								<!-- end::Carousel -->
 								<!-- begin::Pengumuman -->
 								<li class="menu-item <?php if($this->uri->segment(2) == 'pengumuman') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/pengumuman') ?>" class="menu-link">

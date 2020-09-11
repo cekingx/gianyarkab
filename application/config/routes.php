@@ -175,3 +175,13 @@ $route['admin/kritik-saran/(:any)'] = 'kritik_saran/show/$1';
 $route['kirimsaran'] = 'kritik_saran/create';
 $route['kirimsaran/store'] = 'kritik_saran/store';
 $route['daftarsaran'] = 'kritik_saran/index_user';
+
+// carousel
+$route['admin/carousel'] = 'carousel/index';
+$route['admin/carousel/data'] = 'carousel/carousel_data';
+$route['admin/carousel/create'] = 'carousel/create';
+$route['admin/carousel/store'] = 'carousel/store';
+$route['admin/carousel/update'] = 'carousel/update';
+$route['admin/carousel/edit/(:any)'] = 'carousel/edit/$1';
+$route['admin/carousel/delete/(:any)'] = 'carousel/delete/$1';
+$route['admin/carousel/(:any)'] = 'carousel/show/$1';
