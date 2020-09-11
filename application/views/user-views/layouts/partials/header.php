@@ -1,3 +1,6 @@
+<?php
+    $ucapan_perayaan = $this->ucapan_perayaan_model->getAll();
+?>
 <div id="kt_header" class="header header-fixed">
     <!--begin::Container-->
     <div class="container d-flex align-items-stretch justify-content-between">
@@ -99,13 +102,23 @@
         <!--begin::Info-->
         <div id="news-container1" style="overflow: hidden; position: relative; width: 60%;">
             <ul>
+                <?php foreach($ucapan_perayaan as $ucapan_perayaan): ?>
                 <li style="margin: 0pt; padding: 0pt; height: 100%; display: list-item;">
                     <h1 class="text-white" style="margin: 0pt; padding: 0pt;">
-                        Selamat Ulang Tahun Indonesia Ke75 Selamat Ulang Tahun Indonesia Ke75
-
+                        <?= $ucapan_perayaan['ucapan_perayaan_teks'] ?>
                     </h1>
                 </li>
-
+                <?php endforeach; ?>
+                <!-- <li style="margin: 0pt; padding: 0pt; height: 100%; display: list-item;">
+                    <h1 class="text-white" style="margin: 0pt; padding: 0pt;">
+                        Selamat Ulang Tahun Indonesia Ke75 Selamat Ulang Tahun Indonesia Ke75
+                    </h1>
+                </li>
+                <li style="margin: 0pt; padding: 0pt; height: 100%; display: list-item;">
+                    <h1 class="text-white" style="margin: 0pt; padding: 0pt;">
+                        Selamat Ulang Gianyar
+                    </h1>
+                </li> -->
             </ul>
         </div>
 

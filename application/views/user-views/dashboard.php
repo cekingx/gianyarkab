@@ -10,60 +10,25 @@
                     <!--begin::Engage Widget 4-->
                     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                            <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
-                            <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+                        <?php foreach($carousels as $key => $carousel): ?>
+                            <li 
+                                data-target="#carouselExampleCaptions" 
+                                data-slide-to="<?= $key?>" 
+                                <?php if($key == 0): ?>class="active"<?php endif; ?>></li>
+                        <?php endforeach; ?>
                         </ol>
                         <div class="carousel-inner">
-
-                            <div class="carousel-item active ">
-                                <a href="<?php echo site_url('/') ?>">
-                                    <img src="assets/user-assets/img/berita/a.jpg" class="d-block w-100  rounded" alt="...">
+                        <?php foreach($carousels as $key => $carousel): ?>
+                            <div class="carousel-item <?php if($key == 0): ?>active<?php endif; ?>">
+                                <a href="<?= $carousel['carousel_link'] ?>">
+                                    <img src="<?= base_url('assets/upload/carousel/') . $carousel['carousel_foto'] ?>" class="d-block w-100  rounded" alt="...">
                                     <div class="carousel-caption  d-md-block">
-                                        <h5>Second slide label</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <h5><?= $carousel['carousel_judul'] ?></h5>
+                                        <p><?= $carousel['carousel_caption'] ?></p>
                                     </div>
                                 </a>
                             </div>
-                            <div class="carousel-item ">
-                                <a href="<?php echo site_url('/') ?>">
-                                    <img src="assets/user-assets/img/berita/b.jpg" class="d-block w-100 rounded" alt="...">
-                                    <div class="carousel-caption  d-md-block">
-                                        <h5>Second slide label</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="carousel-item">
-                                <a href="<?php echo site_url('/') ?>">
-                                    <img src="assets/user-assets/img/berita/c.jpg" class="d-block w-100 rounded" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Third slide label</h5>
-                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="carousel-item">
-                                <a href="<?php echo site_url('/') ?>">
-                                    <img src="assets/user-assets/img/berita/d.jpg" class="d-block w-100 rounded"
-                                        alt="assets/user-assets/img/berita/b.jpg">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Third slide label</h5>
-                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="carousel-item">
-                                <a href="<?php echo site_url('/') ?>">
-                                    <img src="assets/user-assets/img/berita/e.jpg" class="d-block w-100 rounded" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Third slide label</h5>
-                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
-                                </a>
-                            </div>
+                        <?php endforeach; ?>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button"
                             data-slide="prev">
@@ -167,18 +132,18 @@
                                             aria-labelledby="kt_tab_pane_2_2">
                                             <!--begin::Form-->
                                             <div class="form">
+                                                <?php foreach($pengumuman as $pengumuman): ?>
                                                 <!--begin::Item-->
                                                 <div class="d-flex align-items-center ">
                                                     <!--begin::Section-->
                                                     <div class="d-flex flex-column flex-grow-1">
                                                         <!--begin::Title-->
-                                                        <a href="#"
-                                                            class="text-dark-75 font-weight-bolder font-size-lg text-hover-primary mb-1">Cup
-                                                            & Greasdsadsadsadsadsadasdsaasdasdsen</a>
+                                                        <a href="<?= base_url('pengumuman/') . $pengumuman['pengumuman_slug'] ?>"
+                                                            class="text-dark-75 font-weight-bolder font-size-lg text-hover-primary mb-1"><?= $pengumuman['pengumuman_judul'] ?></a>
                                                         <!--end::Title-->
                                                         <span
                                                             class="text-dark-50 font-weight-normal  text-right font-size-sm">
-                                                            27 Januari 2020
+                                                            <?= parseDate($pengumuman['pengumuman_tanggal']); ?>
                                                         </span>
 
                                                         <div class="separator separator-solid separator-border-3"></div>
@@ -187,106 +152,7 @@
                                                     <!--end::Section-->
                                                 </div>
                                                 <!--end::Item-->
-                                                <!--begin::Item-->
-                                                <div class="d-flex align-items-center ">
-                                                    <!--begin::Section-->
-                                                    <div class="d-flex flex-column flex-grow-1">
-                                                        <!--begin::Title-->
-                                                        <a href="#"
-                                                            class="text-dark-75 font-weight-bolder font-size-lg text-hover-primary mb-1">Cup
-                                                            & Greasdsadsadsadsadsadasdsaasdasdsen</a>
-                                                        <!--end::Title-->
-                                                        <span
-                                                            class="text-dark-50 font-weight-normal  text-right font-size-sm">
-                                                            27 Januari 2020
-                                                        </span>
-
-                                                        <div class="separator separator-solid separator-border-3"></div>
-
-                                                    </div>
-                                                    <!--end::Section-->
-                                                </div>
-                                                <!--end::Item-->
-                                                <!--begin::Item-->
-                                                <div class="d-flex align-items-center ">
-                                                    <!--begin::Section-->
-                                                    <div class="d-flex flex-column flex-grow-1">
-                                                        <!--begin::Title-->
-                                                        <a href="#"
-                                                            class="text-dark-75 font-weight-bolder font-size-lg text-hover-primary mb-1">Cup
-                                                            & Greasdsadsadsadsadsadasdsaasdasdsen</a>
-                                                        <!--end::Title-->
-                                                        <span
-                                                            class="text-dark-50 font-weight-normal  text-right font-size-sm">
-                                                            27 Januari 2020
-                                                        </span>
-
-                                                        <div class="separator separator-solid separator-border-3"></div>
-
-                                                    </div>
-                                                    <!--end::Section-->
-                                                </div>
-                                                <!--end::Item-->
-                                                <!--begin::Item-->
-                                                <div class="d-flex align-items-center ">
-                                                    <!--begin::Section-->
-                                                    <div class="d-flex flex-column flex-grow-1">
-                                                        <!--begin::Title-->
-                                                        <a href="#"
-                                                            class="text-dark-75 font-weight-bolder font-size-lg text-hover-primary mb-1">Cup
-                                                            & Greasdsadsadsadsadsadasdsaasdasdsen</a>
-                                                        <!--end::Title-->
-                                                        <span
-                                                            class="text-dark-50 font-weight-normal  text-right font-size-sm">
-                                                            27 Januari 2020
-                                                        </span>
-
-                                                        <div class="separator separator-solid separator-border-3"></div>
-
-                                                    </div>
-                                                    <!--end::Section-->
-                                                </div>
-                                                <!--end::Item-->
-                                                <!--begin::Item-->
-                                                <div class="d-flex align-items-center ">
-                                                    <!--begin::Section-->
-                                                    <div class="d-flex flex-column flex-grow-1">
-                                                        <!--begin::Title-->
-                                                        <a href="#"
-                                                            class="text-dark-75 font-weight-bolder font-size-lg text-hover-primary mb-1">Cup
-                                                            & Greasdsadsadsadsadsadasdsaasdasdsen</a>
-                                                        <!--end::Title-->
-                                                        <span
-                                                            class="text-dark-50 font-weight-normal  text-right font-size-sm">
-                                                            27 Januari 2020
-                                                        </span>
-
-                                                        <div class="separator separator-solid separator-border-3"></div>
-
-                                                    </div>
-                                                    <!--end::Section-->
-                                                </div>
-                                                <!--end::Item-->
-                                                <!--begin::Item-->
-                                                <div class="d-flex align-items-center ">
-                                                    <!--begin::Section-->
-                                                    <div class="d-flex flex-column flex-grow-1">
-                                                        <!--begin::Title-->
-                                                        <a href="#"
-                                                            class="text-dark-75 font-weight-bolder font-size-lg text-hover-primary mb-1">Cup
-                                                            & Greasdsadsadsadsadsadasdsaasdasdsen</a>
-                                                        <!--end::Title-->
-                                                        <span
-                                                            class="text-dark-50 font-weight-normal  text-right font-size-sm">
-                                                            27 Januari 2020
-                                                        </span>
-
-                                                        <div class="separator separator-solid separator-border-3"></div>
-
-                                                    </div>
-                                                    <!--end::Section-->
-                                                </div>
-                                                <!--end::Item-->
+                                                <?php endforeach; ?>
                                             </div>
                                             <!--end::Form-->
                                         </div>
@@ -319,6 +185,7 @@
                                             aria-labelledby="kt_tab_pane_2_2">
                                             <!--begin::Form-->
                                             <div class="form">
+                                                <?php foreach($kegiatan as $kegiatan): ?>
                                                 <!--begin::Item-->
                                                 <?php foreach($kegiatan as $data): ?>
                                                 <div class="d-flex align-items-center ">

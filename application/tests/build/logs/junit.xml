@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Kritik_saran_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Kritik_saran_model_test.php" tests="5" assertions="9" errors="0" failures="0" skipped="0" time="3.586942">
-    <testcase name="test_WhenGetAllKritikSaranThenGetOneKritikSaran" class="Kritik_saran_model_test" classname="Kritik_saran_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Kritik_saran_model_test.php" line="24" assertions="1" time="0.617155"/>
-    <testcase name="test_WhenSetKritikSaranThenGetTwoKritikSaran" class="Kritik_saran_model_test" classname="Kritik_saran_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Kritik_saran_model_test.php" line="30" assertions="2" time="0.741265"/>
-    <testcase name="test_WhenGetKritikSaranByIdThenGetTheSpecificKritikSaran" class="Kritik_saran_model_test" classname="Kritik_saran_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Kritik_saran_model_test.php" line="45" assertions="2" time="0.637435"/>
-    <testcase name="test_WhenUpdateKritikSaranThenKritikSaranChanged" class="Kritik_saran_model_test" classname="Kritik_saran_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Kritik_saran_model_test.php" line="52" assertions="2" time="0.826228"/>
-    <testcase name="test_WhenDeleteKritikSaranThenGetOneKritikSaran" class="Kritik_saran_model_test" classname="Kritik_saran_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Kritik_saran_model_test.php" line="73" assertions="2" time="0.764859"/>
+  <testsuite name="Carousel_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Carousel_model_test.php" tests="5" assertions="9" errors="0" failures="0" skipped="0" time="2.854126">
+    <testcase name="test_WhenGetAllCarouselThenGetOneCarousel" class="Carousel_model_test" classname="Carousel_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Carousel_model_test.php" line="25" assertions="1" time="0.448312"/>
+    <testcase name="test_WhenSetCarouselThenGetTwoCarousel" class="Carousel_model_test" classname="Carousel_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Carousel_model_test.php" line="31" assertions="2" time="0.550820"/>
+    <testcase name="test_WhenGetCarouselByIdThenGetTheSpecificCarousel" class="Carousel_model_test" classname="Carousel_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Carousel_model_test.php" line="43" assertions="2" time="0.531535"/>
+    <testcase name="test_WhenUpdateCarouselThenCarouselChanged" class="Carousel_model_test" classname="Carousel_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Carousel_model_test.php" line="51" assertions="2" time="0.678659"/>
+    <testcase name="test_WhenDeleteCarouselThenGetOneCarousel" class="Carousel_model_test" classname="Carousel_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Carousel_model_test.php" line="70" assertions="2" time="0.644800"/>
   </testsuite>
 </testsuites>
