@@ -6,7 +6,9 @@ class Alamat_instansi extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+
         $this->load->model("Jenis_laporan_model");
+        $this->load->model('kritik_saran_model');
         $this->load->model('alamat_instansi_model');
         $this->load->library('form_validation');
     }

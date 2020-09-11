@@ -3,7 +3,7 @@
 <div class="card card-custom">
     <div class="card-header">
         <div class="card-title">
-            <a href="<?= base_url('admin/kontak') ?>" class="btn btn-primary font-weight-bold">
+            <a href="<?= base_url('admin/kritik-saran') ?>" class="btn btn-primary font-weight-bold">
                 <i class="flaticon2-left-arrow"></i> Kembali
             </a>
         </div>
@@ -18,27 +18,31 @@
             <tbody>
                 <tr>
                     <td>Nama</td>
-                    <td><?= $kontak['kontak_person_nama'] ?></td>
+                    <td><?= $kritik_saran['kritik_saran_nama'] ?></td>
                 </tr>
                 <tr>
                     <td>Alamat</td>
-                    <td><?= $kontak['kontak_person_alamat'] ?></td>
+                    <td><?= $kritik_saran['kritik_saran_alamat'] ?></td>
                 </tr>
                 <tr>
                     <td>Email</td>
-                    <td><?= $kontak['kontak_person_email'] ?></td>
+                    <td><?= $kritik_saran['kritik_saran_email'] ?></td>
                 </tr>
                 <tr>
                     <td>Judul</td>
-                    <td><?= $kontak['kontak_person_judul'] ?></td>
+                    <td><?= $kritik_saran['kritik_saran_judul'] ?></td>
                 </tr>
                 <tr>
-                    <td>Pesan</td>
-                    <td><?= $kontak['kontak_person_isi_aduan'] ?></td>
+                    <td>Isi</td>
+                    <td><?= $kritik_saran['kritik_saran_isi'] ?></td>
+                </tr>
+                <tr>
+                    <td>Gambar</td>
+                    <td><img class="img-fluid" src="<?= base_url('assets/upload/kritiksaran/') . $kritik_saran['kritik_saran_foto'] ?>" alt="<?= $kritik_saran['kritik_saran_judul'] ?>"></td>
                 </tr>
                 <tr>
                     <td>Tanggal</td>
-                    <td><?= $kontak['kontak_person_tanggal'] ?></td>
+                    <td><?= $kritik_saran['kritik_saran_tanggal'] ?></td>
                 </tr>
             </tbody>
         </table>
@@ -49,10 +53,10 @@
     $('.preloader').fadeOut();
 
     $('.btn-delete').click(function() {
-        let id = <?= $kontak['kontak_person_id'] ?>;
+        let id = <?= $kritik_saran['kritik_saran_id'] ?>;
         bootbox.confirm({
-            title: "Hapus Pesan",
-            message: "Apakah anda yakin menghapus pesan?",
+            title: "Hapus Kritik Saran",
+            message: "Apakah anda yakin menghapus kritik saran?",
             buttons: {
                 cancel: {
                     label: "Batal"
@@ -67,11 +71,11 @@
                     $('.preloader').fadeIn();
                     $.ajax({
                         type: 'GET',
-                        url: "<?= base_url('admin/kontak/delete/') ?>" + id,
+                        url: "<?= base_url('admin/kritik-saran/delete/') ?>" + id,
                         dataType: 'json',
                         success: function(data) {
                             $('.preloader').fadeOut();
-                            window.location.replace('<?= base_url('admin/kontak') ?>')
+                            window.location.replace('<?= base_url('admin/kritik-saran') ?>')
                         },
                         error: function(xhr, desc, err) {
                             console.log(xhr.responseText);

@@ -1,23 +1,28 @@
 <?php
-defined('BASEPATH') or exit('No direct script access allowed');
+defined('BASEPATH') or exit("No direct script access allowed");
 
-class Kontak extends CI_Controller
+class Kritik_saran extends CI_Controller
 {
     public function __construct()
     {
         parent::__construct();
 
-        $this->load->model("Jenis_laporan_model");
         $this->load->model('kritik_saran_model');
-        $this->load->model('kontak_model');
-        $this->load->model('narahubung_model');
         $this->load->library('form_validation');
     }
 
-    public function kontak_data()
+    public function kritik_saran_data()
     {
-        $data = $this->kontak_model->getAll();
+        $data = $this->kritik_saran_model->getAll();
         echo json_encode($data);
+    }
+
+    public function index_user()
+    {
+        $data['content'] = 'user-views/saran/daftarsaran';
+        $data['kritik_saran'] = $this->kritik_saran_model->getAllDesc();
+
+        $this->load->view('user-views/layouts/master', $data);
     }
 
     public function index()
@@ -26,21 +31,20 @@ class Kontak extends CI_Controller
             $data['message'] = $this->session->flashdata('message');
         }
 
-        $data['content'] = 'admin/kontak/index';
-        $data['kontak'] = $this->kontak_model->getAll();
+        $data['content'] = 'admin/kritik_saran/index';
 
         $this->load->view('admin/index', $data);
     }
 
-    public function show($kontak_person_id)
+    public function show($kritik_saran_id)
     {
-        $data['kontak'] = $this->kontak_model->getById($kontak_person_id);
-        if(empty($data['kontak'])) {
+        $data['kritik_saran'] = $this->kritik_saran_model->getById($kritik_saran_id);
+        if(empty($data['kritik_saran'])) {
             show_404();
         }
 
-        $data['content'] = 'admin/kontak/show';
-        $data['title'] = $data['kontak']['kontak_person_judul'];
+        $data['content'] = 'admin/kritik_saran/show';
+        $data['title'] = $data['kritik_saran']['kritik_saran_judul'];
 
         $this->load->view('admin/index', $data);
     }
@@ -55,35 +59,28 @@ class Kontak extends CI_Controller
             $data['message'] = $this->session->flashdata('message');
         }
 
-        $data['narahubung'] = $this->narahubung_model->get();
-        $data['content'] = 'user-views/kontak';
+        $data['content'] = 'user-views/saran/kirimsaran';
+
         $this->load->view('user-views/layouts/master', $data);
     }
 
     public function store()
     {
-        $kontak = $this->kontak_model;
+        $kritik_saran = $this->kritik_saran_model;
         $validation = $this->form_validation;
-        $validation->set_rules($kontak->rules());
+        $validation->set_rules($kritik_saran->rules());
 
         if($validation->run()) {
-            $kontak->save();
+            $kritik_saran->save();
             $this->session->set_flashdata('message', 'Data berhasil dibuat');
-            return redirect('kontak');
+            return redirect('kirimsaran');
         }  else {
             $this->session->set_flashdata('error', validation_errors());
-            return redirect('kontak');
+            return redirect('kirimsaran');
         }
     }
 
-    public function save_narahubung()
-    {
-        $narahubung = $this->narahubung_model;
-        $narahubung->save();
-        echo json_encode('success');
-    }
-
-    public function edit($kontak_person_id)
+    public function edit($kritik_saran_id)
     {
 
     }
@@ -93,10 +90,10 @@ class Kontak extends CI_Controller
 
     }
 
-    public function delete($kontak_person_id)
+    public function delete($kritik_saran_id)
     {
-        if(!empty($this->kontak_model->getById($kontak_person_id))) {
-            $this->kontak_model->delete($kontak_person_id);
+        if(!empty($this->kritik_saran_model->getById($kritik_saran_id))) {
+            $this->kritik_saran_model->delete($kritik_saran_id);
             $this->session->set_flashdata('message', 'Data berhasil dihapus');
             echo json_encode('success');
         } else {

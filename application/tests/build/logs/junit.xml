@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Narahubung_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Narahubung_model_test.php" tests="3" assertions="4" errors="0" failures="0" skipped="0" time="2.363672">
-    <testcase name="test_WhenGetDataThenGetEmpty" class="Narahubung_model_test" classname="Narahubung_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Narahubung_model_test.php" line="20" assertions="1" time="0.662814"/>
-    <testcase name="test_WhenSaveNarahubungThenGetOneNarahubung" class="Narahubung_model_test" classname="Narahubung_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Narahubung_model_test.php" line="26" assertions="1" time="0.698710"/>
-    <testcase name="test_WhenSaveNewNarahubungThenOldNarahubungChanged" class="Narahubung_model_test" classname="Narahubung_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Narahubung_model_test.php" line="39" assertions="2" time="1.002148"/>
+  <testsuite name="Kritik_saran_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Kritik_saran_model_test.php" tests="5" assertions="9" errors="0" failures="0" skipped="0" time="3.586942">
+    <testcase name="test_WhenGetAllKritikSaranThenGetOneKritikSaran" class="Kritik_saran_model_test" classname="Kritik_saran_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Kritik_saran_model_test.php" line="24" assertions="1" time="0.617155"/>
+    <testcase name="test_WhenSetKritikSaranThenGetTwoKritikSaran" class="Kritik_saran_model_test" classname="Kritik_saran_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Kritik_saran_model_test.php" line="30" assertions="2" time="0.741265"/>
+    <testcase name="test_WhenGetKritikSaranByIdThenGetTheSpecificKritikSaran" class="Kritik_saran_model_test" classname="Kritik_saran_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Kritik_saran_model_test.php" line="45" assertions="2" time="0.637435"/>
+    <testcase name="test_WhenUpdateKritikSaranThenKritikSaranChanged" class="Kritik_saran_model_test" classname="Kritik_saran_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Kritik_saran_model_test.php" line="52" assertions="2" time="0.826228"/>
+    <testcase name="test_WhenDeleteKritikSaranThenGetOneKritikSaran" class="Kritik_saran_model_test" classname="Kritik_saran_model_test" file="/opt/lampp/htdocs/gianyarkab/application/tests/models/Kritik_saran_model_test.php" line="73" assertions="2" time="0.764859"/>
   </testsuite>
 </testsuites>

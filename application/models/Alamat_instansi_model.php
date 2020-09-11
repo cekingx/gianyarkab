@@ -36,6 +36,11 @@ class Alamat_instansi_model extends CI_Model
         ];
     }
 
+    public function getNumRows()
+    {
+        return $this->db->get($this->table)->num_rows();
+    }
+
     public function getAll()
     {
         return $this->db->get($this->table)->result_array();

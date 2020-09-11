@@ -1,3 +1,9 @@
+<?php
+
+$kritik_saran = $this->kritik_saran_model->getLast(5);
+
+?>
+
 <div class="col-xl-3">
     <!--begin::Engage Widget 4-->
     <div class="card card-custom bgi-no-repeat gutter-b bg-light"
@@ -114,86 +120,24 @@
 
                 <!--begin::Body-->
                 <div class="card-body pt-0">
-                    <!--begin::Item-->
+                    <?php foreach($kritik_saran as $kritik_saran): ?>
                     <div class="d-flex align-items-center mb-9 bg-light-warning rounded p-5">
                         <!--begin::Title-->
                         <div class="d-flex flex-column flex-grow-1 mr-2">
                             <a href="#" class="font-weight-boldest text-dark-75 text-hover-primary font-size-sm mb-1 ">
-                                KK MISKIN</a>
-                            <span class="text-dark-75 font-weight-bold font-size-xs">tolong utk kk miskin
-                                dicek kembali! sy rasa bantuan sembako utk kk miskin di gianyar karena
-                                pandemi corona ini tidak tepat sasaran. Karena sebagian ...</span>
-                            <span class="text-muted font-weight-light text-right font-size-xs">Indra, 12
-                                April 2020</span>
+                                <?= $kritik_saran['kritik_saran_judul']; ?></a>
+                            <span
+                                data-maxlength="300"
+                                class="text-dark-75 font-weight-bold font-size-xs kritik-saran-side-content"
+                            ><?= $kritik_saran['kritik_saran_isi']; ?></span>
+                            <span 
+                                class="text-muted font-weight-light text-right font-size-xs"
+                            ><?= $kritik_saran['kritik_saran_nama'] . ', ' .  parseDate($kritik_saran['kritik_saran_tanggal']) ;?></span>
 
                         </div>
                         <!--end::Title-->
                     </div>
-                    <!--end::Item-->
-                    <!--begin::Item-->
-                    <div class="d-flex align-items-center mb-9 bg-light-warning rounded p-5">
-                        <!--begin::Title-->
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <a href="#" class="font-weight-boldest text-dark-75 text-hover-primary font-size-sm mb-1 ">
-                                KK MISKIN</a>
-                            <span class="text-dark-75 font-weight-bold font-size-xs">tolong utk kk miskin
-                                dicek kembali! sy rasa bantuan sembako utk kk miskin di gianyar karena
-                                pandemi corona ini tidak tepat sasaran. Karena sebagian ...</span>
-                            <span class="text-muted font-weight-light text-right font-size-xs">Indra, 12
-                                April 2020</span>
-
-                        </div>
-                        <!--end::Title-->
-                    </div>
-                    <!--end::Item-->
-                    <!--begin::Item-->
-                    <div class="d-flex align-items-center mb-9 bg-light-warning rounded p-5">
-                        <!--begin::Title-->
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <a href="#" class="font-weight-boldest text-dark-75 text-hover-primary font-size-sm mb-1 ">
-                                KK MISKIN</a>
-                            <span class="text-dark-75 font-weight-bold font-size-xs">tolong utk kk miskin
-                                dicek kembali! sy rasa bantuan sembako utk kk miskin di gianyar karena
-                                pandemi corona ini tidak tepat sasaran. Karena sebagian ...</span>
-                            <span class="text-muted font-weight-light text-right font-size-xs">Indra, 12
-                                April 2020</span>
-
-                        </div>
-                        <!--end::Title-->
-                    </div>
-                    <!--end::Item-->
-                    <!--begin::Item-->
-                    <div class="d-flex align-items-center mb-9 bg-light-warning rounded p-5">
-                        <!--begin::Title-->
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <a href="#" class="font-weight-boldest text-dark-75 text-hover-primary font-size-sm mb-1 ">
-                                KK MISKIN</a>
-                            <span class="text-dark-75 font-weight-bold font-size-xs">tolong utk kk miskin
-                                dicek kembali! sy rasa bantuan sembako utk kk miskin di gianyar karena
-                                pandemi corona ini tidak tepat sasaran. Karena sebagian ...</span>
-                            <span class="text-muted font-weight-light text-right font-size-xs">Indra, 12
-                                April 2020</span>
-
-                        </div>
-                        <!--end::Title-->
-                    </div>
-                    <!--end::Item-->
-                    <!--begin::Item-->
-                    <div class="d-flex align-items-center mb-9 bg-light-warning rounded p-5">
-                        <!--begin::Title-->
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <a href="#" class="font-weight-boldest text-dark-75 text-hover-primary font-size-sm mb-1 ">
-                                KK MISKIN</a>
-                            <span class="text-dark-75 font-weight-bold font-size-xs">tolong utk kk miskin
-                                dicek kembali! sy rasa bantuan sembako utk kk miskin di gianyar karena
-                                pandemi corona ini tidak tepat sasaran. Karena sebagian ...</span>
-                            <span class="text-muted font-weight-light text-right font-size-xs">Indra, 12
-                                April 2020</span>
-
-                        </div>
-                        <!--end::Title-->
-                    </div>
-                    <!--end::Item-->
+                    <?php endforeach; ?>
                 </div>
                 <!--end::Body-->
             </div>
@@ -204,3 +148,13 @@
     <!--end::Engage Widget 4-->
 
 </div>
+<script>
+    $(".kritik-saran-side-content").text(function (index, currentText) {
+        var maxLength = $(this).attr('data-maxlength');
+        if (currentText.length >= maxLength) {
+            return currentText.substr(0, maxLength) + "...";
+        } else {
+            return currentText
+        }
+    });
+</script>

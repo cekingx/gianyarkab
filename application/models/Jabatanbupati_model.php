@@ -25,6 +25,11 @@ class Jabatanbupati_model extends CI_Model
         ];
     }
 
+    public function getNumRows()
+    {
+        return $this->db->get($this->table)->num_rows();
+    }
+
     public function getAll()
     {
         return $this->db->get($this->table)->result_array();
@@ -82,7 +87,7 @@ class Jabatanbupati_model extends CI_Model
             return $this->upload->data('file_name');
         }
 
-        die($this->upload->display_errors());
+        // die($this->upload->display_errors());
         return 'default.jpg';
     }
 

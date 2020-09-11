@@ -59,6 +59,9 @@ $route['dashboard'] = 'welcome/dashboard';
 // $route['admin/pengumuman/create'] = 'welcome/create';
 // $route['api/pengumuman'] = 'welcome/data';
 
+// admin dashboard
+$route['admin'] = 'admin_dashboard/index';
+
 // pengumuman
 $route['pengumuman'] = 'pengumuman/index_user';
 $route['pengumuman/(:any)'] = 'pengumuman/show_user/$1';
@@ -165,6 +168,7 @@ $route['admin/kontak/delete/(:any)'] = 'kontak/delete/$1';
 $route['admin/kontak/(:any)'] = 'kontak/show/$1';
 
 
+
 //media cetak admin
 $route['admin/media_cetak'] = 'media_cetak/index';
 $route['admin/media_cetak/data'] = 'media_cetak/media_cetak_data';
@@ -206,3 +210,13 @@ $route['admin/kegiatan/(:any)'] = 'kegiatan/show/$1';
 //kegiatan user
 $route['arsip/kegiatan'] = 'kegiatan/index_user';
 $route['arsip/kegiatan/(:any)'] = 'kegiatan/detail_kegiatan/$1';
+
+// kritik saran
+$route['admin/kritik-saran'] = 'kritik_saran/index';
+$route['admin/kritik-saran/data'] = 'kritik_saran/kritik_saran_data';
+$route['admin/kritik-saran/delete/(:any)'] = 'kritik_saran/delete/$1';
+$route['admin/kritik-saran/(:any)'] = 'kritik_saran/show/$1';
+$route['kirimsaran'] = 'kritik_saran/create';
+$route['kirimsaran/store'] = 'kritik_saran/store';
+$route['daftarsaran'] = 'kritik_saran/index_user';
+

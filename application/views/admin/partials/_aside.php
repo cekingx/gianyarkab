@@ -23,6 +23,14 @@
 
 							<!--begin::Menu Nav-->
 							<ul class="menu-nav">
+								<!-- begin::dashboard -->
+								<li class="menu-item <?php if($this->uri->segment(2) == '') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
+									<a href="<?= site_url('/admin') ?>" class="menu-link">
+										<span class="menu-icon"><i class="flaticon2-menu-2 <?php if($this->uri->segment(2) == '') : ?>text-success<?php endif; ?>"></i></span>
+										<span class="menu-text">Dashboard</span>
+									</a>
+								</li>
+								<!-- end::dashboard -->
 								<!-- begin::foto&video -->
 								<li class="menu-item <?php if($this->uri->segment(2) == 'galeri') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/galeri') ?>" class="menu-link">
@@ -31,6 +39,15 @@
 									</a>
 								</li>
 								<!-- end::foto&video -->
+								<!-- begin::kritik_saran -->
+								<li class="menu-item <?php if($this->uri->segment(2) == 'kritik-saran') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
+									<a href="<?= site_url('/admin/kritik-saran') ?>" class="menu-link">
+										<span class="menu-icon"><i class="flaticon2-speaker"></i></span>
+										<span class="menu-text">Kritik Saran</span>
+									</a>
+								</li>
+								<!-- end::kritik_saran -->
+
 								<!-- begin::Beranda -->
 								<li class="menu-section">
 									<h4 class="menu-text">Beranda</h4>
@@ -135,7 +152,7 @@
 								<li class="menu-item <?php if($this->uri->segment(2) == 'kontak') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/kontak') ?>" class="menu-link">
 										<span class="menu-icon"><i class="flaticon2-website"></i></span>
-										<span class="menu-text">Kontak dan Aduan</span>
+										<span class="menu-text">Kontak dan Pesan</span>
 									</a>
 								</li>
 								<!-- end::Kontak -->

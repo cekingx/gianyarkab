@@ -33,6 +33,9 @@
     <!--begin::Main-->
     <!--begin::Header Mobile position:absolute;right:0;top:80;z-index:0;width:200px;-->
 
+    <!-- begin::Utilities -->
+    <?php $this->load->view('user-views/layouts/utils'); ?>
+    <!-- end::Utilities -->
 
     <!-- <img id="anim" src="<?php echo base_url('assets/user-assets/img/anim-1.png')?>"> -->
     <div id="kt_header_mobile" class="header-mobile">
@@ -173,10 +176,10 @@
     
     var output_date = d_names[s_day] + ", " + s_date + " " + m_names[s_month] + " " + s_year;
         
-    //console.log(output_date);
+    // console.log(output_date);
     
     // Pass the string to an element by ID or to a text input by ID
-        if (document.getElementById) {
+        if (document.getElementById(id)) {
             x = document.getElementById(id);
         } 
             else if (document.all) //For IE Support
@@ -199,7 +202,7 @@
     var span_Text = document.getElementById("display-date").innerText;
     
     formatTextDate(span_Text,"display-date");
-    formatTextDate("2013-12-22","display-date2");
+    // formatTextDate("2013-12-22","display-date2");
 
 </script>
 <!--end::Body-->
