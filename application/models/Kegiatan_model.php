@@ -25,13 +25,13 @@ class Kegiatan_model extends CI_Model
 		];
 	}
 
-	public function getLast($number) 
+	public function getLast() 
 	{
 		$this->db->select('*');
 		$this->db->from($this->_table);
 		$this->db->order_by('kegiatan_id', 'DESC');
-		$this->db->limit($number);
-		return $this->db->get()->result_array();
+		$this->db->limit(5);
+		return $this->db->get()->result();
 	}
 
 	public function getAll()
