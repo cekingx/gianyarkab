@@ -7,6 +7,7 @@ class Kritik_saran extends CI_Controller
     {
         parent::__construct();
 
+        $this->load->model("Jenis_laporan_model");
         $this->load->model('kritik_saran_model');
         $this->load->library('form_validation');
     }
