@@ -15,7 +15,7 @@ class Pengumuman extends CI_Controller
     public function index_user()
     {
         $data['content'] = 'user-views/beranda/pengumuman';
-        $data['pengumuman'] = $this->pengumuman_model->getAll();
+        $data['pengumuman'] = $this->pengumuman_model->getAllDesc();
 
         $this->load->view('user-views/layouts/master', $data);
     }

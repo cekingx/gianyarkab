@@ -7,6 +7,9 @@ class Beranda extends CI_Controller
 		parent::__construct();
 		
 		$this->load->model("Banner_model");		
+		$this->load->model('kritik_saran_model');
+		$this->load->model('pengumuman_model');
+		$this->load->model('kegiatan_model');
 		$this->load->library('form_validation');
 	}
 
@@ -14,6 +17,8 @@ class Beranda extends CI_Controller
 	{	$banner = $this->Banner_model;
 		$data['banner_besar'] = $banner->banner_besar_user();	
 		$data['banner_kecil'] = $banner->banner_kecil_user();
+		$data['pengumuman'] = $this->pengumuman_model->getLast(5);
+		$data['kegiatan'] = $this->kegiatan_model->getLast(5);
 		// return var_dump($data['banner_kecil']);
 		// die;		
 		$data['content'] = 'user-views/dashboard';		

@@ -3,9 +3,9 @@
     <div id="kt_header_menu" class="header-menu header-menu-left header-menu-mobile header-menu-layout-default">
         <!--begin::Header Nav-->
         <ul class="menu-nav">
-            <li class="menu-item menu-item-rel <?php if ($this->uri->segment(1) == '') : ?>menu-item-here<?php endif; ?>"
+            <li class="menu-item menu-item-rel <?php if ($this->uri->segment(1) == 'home') : ?>menu-item-here<?php endif; ?>"
                 data-menu-toggle="click" aria-haspopup="true">
-                <a href="<?php echo site_url('/') ?>" class="menu-link">
+                <a href="<?php echo site_url('/home') ?>" class="menu-link">
                     <span class="menu-text">Beranda</span>
                     <i class="menu-arrow"></i>
                 </a>
