@@ -164,7 +164,6 @@ $route['kontak/store'] = 'kontak/store';
 $route['admin/kontak/delete/(:any)'] = 'kontak/delete/$1';
 $route['admin/kontak/(:any)'] = 'kontak/show/$1';
 
-$route['arsip/koranPaswara'] = 'media_cetak/index_user';
 
 //media cetak admin
 $route['admin/media_cetak'] = 'media_cetak/index';
