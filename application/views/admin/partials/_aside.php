@@ -49,6 +49,12 @@
 										<span class="menu-text">Banner Acara</span>
 									</a>
 								</li>
+								<li class="menu-item <?php if($this->uri->segment(2) == 'kegiatan') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
+									<a href="<?= site_url('/admin/kegiatan') ?>" class="menu-link">
+										<span class="menu-icon"><i class="flaticon-event-calendar-symbol"></i></span>
+										<span class="menu-text">Kegiatan</span>
+									</a>
+								</li>
 								<!-- end::Pengumuman -->
 								<!-- end::Beranda -->
 								<!-- begin::Profile -->
@@ -78,6 +84,14 @@
 									</a>
 								</li>
 								<!-- end::Alamat Instansi -->
+								<!-- begin::laporan -->
+								<li class="menu-item <?php if($this->uri->segment(2) == 'laporan') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
+									<a href="<?= site_url('/admin/laporan') ?>" class="menu-link">
+										<span class="menu-icon"><i class="flaticon2-open-text-book"></i></span>
+										<span class="menu-text">Laporan</span>
+									</a>
+								</li>
+								<!-- end::laporan -->
 								<!-- end::Pemerintahan -->
 								<!-- begin::Sub Domain -->
 								<li class="menu-section">
@@ -104,6 +118,14 @@
 									</a>
 								</li>
 								<!-- end::Artikel berita -->
+								<!-- begin::media cetak -->
+								<li class="menu-item <?php if($this->uri->segment(2) == 'media_cetak') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
+									<a href="<?= site_url('/admin/artikel_berita') ?>" class="menu-link">
+										<span class="menu-icon"><i class="flaticon2-paper"></i></span>
+										<span class="menu-text">Media Cetak</span>
+									</a>
+								</li>
+								<!-- end::media cetak -->
 								<!-- end::infogianyar -->
 								<!-- begin::Kontak -->
 								<li class="menu-section">

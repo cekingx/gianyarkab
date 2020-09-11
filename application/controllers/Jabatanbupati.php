@@ -6,7 +6,7 @@ class Jabatanbupati extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-
+        $this->load->model("Jenis_laporan_model");
         $this->load->model('jabatanbupati_model');
         $this->load->library('form_validation');
     }

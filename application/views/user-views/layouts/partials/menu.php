@@ -99,53 +99,38 @@
                                 </ul>
                             </div>
                         </li>
+                       <?php
+                            $this->load->model("Jenis_laporan_model");
+                            $laporan = $this->Jenis_laporan_model->getAll();
+                       ?>
                         <li class="menu-item  menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true"><a
                                 href="javascript:;" class="menu-link menu-toggle">
                                 </span><span class="menu-text">Laporan</span><i class="menu-arrow"></i></a>
                             <div class="menu-submenu menu-submenu-classic menu-submenu-right">
                                 <ul class="menu-subnav">
+                                    <?php foreach($laporan as $data):?>
                                     <li class="menu-item " aria-haspopup="true"><a
-                                            href="<?php echo site_url('/lakip') ?>" class="menu-link "><i
-                                                class="menu-bullet menu-bullet-dot"><span></span></i><span
-                                                class="menu-text">LAKIP</span></a></li>
-                                    <li class="menu-item " aria-haspopup="true"><a
-                                            href="<?php echo site_url('/perjanjiankinerja') ?>" class="menu-link "><i
-                                                class="menu-bullet menu-bullet-dot"><span></span></i><span
-                                                class="menu-text">Perjanjian Kinerja</span></a></li>
-                                    <li class="menu-item " aria-haspopup="true"><a
-                                            href="<?php echo site_url('/rencanaaksi') ?>" class="menu-link "><i
-                                                class="menu-bullet menu-bullet-dot"><span></span></i><span
-                                                class="menu-text">Rencana Aksi</span></a>
-                                    </li>
-                                    <li class="menu-item " aria-haspopup="true"><a
-                                            href="<?php echo site_url('/renstra') ?>" class="menu-link "><i
-                                                class="menu-bullet menu-bullet-dot"><span></span></i><span
-                                                class="menu-text">RENSTRA</span></a></li>
-                                    <li class="menu-item " aria-haspopup="true"><a
-                                            href="<?php echo site_url('/renja') ?>" class="menu-link "><i
-                                                class="menu-bullet menu-bullet-dot"><span></span></i><span
-                                                class="menu-text">RENJA</span></a></li>
-                                    <li class="menu-item " aria-haspopup="true"><a href="<?php echo site_url('/iku') ?>"
-                                            class="menu-link "><i
-                                                class="menu-bullet menu-bullet-dot"><span></span></i><span
-                                                class="menu-text">IKU</span></a></li>
+                                        href="<?php echo site_url('laporan/arsip/'.$data->jenis_laporan_id) ?>" class="menu-link "><i
+                                            class="menu-bullet menu-bullet-dot"><span></span></i><span
+                                            class="menu-text"><?= $data->jenis_laporan_nama ?></span></a></li>
+                                    <? endforeach; ?>                                   
                                 </ul>
                             </div>
                         </li>
                     </ul>
                 </div>
             </li>
-            <li class="menu-item  menu-item-submenu menu-item-rel <?php if ($this->uri->segment(1) == 'berita' or $this->uri->segment(1) == 'artikel' or $this->uri->segment(1) == 'koranpaswara' or $this->uri->segment(1) == 'pariwisata' or $this->uri->segment(1) == 'teleponpenting') : ?>menu-item-here<?php endif; ?>"
+            <li class="menu-item  menu-item-submenu menu-item-rel <?php if ($this->uri->segment(1) == 'arsip' or $this->uri->segment(1) == 'media_cetak' or $this->uri->segment(1) == 'pariwisata' or $this->uri->segment(1) == 'teleponpenting') : ?>menu-item-here<?php endif; ?>"
                 data-menu-toggle="click" aria-haspopup="true">                
                 <a href="javascript:;" class="menu-link menu-toggle"><span class="menu-text">Info Gianyar</span><i
                         class="menu-arrow"></i></a>
                 <div class="menu-submenu menu-submenu-classic menu-submenu-left">
                     <ul class="menu-subnav">
-                        <li class="menu-item " aria-haspopup="true"><a href="<?php echo site_url('/berita') ?>"
+                        <li class="menu-item " aria-haspopup="true"><a href="<?php echo site_url('arsip/berita') ?>"
                                 class="menu-link" class="menu-link "><span class="menu-text">Berita</span><span
                                     class="menu-desc"></span></a></li>
                         <li class="menu-item " aria-haspopup="true"><a 
-                                href="<?php echo site_url('/artikel') ?>"
+                                href="<?php echo site_url('arsip/artikel') ?>"
                                 class="menu-link "><span class="menu-text">Artikel</span><span
                                     class="menu-desc"></span></a></li>
                         <li class="menu-item  menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true"><a
@@ -154,7 +139,7 @@
                             <div class="menu-submenu menu-submenu-classic menu-submenu-right">
                                 <ul class="menu-subnav">
                                     <li class="menu-item " aria-haspopup="true"><a
-                                            href="<?php echo site_url('/koranpaswara') ?>" class="menu-link "><i
+                                            href="<?php echo site_url('/media_cetak/arsip/paswara') ?>" class="menu-link "><i
                                                 class="menu-bullet menu-bullet-dot"><span></span></i><span
                                                 class="menu-text">Koran PASWARA</span></a></li>
                                 </ul>

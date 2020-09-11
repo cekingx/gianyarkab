@@ -1,72 +1,29 @@
-<title><?= $title ?></title>
+<title>Jenis Laporan</title>
 
 <div class="card card-custom">
     <div class="card-header">
         <div class="card-title">
-            <a href="<?= base_url('admin/galeri') ?>" class="btn btn-primary font-weight-bold">
+            <a href="<?= base_url('admin/laporan') ?>" class="btn btn-primary font-weight-bold">
                 <i class="flaticon2-left-arrow"></i> Kembali
             </a>
         </div>
-        <div class="card-toolbar">
-            <a target="_blank" href="<?= base_url('/galeri/foto/') . $galeri->galeri_slug ?>" class="btn btn-icon btn-light-info mr-2">
-                <i class="flaticon2-photograph"></i>
-            </a>
-            <a target="_blank" href="<?= base_url('/galeri/video/') . $galeri->galeri_slug ?>" class="btn btn-icon btn-light-info mr-2">
-                <i class="flaticon2-arrow"></i>
-            </a>
-            <a href="<?= base_url('admin/galeri/edit/') . $galeri->galeri_id ?>" class="btn btn-icon btn-light-warning mr-2">
-                <i class="flaticon2-edit"></i>
-            </a>
-            <a class="btn btn-icon btn-light-danger btn-delete">
-                <i class="flaticon2-trash"></i>
-            </a>
-            
+        <div class="card-toolbar">                     
         </div>
     </div>
-    <div class="card-body">
-        <table class="table table-bordered">
-            <tbody>
-                <tr>
-                    <td>Judul</td>
-                    <td><?= $galeri->galeri_judul ?></td>
-                </tr>                              
-                <tr>
-                    <td>Deskripsi</td>
-                    <td><?= $galeri->galeri_deskripsi ?></td>
-                </tr>
-                <tr>
-                    <td>Tanggal</td>
-                    <td><?= $galeri->galeri_tanggal ?></td>
-                </tr>
-            </tbody>
-        </table>
-        <form id="form_galeri" method="POST" enctype="multipart/form-data" role="form">
-          <div class="form-group">
-            <label>Foto</label>
-            <div></div>
-            <input type="hidden" name="id_galeri" id="id_galeri" value="<?php echo $galeri->galeri_id ?>">
-            <input type="hidden" name="slug_galeri" id="slug_galeri" value="<?php echo $galeri->galeri_slug ?>">
-            <div class="custom-file">
-              <input type="file" class="custom-file-input" id="foto_galeri" name = "foto_galeri[]" multiple="">
-              <label class="custom-file-label" for="customFile">Choose file</label>      
-            </div>
-            <span style="display: none;" class="form-text text-muted" id="need-foto" >
-                foto masih kosong
-            </span> 
-          </div>
-          <div class="form-group">
-            <label for="nama">Link Youtube Video</label> 
-            <input type="text" class="form-control" id="video_galeri" name="video_galeri" placeholder = "Link Video">
-            <span style="display: none;" class="form-text text-muted" id="need-link" >
-              link masih kosong
-            </span> 
-          </div>
+    <div class="card-body">        
+        <form id="form_laporan" method="POST" enctype="multipart/form-data" role="form">
+          <div class="form-group">                                            
+              <label for="nama">Nama Laporan</label> 
+              <input type="text" class="form-control" id="jenis_nama" name="jenis_nama" placeholder = "Nama">
+              <span style="display: none;" class="form-text text-muted" id="need-nama" >
+                  Jenis masih kosong
+              </span>                             
+            </div>          
           <button type="button" class="btn btn-success" id="validasi">Simpan</button>
-          <a type="button" class="btn btn-secondary" href ="<?php echo site_url('admin/galeri') ?>">Back</a>
+          <a type="button" class="btn btn-secondary" href ="<?php echo site_url('admin/laporan') ?>">Back</a>
       </form>
     </div>
 </div>
-
 <?php if(isset($message)) {
     echo('
     <div class="alert alert-custom alert-outline-2x alert-outline-primary fade show mb-5" id="message" role="alert">
@@ -88,10 +45,10 @@
     <div class="card-header">
         <div class="card-title">
             <h3 class="card-label">
-                Media Galeri
+                Jenis laporan
             </h3>
         </div>
-        <div class="card-toolbar">           
+            <div class="card-toolbar">           
         </div>
     </div>
     <div class="card-body">
@@ -102,14 +59,14 @@
 
 <script>
     $('.preloader').fadeOut();
-    var KTDatatablePengumuman = function () {
+    var KTDatatableJenisLaporan = function () {
         var demo = function() {
             var datatable = $('#kt_datatable').KTDatatable({
                 data: {
                     type: 'remote',
                     source: {
                         read: {
-                            url: '<?= base_url('admin/galeri/media/data/'.$galeri->galeri_id) ?>',
+                            url: '<?= base_url('admin/laporan/jenis/data/') ?>',
                             map: function(raw) {
                                 var dataset = raw;
                                 if(typeof raw.data !== 'undefined') {
@@ -129,29 +86,10 @@
                 pagnation: true,
                 columns: [
                     {
-                        field: 'galeri_media_media',
-                        title: 'Media',
-                        sortable: true,
-                        template: function(row) {
-                            if(row.galeri_media_jenis == 0){
-                                return '<img src="<?php echo base_url("/assets/upload/galeri_foto/")?>'+row.galeri_media_media+ '"'+'width="200"/>';            
-                            }else{
-                                return row.galeri_media_media
-                            }
-                                           
-                        }
-                    },
-                    {
-                        field: 'galeri_media_jenis',
-                        title: 'Jenis Media',
-                        template: function(row){
-                            if(row.galeri_media_jenis == 0){
-                                return 'Foto';
-                            }else{
-                                return 'Video';
-                            }
-                        }
-                    },                    
+                        field: 'jenis_laporan_nama',
+                        title: 'Jenis Laporan',
+                        sortable: true,                        
+                    },                                   
                     {
                         field: 'Actions',
                         title: 'Actions',
@@ -161,7 +99,18 @@
                         autoHide: false,
                         template: function(row) {
                             return '\
-                                <button data-id_galeri="'+row.galeri_media_galeri_id+'" data-id_media="'+row.galeri_media_id+'" class="btn btn-sm btn-clean btn-icon btnDelete" title="Delete">\
+                                <button data-id="'+row.jenis_laporan_id+'" class="btn btn-sm btn-clean btn-icon mr-2 btnEdit" title="Edit details">\
+                                    <span class="svg-icon svg-icon-md">\
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">\
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">\
+                                                <rect x="0" y="0" width="24" height="24"/>\
+                                                <path d="M8,17.9148182 L8,5.96685884 C8,5.56391781 8.16211443,5.17792052 8.44982609,4.89581508 L10.965708,2.42895648 C11.5426798,1.86322723 12.4640974,1.85620921 13.0496196,2.41308426 L15.5337377,4.77566479 C15.8314604,5.0588212 16,5.45170806 16,5.86258077 L16,17.9148182 C16,18.7432453 15.3284271,19.4148182 14.5,19.4148182 L9.5,19.4148182 C8.67157288,19.4148182 8,18.7432453 8,17.9148182 Z" fill="#000000" fill-rule="nonzero"\ transform="translate(12.000000, 10.707409) rotate(-135.000000) translate(-12.000000, -10.707409) "/>\
+                                                <rect fill="#000000" opacity="0.3" x="5" y="20" width="15" height="2" rx="1"/>\
+                                            </g>\
+                                        </svg>\
+                                    </span>\
+                                </button>\
+                                <button data-id="'+row.jenis_laporan_id+'" class="btn btn-sm btn-clean btn-icon btnDelete" title="Delete">\
                                     <span class="svg-icon svg-icon-md">\
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">\
                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">\
@@ -179,8 +128,7 @@
             });
 
             $(document).on("click", ".btnDelete", function() {
-                let id_galeri = $(this).data('id_galeri');
-                let id_media = $(this).data('id_media');
+                let id_laporan = $(this).data('id');                
                 bootbox.confirm({
                     title: "Hapus Pengumuman",
                     message: "Apakah anda yakin menghapus pengumuman?",
@@ -198,7 +146,7 @@
                             $('.preloader').fadeIn();
                             $.ajax({
                                 type: 'GET',
-                                url: "<?= base_url('galeri/delete_media/') ?>" + id_media + "/" + id_galeri,
+                                url: "<?= base_url('laporan/delete_jenis/') ?>" + id_laporan,
                                 dataType: 'json',
                                 success: function(data) {
                                     $('.preloader').fadeOut();
@@ -214,10 +162,8 @@
             });
 
             $(document).on("click", ".btnEdit", function() {
-                let id = $(this).data('id');
-                
-                // console.log("<?= base_url('admin/banner/edit/') ?>" + id)
-                window.location.replace("<?= base_url('admin/banner/edit/') ?>" + id);
+                let id = $(this).data('id');                                
+                window.location.replace("<?= base_url('admin/laporan/jenis/edit/') ?>" + id);
             });
         }
 
@@ -229,39 +175,31 @@
     }();
 
     $(document).ready(function() {
-        KTDatatablePengumuman.init()
+        KTDatatableJenisLaporan.init()
     });
-
-    $('.btnNew').click(function() {
-        window.location = '<?= base_url('admin/banner/create') ?>'
-    })
+   
 
 
-$('#link_video').keyup( function() {
-  if($('#link_video').val() == '') {
-      $('#link_video').addClass('is-invalid');
-      $('#need-link').fadeIn(3);
+$('#jenis_nama').keyup( function() {
+  if($('#jenis_nama').val() == '') {
+      $('#jenis_nama').addClass('is-invalid');
+      $('#need-nama').fadeIn(3);
   } else {
-      $('#link_video').removeClass('is-invalid');
-      $('#need-link').fadeOut(3);
+      $('#jenis_nama').removeClass('is-invalid');
+      $('#need-nama').fadeOut(3);
   }
   });
 
 $("#validasi").on('click',function(){
   // e.preventDefault(); 
-  // var data = $("#testForm").serialize();
-    var fileToUpload = $('input:file').val();
-    var formData = new FormData($("#form_galeri")[0]);
-    var id = $('#id_galeri').val();
-    var slug = $('#slug_galeri').val();       
-    if(fileToUpload == '' && $('#video_galeri').val() == ''){
-      $('#foto_galeri').addClass('is-invalid');
-      $('#need-foto').fadeIn(3);
-      $('#video_galeri').addClass('is-invalid');
-      $('#need-link').fadeIn(3);
+  // var data = $("#testForm").serialize();    
+    var formData = new FormData($("#form_laporan")[0]);          
+    if($('#jenis_nama').val() == ''){
+      $('#jenis_nama').addClass('is-invalid');
+      $('#need-nama').fadeIn(3);      
     }else{
       $.ajax({
-        url : '<?php echo site_url('admin/galeri/media/store/')?>'+id+'/'+slug,
+        url : '<?php echo site_url('admin/laporan/jenis/store/')?>',
         type : 'POST',  
         data: formData,
         processData:false,

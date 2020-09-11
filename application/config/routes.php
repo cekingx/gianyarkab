@@ -164,3 +164,46 @@ $route['kontak/store'] = 'kontak/store';
 $route['admin/kontak/delete/(:any)'] = 'kontak/delete/$1';
 $route['admin/kontak/(:any)'] = 'kontak/show/$1';
 
+$route['arsip/koranPaswara'] = 'media_cetak/index_user';
+
+//media cetak admin
+$route['admin/media_cetak'] = 'media_cetak/index';
+$route['admin/media_cetak/data'] = 'media_cetak/media_cetak_data';
+$route['admin/media_cetak/create'] = 'media_cetak/create';
+$route['admin/media_cetak/store'] = 'media_cetak/store';
+$route['admin/media_cetak/edit/(:any)'] = 'media_cetak/edit/$1';
+$route['admin/media_cetak/update'] = 'media_cetak/update';
+$route['admin/media_cetak/(:any)'] = 'media_cetak/show/$1';
+//tampilan media cetak user
+$route['media_cetak/arsip/paswara'] = 'media_cetak/index_user';
+
+//laporan admin
+$route['admin/laporan'] = 'laporan/index';
+$route['admin/laporan/data'] = 'laporan/laporan_data';
+$route['admin/laporan/create'] = 'laporan/create';
+$route['admin/laporan/store'] = 'laporan/store';
+$route['admin/laporan/edit/(:any)'] = 'laporan/edit/$1';
+$route['admin/laporan/update'] = 'laporan/update';
+$route['admin/laporan/(:any)'] = 'laporan/show/$1';
+//jenis laporan admin
+$route['admin/laporan/jenis/index'] = 'laporan/index_jenis';
+$route['admin/laporan/jenis/data'] = 'laporan/jenis_data';
+$route['admin/laporan/jenis/store'] = 'laporan/store_jenis';
+$route['admin/laporan/jenis/edit/(:any)'] = 'laporan/edit_jenis/$1';
+$route['admin/laporan/jenis/update'] = 'laporan/update_jenis';
+
+//laporan user
+$route['laporan/arsip/(:any)'] = 'laporan/index_user/$1';
+
+
+//kegiatan admin
+$route['admin/kegiatan'] = 'kegiatan/index';
+$route['admin/kegiatan/create'] = 'kegiatan/create';
+$route['admin/kegiatan/store'] = 'kegiatan/store';
+$route['admin/kegiatan/data'] = 'kegiatan/kegiatan_data';
+$route['admin/kegiatan/edit/(:any)'] = 'kegiatan/edit/$1';
+$route['admin/kegiatan/update'] = 'kegiatan/update';
+$route['admin/kegiatan/(:any)'] = 'kegiatan/show/$1';
+//kegiatan user
+$route['arsip/kegiatan'] = 'kegiatan/index_user';
+$route['arsip/kegiatan/(:any)'] = 'kegiatan/detail_kegiatan/$1';

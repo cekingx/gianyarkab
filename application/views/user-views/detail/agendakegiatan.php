@@ -1,4 +1,4 @@
-<title>detail agenda kegiatan</title>
+<title><?= $title ?></title>
 <!--begin::Entry-->
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
@@ -15,7 +15,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="h1 text-center">Membandel, Pabrik Tahu Tempe Disegel Satpol PP</div>
+                        <div class="h1 text-center"><?= $title ?></div>
                     </div>
 
                     <!--begin::Footer-->
@@ -28,13 +28,13 @@
                             class=" container  d-flex flex-column flex-md-row align-items-center justify-content-between">
                             <!--begin::Copyright-->
                             <div class="text-dark order-2 order-md-1">
-                                <span class="text-dark font-weight-bold mr-2">Jumat, 20 Juli 2020</span>
+                                <span class="text-dark font-weight-bold mr-2"><?= date('l, d F Y', strtotime($kegiatan->kegiatan_tanggal)) ?></span>
 
                             </div>
                             <!--end::Copyright-->
 
                             <!--begin::Nav-->
-                            <?php $this->load->view('layouts/partials/sosial') ?>
+                            <?php $this->load->view('user-views/layouts/partials/sosial') ?>
                             <!--end::Nav-->
                         </div>
                         <!--end::Container-->
@@ -52,14 +52,14 @@
 
                     <div class="card-body">
                         <p>
-                            asddddddddddddddddddddddddddddddddddddddd 
-</p>
+                            <?= $kegiatan->kegiatan_deskripsi?>
+                        </p>
                     </div>
                 </div>
 
 
             </div>
-            <?php $this->load->view('layouts/partials/side.php'); ?>
+            <?php $this->load->view('user-views/layouts/partials/side.php'); ?>
 
         </div>
         <!--end::Row-->

@@ -5,7 +5,7 @@ class Galeri extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		
+		$this->load->model("Jenis_laporan_model");
 		$this->load->model("Galeri_media_model");
 		$this->load->model("Galeri_model");		
 		$this->load->library('form_validation');

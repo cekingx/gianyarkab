@@ -320,17 +320,17 @@
                                             <!--begin::Form-->
                                             <div class="form">
                                                 <!--begin::Item-->
+                                                <?php foreach($kegiatan as $data): ?>
                                                 <div class="d-flex align-items-center ">
                                                     <!--begin::Section-->
                                                     <div class="d-flex flex-column flex-grow-1">
                                                         <!--begin::Title-->
-                                                        <a href="#"
-                                                            class="text-dark-75 font-weight-bolder font-size-lg text-hover-primary mb-1">Cup
-                                                            & Greasdsadsadsadsadsadasdsaasdasdsen</a>
+                                                        <a href="<?php echo site_url('arsip/kegiatan/'.$data->kegiatan_slug) ?>"
+                                                            class="text-dark-75 font-weight-bolder font-size-lg text-hover-primary mb-1"><?= $data->kegiatan_judul ?></a>
                                                         <!--end::Title-->
                                                         <span
                                                             class="text-dark-50 font-weight-normal  text-right font-size-sm">
-                                                            27 Januari 2020
+                                                            <?= date('d F, Y', strtotime($data->kegiatan_tanggal)) ?>
                                                         </span>
 
                                                         <div class="separator separator-solid separator-border-3"></div>
@@ -338,107 +338,8 @@
                                                     </div>
                                                     <!--end::Section-->
                                                 </div>
-                                                <!--end::Item-->
-                                                <!--begin::Item-->
-                                                <div class="d-flex align-items-center ">
-                                                    <!--begin::Section-->
-                                                    <div class="d-flex flex-column flex-grow-1">
-                                                        <!--begin::Title-->
-                                                        <a href="#"
-                                                            class="text-dark-75 font-weight-bolder font-size-lg text-hover-primary mb-1">Cup
-                                                            & Greasdsadsadsadsadsadasdsaasdasdsen</a>
-                                                        <!--end::Title-->
-                                                        <span
-                                                            class="text-dark-50 font-weight-normal  text-right font-size-sm">
-                                                            27 Januari 2020
-                                                        </span>
-
-                                                        <div class="separator separator-solid separator-border-3"></div>
-
-                                                    </div>
-                                                    <!--end::Section-->
-                                                </div>
-                                                <!--end::Item-->
-                                                <!--begin::Item-->
-                                                <div class="d-flex align-items-center ">
-                                                    <!--begin::Section-->
-                                                    <div class="d-flex flex-column flex-grow-1">
-                                                        <!--begin::Title-->
-                                                        <a href="#"
-                                                            class="text-dark-75 font-weight-bolder font-size-lg text-hover-primary mb-1">Cup
-                                                            & Greasdsadsadsadsadsadasdsaasdasdsen</a>
-                                                        <!--end::Title-->
-                                                        <span
-                                                            class="text-dark-50 font-weight-normal  text-right font-size-sm">
-                                                            27 Januari 2020
-                                                        </span>
-
-                                                        <div class="separator separator-solid separator-border-3"></div>
-
-                                                    </div>
-                                                    <!--end::Section-->
-                                                </div>
-                                                <!--end::Item-->
-                                                <!--begin::Item-->
-                                                <div class="d-flex align-items-center ">
-                                                    <!--begin::Section-->
-                                                    <div class="d-flex flex-column flex-grow-1">
-                                                        <!--begin::Title-->
-                                                        <a href="#"
-                                                            class="text-dark-75 font-weight-bolder font-size-lg text-hover-primary mb-1">Cup
-                                                            & Greasdsadsadsadsadsadasdsaasdasdsen</a>
-                                                        <!--end::Title-->
-                                                        <span
-                                                            class="text-dark-50 font-weight-normal  text-right font-size-sm">
-                                                            27 Januari 2020
-                                                        </span>
-
-                                                        <div class="separator separator-solid separator-border-3"></div>
-
-                                                    </div>
-                                                    <!--end::Section-->
-                                                </div>
-                                                <!--end::Item-->
-                                                <!--begin::Item-->
-                                                <div class="d-flex align-items-center ">
-                                                    <!--begin::Section-->
-                                                    <div class="d-flex flex-column flex-grow-1">
-                                                        <!--begin::Title-->
-                                                        <a href="#"
-                                                            class="text-dark-75 font-weight-bolder font-size-lg text-hover-primary mb-1">Cup
-                                                            & Greasdsadsadsadsadsadasdsaasdasdsen</a>
-                                                        <!--end::Title-->
-                                                        <span
-                                                            class="text-dark-50 font-weight-normal  text-right font-size-sm">
-                                                            27 Januari 2020
-                                                        </span>
-
-                                                        <div class="separator separator-solid separator-border-3"></div>
-
-                                                    </div>
-                                                    <!--end::Section-->
-                                                </div>
-                                                <!--end::Item-->
-                                                <!--begin::Item-->
-                                                <div class="d-flex align-items-center ">
-                                                    <!--begin::Section-->
-                                                    <div class="d-flex flex-column flex-grow-1">
-                                                        <!--begin::Title-->
-                                                        <a href="#"
-                                                            class="text-dark-75 font-weight-bolder font-size-lg text-hover-primary mb-1">Cup
-                                                            & Greasdsadsadsadsadsadasdsaasdasdsen</a>
-                                                        <!--end::Title-->
-                                                        <span
-                                                            class="text-dark-50 font-weight-normal  text-right font-size-sm">
-                                                            27 Januari 2020
-                                                        </span>
-
-                                                        <div class="separator separator-solid separator-border-3"></div>
-
-                                                    </div>
-                                                    <!--end::Section-->
-                                                </div>
-                                                <!--end::Item-->
+                                                <?php endforeach; ?>
+                                                <!--end::Item-->                                                
                                             </div>
                                             <!--end::Form-->
                                         </div>
@@ -446,7 +347,7 @@
                                     </div>
                                     <!--end::Widget 15-->
 
-                                    <a href="<?php echo site_url('/agendakegiatan') ?>"
+                                    <a href="<?php echo site_url('arsip/kegiatan') ?>"
                                         class="text-dark font-weight-bolder font-size-lg text-hover-secondary mb-1">Selengkapnya</a>
                                 </div>
                             </div>
