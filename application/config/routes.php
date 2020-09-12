@@ -64,6 +64,7 @@ $route['admin'] = 'admin_dashboard/index';
 
 // pengumuman
 $route['pengumuman'] = 'pengumuman/index_user';
+$route['pengumuman/(:num)'] = 'pengumuman/index_user';
 $route['pengumuman/(:any)'] = 'pengumuman/show_user/$1';
 $route['admin/pengumuman'] = 'pengumuman/index';
 $route['admin/pengumuman/data'] = 'pengumuman/pengumuman_data';

@@ -27,6 +27,15 @@ class Pengumuman_model extends CI_Model
         ];
     }
 
+    public function data($number, $offset)
+    {   
+        $this->db->select('*');
+        $this->db->from($this->table);
+        $this->db->limit($number, $offset);
+        $this->db->order_by('pengumuman_id', 'DESC');
+        return $this->db->get()->result_array();
+    }
+
     public function getNumRows()
     {
         return $this->db->get($this->table)->num_rows();

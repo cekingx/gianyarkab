@@ -105,6 +105,9 @@
                     <?php endforeach; ?>
                     <!-- end berita 1 -->
                 </div>
+                <nav aria-label="Page navigation">
+                    <?= $this->pagination->create_links(); ?>
+                </nav>
                 <!--end::Card-->
             </div>
             <?php $this->load->view('user-views/layouts/partials/side.php'); ?>
