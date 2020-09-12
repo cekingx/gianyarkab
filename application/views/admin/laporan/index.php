@@ -207,6 +207,6 @@
     })
 
     $('.btnNew2').click(function() {
-        window.location = '<?= base_url('admin/laporan/jenis') ?>'
+        window.location = '<?= base_url('admin/laporan/jenis/index') ?>'
     })
 </script>

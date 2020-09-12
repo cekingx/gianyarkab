@@ -9,6 +9,7 @@ class artikel_berita extends CI_Controller
 		$this->load->model("Artikel_berita_model");
 		$this->load->model("Artikel_berita_media_model");		
 		$this->load->model('ucapan_perayaan_model');
+		$this->load->model('kritik_saran_model');
 		$this->load->library('form_validation');
 	}
 
