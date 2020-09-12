@@ -33,20 +33,20 @@ class Admin_dashboard extends CI_Controller
 
     private function getDashboardData()
     {
-        $galeri_count = $this->galeri_model->getNumRows();
-        $kritik_saran_count = $this->kritik_saran_model->getNumRows();
-        $carousel_count = $this->carousel_model->getNumRows();
-        $ucapan_perayaan_count = $this->ucapan_perayaan_model->getNumRows();
-        $pengumuman_count = $this->pengumuman_model->getNumRows();
-        $banner_count = $this->banner_model->getNumRows();
-        $kegiatan_count = $this->kegiatan_model->getNumRows();
-        $jabatanbupati_count = $this->jabatanbupati_model->getNumRows();
-        $alamat_instansi_count = $this->alamat_instansi_model->getNumRows();
-        $laporan_count = $this->laporan_model->getNumRows();
-        $subdomain_count = $this->subdomain_model->getNumRows();
-        $artikel_berita_count = $this->artikel_berita_model->getNumRows();
-        $media_cetak_count = $this->media_cetak_model->getNumRows();
-        $kontak_count = $this->kontak_model->getNumRows();
+        $galeri_count           = $this->galeri_model->getNumRows();
+        $kritik_saran_count     = $this->kritik_saran_model->getNumRows();
+        $carousel_count         = $this->carousel_model->getNumRows();
+        $ucapan_perayaan_count  = $this->ucapan_perayaan_model->getNumRows();
+        $pengumuman_count       = $this->pengumuman_model->getNumRows();
+        $banner_count           = $this->banner_model->getNumRows();
+        $kegiatan_count         = $this->kegiatan_model->getNumRows();
+        $jabatanbupati_count    = $this->jabatanbupati_model->getNumRows();
+        $alamat_instansi_count  = $this->alamat_instansi_model->getNumRows();
+        $laporan_count          = $this->laporan_model->getNumRows();
+        $subdomain_count        = $this->subdomain_model->getNumRows();
+        $artikel_berita_count   = $this->artikel_berita_model->getNumRows();
+        $media_cetak_count      = $this->media_cetak_model->getNumRows();
+        $kontak_count           = $this->kontak_model->getNumRows();
 
         return [
             [
