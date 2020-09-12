@@ -98,7 +98,6 @@ $route['admin/banner/(:any)'] = 'banner/show/$1';
 
 
 //user
-$route['/'] = 'Beranda/menu';
 $route['home'] = 'Beranda';
 
 
