@@ -9,6 +9,7 @@ class Galeri extends CI_Controller
 		$this->load->model("Galeri_media_model");
 		$this->load->model("Galeri_model");		
 		$this->load->model('kritik_saran_model');
+		$this->load->model('ucapan_perayaan_model');
 		$this->load->library('form_validation');
 	}
 	

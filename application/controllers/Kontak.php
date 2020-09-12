@@ -9,6 +9,7 @@ class Kontak extends CI_Controller
 
         $this->load->model("Jenis_laporan_model");
         $this->load->model('kritik_saran_model');
+		$this->load->model('ucapan_perayaan_model');
         $this->load->model('kontak_model');
         $this->load->model('narahubung_model');
         $this->load->library('form_validation');

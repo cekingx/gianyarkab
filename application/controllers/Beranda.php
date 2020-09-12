@@ -21,8 +21,8 @@ class Beranda extends CI_Controller
 		$kegiatan = $this->Kegiatan_model;
 		$data['banner_besar'] = $banner->banner_besar_user();	
 		$data['banner_kecil'] = $banner->banner_kecil_user();
+		$data['kegiatan'] = $kegiatan->kegiatanHome();
 		$data['pengumuman'] = $this->pengumuman_model->getLast(5);
-		$data['kegiatan'] = $this->kegiatan_model->getLast(5);
 		$data['carousels'] = $this->carousel_model->getAll();
 		// return var_dump($data['banner_kecil']);
 		// die;		

@@ -185,7 +185,6 @@
                                             aria-labelledby="kt_tab_pane_2_2">
                                             <!--begin::Form-->
                                             <div class="form">
-                                                <?php foreach($kegiatan as $kegiatan): ?>
                                                 <!--begin::Item-->
                                                 <?php foreach($kegiatan as $data): ?>
                                                 <div class="d-flex align-items-center ">
