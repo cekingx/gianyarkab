@@ -6,7 +6,7 @@
 					<div class="brand flex-column-auto" id="kt_brand">
 
 						<!--begin::Logo-->
-						<a href="index.html" class="brand-logo">
+						<a href="<?= base_url('admin') ?>" class="brand-logo">
 							<img alt="Logo" src="<?= base_url('assets/admin-assets/media/logos/pemkab.png') ?>" />
 						</a>
 
@@ -34,7 +34,7 @@
 								<!-- begin::foto&video -->
 								<li class="menu-item <?php if($this->uri->segment(2) == 'galeri') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/galeri') ?>" class="menu-link">
-										<span class="menu-icon"><i class="flaticon2-photograph"></i></span>
+										<span class="menu-icon"><i class="flaticon2-photograph <?php if($this->uri->segment(2) == 'galeri') : ?>text-success<?php endif; ?>"></i></span>
 										<span class="menu-text">Galeri</span>
 									</a>
 								</li>
@@ -42,7 +42,7 @@
 								<!-- begin::kritik_saran -->
 								<li class="menu-item <?php if($this->uri->segment(2) == 'kritik-saran') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/kritik-saran') ?>" class="menu-link">
-										<span class="menu-icon"><i class="flaticon2-speaker"></i></span>
+										<span class="menu-icon"><i class="flaticon-exclamation-2 <?php if($this->uri->segment(2) == 'kritik-saran') : ?>text-success<?php endif; ?>"></i></span>
 										<span class="menu-text">Kritik Saran</span>
 									</a>
 								</li>
@@ -56,7 +56,7 @@
 								<!-- begin::Carousel -->
 								<li class="menu-item <?php if($this->uri->segment(2) == 'carousel') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/carousel') ?>" class="menu-link">
-										<span class="menu-icon"><i class="flaticon2-speaker"></i></span>
+										<span class="menu-icon"><i class="flaticon-web <?php if($this->uri->segment(2) == 'carousel') : ?>text-success<?php endif; ?>"></i></span>
 										<span class="menu-text">Carousel</span>
 									</a>
 								</li>
@@ -64,7 +64,7 @@
 								<!-- begin::Ucapan perayaan -->
 								<li class="menu-item <?php if($this->uri->segment(2) == 'ucapan-perayaan') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/ucapan-perayaan') ?>" class="menu-link">
-										<span class="menu-icon"><i class="flaticon2-speaker"></i></span>
+										<span class="menu-icon"><i class="flaticon2-quotation-mark <?php if($this->uri->segment(2) == 'ucapan-perayaan') : ?>text-success<?php endif; ?>"></i></span>
 										<span class="menu-text">Ucapan Perayaan</span>
 									</a>
 								</li>
@@ -72,19 +72,19 @@
 								<!-- begin::Pengumuman -->
 								<li class="menu-item <?php if($this->uri->segment(2) == 'pengumuman') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/pengumuman') ?>" class="menu-link">
-										<span class="menu-icon"><i class="flaticon2-speaker"></i></span>
+										<span class="menu-icon"><i class="flaticon2-speaker <?php if($this->uri->segment(2) == 'pengumuman') : ?>text-success<?php endif; ?>"></i></span>
 										<span class="menu-text">Pengumuman</span>
 									</a>
 								</li>
 								<li class="menu-item <?php if($this->uri->segment(2) == 'banner') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/banner') ?>" class="menu-link">
-										<span class="menu-icon"><i class="flaticon-tabs"></i></span>
+										<span class="menu-icon"><i class="flaticon-tabs <?php if($this->uri->segment(2) == 'banner') : ?>text-success<?php endif; ?>"></i></span>
 										<span class="menu-text">Banner Acara</span>
 									</a>
 								</li>
 								<li class="menu-item <?php if($this->uri->segment(2) == 'kegiatan') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/kegiatan') ?>" class="menu-link">
-										<span class="menu-icon"><i class="flaticon-event-calendar-symbol"></i></span>
+										<span class="menu-icon"><i class="flaticon-event-calendar-symbol <?php if($this->uri->segment(2) == 'kegiatan') : ?>text-success<?php endif; ?>"></i></span>
 										<span class="menu-text">Kegiatan</span>
 									</a>
 								</li>
@@ -98,7 +98,7 @@
 								<!-- begin::Jabatan Bupati -->
 								<li class="menu-item <?php if($this->uri->segment(2) == 'jabatan-bupati') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/jabatan-bupati') ?>" class="menu-link">
-										<span class="menu-icon"><i class="flaticon2-speaker"></i></span>
+										<span class="menu-icon"><i class="flaticon2-group <?php if($this->uri->segment(2) == 'jabatan-bupati') : ?>text-success<?php endif; ?>"></i></span>
 										<span class="menu-text">Bupati Masa ke Masa</span>
 									</a>
 								</li>
@@ -112,7 +112,7 @@
 								<!-- begin::Alamat Instansi -->
 								<li class="menu-item <?php if($this->uri->segment(2) == 'alamat-instansi') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/alamat-instansi') ?>" class="menu-link">
-										<span class="menu-icon"><i class="flaticon2-location"></i></span>
+										<span class="menu-icon"><i class="flaticon2-location <?php if($this->uri->segment(2) == 'alamat-instansi') : ?>text-success<?php endif; ?>"></i></span>
 										<span class="menu-text">Alamat Instansi</span>
 									</a>
 								</li>
@@ -120,7 +120,7 @@
 								<!-- begin::laporan -->
 								<li class="menu-item <?php if($this->uri->segment(2) == 'laporan') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/laporan') ?>" class="menu-link">
-										<span class="menu-icon"><i class="flaticon2-open-text-book"></i></span>
+										<span class="menu-icon"><i class="flaticon2-open-text-book <?php if($this->uri->segment(2) == 'laporan') : ?>text-success<?php endif; ?>"></i></span>
 										<span class="menu-text">Laporan</span>
 									</a>
 								</li>
@@ -133,7 +133,7 @@
 								</li>
 								<li class="menu-item <?php if($this->uri->segment(2) == 'subdomain') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/subdomain') ?>" class="menu-link">
-										<span class="menu-icon"><i class="flaticon2-website"></i></span>
+										<span class="menu-icon"><i class="flaticon2-website <?php if($this->uri->segment(2) == 'subdomain') : ?>text-success<?php endif; ?>"></i></span>
 										<span class="menu-text">Sub Domain</span>
 									</a>
 								</li>
@@ -146,15 +146,15 @@
 								<!-- begin::Artikel berita -->
 								<li class="menu-item <?php if($this->uri->segment(2) == 'artikel_berita') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/artikel_berita') ?>" class="menu-link">
-										<span class="menu-icon"><i class="flaticon-notes"></i></span>
+										<span class="menu-icon"><i class="flaticon-notes <?php if($this->uri->segment(2) == 'artikel_berita') : ?>text-success<?php endif; ?>"></i></span>
 										<span class="menu-text">Artikel dan Berita</span>
 									</a>
 								</li>
 								<!-- end::Artikel berita -->
 								<!-- begin::media cetak -->
 								<li class="menu-item <?php if($this->uri->segment(2) == 'media_cetak') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
-									<a href="<?= site_url('/admin/artikel_berita') ?>" class="menu-link">
-										<span class="menu-icon"><i class="flaticon2-paper"></i></span>
+									<a href="<?= site_url('/admin/media_cetak') ?>" class="menu-link">
+										<span class="menu-icon"><i class="flaticon2-paper <?php if($this->uri->segment(2) == 'media_cetak') : ?>text-success<?php endif; ?>"></i></span>
 										<span class="menu-text">Media Cetak</span>
 									</a>
 								</li>
@@ -167,7 +167,7 @@
 								</li>
 								<li class="menu-item <?php if($this->uri->segment(2) == 'kontak') : ?>menu-item-active<?php endif; ?>" aria-haspopup="true">
 									<a href="<?= site_url('/admin/kontak') ?>" class="menu-link">
-										<span class="menu-icon"><i class="flaticon2-website"></i></span>
+										<span class="menu-icon"><i class="flaticon2-email <?php if($this->uri->segment(2) == 'kontak') : ?>text-success<?php endif; ?>"></i></span>
 										<span class="menu-text">Kontak dan Pesan</span>
 									</a>
 								</li>

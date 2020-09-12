@@ -93,6 +93,101 @@ $svgIcon = [
                 </g>
             </svg>
             <!--end::Svg Icon--></span>',
+    'image' => '
+        <span class="svg-icon svg-icon-success svg-icon-2x">
+            <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-08-25-063451/theme/html/demo1/dist/../src/media/svg/icons/Design/Image.svg--><svg
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+                viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <polygon points="0 0 24 0 24 24 0 24" />
+                    <path
+                        d="M6,5 L18,5 C19.6568542,5 21,6.34314575 21,8 L21,17 C21,18.6568542 19.6568542,20 18,20 L6,20 C4.34314575,20 3,18.6568542 3,17 L3,8 C3,6.34314575 4.34314575,5 6,5 Z M5,17 L14,17 L9.5,11 L5,17 Z M16,14 C17.6568542,14 19,12.6568542 19,11 C19,9.34314575 17.6568542,8 16,8 C14.3431458,8 13,9.34314575 13,11 C13,12.6568542 14.3431458,14 16,14 Z"
+                        fill="#000000" />
+                </g>
+            </svg>
+            <!--end::Svg Icon--></span>',
+    'quote' => '
+        <span class="svg-icon svg-icon-success svg-icon-2x">
+            <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-08-25-063451/theme/html/demo1/dist/../src/media/svg/icons/Text/Quote2.svg--><svg
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+                viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <rect x="0" y="0" width="24" height="24" />
+                    <polygon fill="#000000"
+                        transform="translate(16.500000, 12.500000) rotate(-180.000000) translate(-16.500000, -12.500000) "
+                        points="19 7 17 13 19 13 19 18 14 18 14 13 16 7" />
+                    <polygon fill="#000000" opacity="0.3"
+                        transform="translate(8.500000, 12.500000) rotate(-180.000000) translate(-8.500000, -12.500000) "
+                        points="11 7 9 13 11 13 11 18 6 18 6 13 8 7" />
+                </g>
+            </svg>
+            <!--end::Svg Icon--></span>',
+    'thumbtack' => '
+        <span class="svg-icon svg-icon-success svg-icon-2x">
+            <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-08-25-063451/theme/html/demo1/dist/../src/media/svg/icons/Communication/Thumbtack.svg--><svg
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+                viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <rect x="0" y="0" width="24" height="24" />
+                    <path
+                        d="M11.6734943,8.3307728 L14.9993074,6.09979492 L14.1213255,5.22181303 C13.7308012,4.83128874 13.7308012,4.19812376 14.1213255,3.80759947 L15.535539,2.39338591 C15.9260633,2.00286161 16.5592283,2.00286161 16.9497526,2.39338591 L22.6066068,8.05024016 C22.9971311,8.44076445 22.9971311,9.07392943 22.6066068,9.46445372 L21.1923933,10.8786673 C20.801869,11.2691916 20.168704,11.2691916 19.7781797,10.8786673 L18.9002333,10.0007208 L16.6692373,13.3265608 C16.9264145,14.2523264 16.9984943,15.2320236 16.8664372,16.2092466 L16.4344698,19.4058049 C16.360509,19.9531149 15.8568695,20.3368403 15.3095595,20.2628795 C15.0925691,20.2335564 14.8912006,20.1338238 14.7363706,19.9789938 L5.02099894,10.2636221 C4.63047465,9.87309784 4.63047465,9.23993286 5.02099894,8.84940857 C5.17582897,8.69457854 5.37719743,8.59484594 5.59418783,8.56552292 L8.79074617,8.13355557 C9.76799113,8.00149544 10.7477104,8.0735815 11.6734943,8.3307728 Z"
+                        fill="#000000" />
+                    <polygon fill="#000000" opacity="0.3"
+                        transform="translate(7.050253, 17.949747) rotate(-315.000000) translate(-7.050253, -17.949747) "
+                        points="5.55025253 13.9497475 5.55025253 19.6640332 7.05025253 21.9497475 8.55025253 19.6640332 8.55025253 13.9497475" />
+                </g>
+            </svg>
+            <!--end::Svg Icon--></span>',
+    'clipboard' => '
+        <span class="svg-icon svg-icon-success svg-icon-2x">
+            <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-08-25-063451/theme/html/demo1/dist/../src/media/svg/icons/General/Clipboard.svg--><svg
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+                viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <rect x="0" y="0" width="24" height="24" />
+                    <path
+                        d="M8,3 L8,3.5 C8,4.32842712 8.67157288,5 9.5,5 L14.5,5 C15.3284271,5 16,4.32842712 16,3.5 L16,3 L18,3 C19.1045695,3 20,3.8954305 20,5 L20,21 C20,22.1045695 19.1045695,23 18,23 L6,23 C4.8954305,23 4,22.1045695 4,21 L4,5 C4,3.8954305 4.8954305,3 6,3 L8,3 Z"
+                        fill="#000000" opacity="0.3" />
+                    <path
+                        d="M11,2 C11,1.44771525 11.4477153,1 12,1 C12.5522847,1 13,1.44771525 13,2 L14.5,2 C14.7761424,2 15,2.22385763 15,2.5 L15,3.5 C15,3.77614237 14.7761424,4 14.5,4 L9.5,4 C9.22385763,4 9,3.77614237 9,3.5 L9,2.5 C9,2.22385763 9.22385763,2 9.5,2 L11,2 Z"
+                        fill="#000000" />
+                    <rect fill="#000000" opacity="0.3" x="7" y="10" width="5" height="2" rx="1" />
+                    <rect fill="#000000" opacity="0.3" x="7" y="14" width="9" height="2" rx="1" />
+                </g>
+            </svg>
+            <!--end::Svg Icon--></span>',
+    'font' => '
+        <span class="svg-icon svg-icon-success svg-icon-2x">
+            <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-08-25-063451/theme/html/demo1/dist/../src/media/svg/icons/Text/Font.svg--><svg
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+                viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <rect x="0" y="0" width="24" height="24" />
+                    <path
+                        d="M0.18,19 L7.1,4.64 L14.02,19 L12.06,19 L10.3,15.28 L3.9,15.28 L2.14,19 L0.18,19 Z M7.1,8.52 L4.7,13.6 L9.5,13.6 L7.1,8.52 Z"
+                        fill="#000000" />
+                    <path
+                        d="M21.34,19 L21.34,18 C20.5,18.76 19.38,19.16 18.16,19.16 C15.22,19.16 13.06,16.9 13.06,14 C13.06,11.1 15.22,8.84 18.16,8.84 C19.38,8.84 20.5,9.24 21.34,10 L21.34,9 L23.06,9 L23.06,19 L21.34,19 Z M18.2,17.54 C19.64,17.54 20.76,16.86 21.34,15.92 L21.34,12.08 C20.76,11.14 19.64,10.46 18.2,10.46 C16.24,10.46 14.84,12.02 14.84,14 C14.84,15.98 16.24,17.54 18.2,17.54 Z"
+                        fill="#000000" opacity="0.3" />
+                </g>
+            </svg>
+            <!--end::Svg Icon--></span>',
+    'file' => '
+        <span class="svg-icon svg-icon-success svg-icon-2x">
+            <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-08-25-063451/theme/html/demo1/dist/../src/media/svg/icons/Files/Selected-file.svg--><svg
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+                viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <polygon points="0 0 24 0 24 24 0 24" />
+                    <path
+                        d="M4.85714286,1 L11.7364114,1 C12.0910962,1 12.4343066,1.12568431 12.7051108,1.35473959 L17.4686994,5.3839416 C17.8056532,5.66894833 18,6.08787823 18,6.52920201 L18,19.0833333 C18,20.8738751 17.9795521,21 16.1428571,21 L4.85714286,21 C3.02044787,21 3,20.8738751 3,19.0833333 L3,2.91666667 C3,1.12612489 3.02044787,1 4.85714286,1 Z M8,12 C7.44771525,12 7,12.4477153 7,13 C7,13.5522847 7.44771525,14 8,14 L15,14 C15.5522847,14 16,13.5522847 16,13 C16,12.4477153 15.5522847,12 15,12 L8,12 Z M8,16 C7.44771525,16 7,16.4477153 7,17 C7,17.5522847 7.44771525,18 8,18 L11,18 C11.5522847,18 12,17.5522847 12,17 C12,16.4477153 11.5522847,16 11,16 L8,16 Z"
+                        fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                    <path
+                        d="M6.85714286,3 L14.7364114,3 C15.0910962,3 15.4343066,3.12568431 15.7051108,3.35473959 L20.4686994,7.3839416 C20.8056532,7.66894833 21,8.08787823 21,8.52920201 L21,21.0833333 C21,22.8738751 20.9795521,23 19.1428571,23 L6.85714286,23 C5.02044787,23 5,22.8738751 5,21.0833333 L5,4.91666667 C5,3.12612489 5.02044787,3 6.85714286,3 Z M8,12 C7.44771525,12 7,12.4477153 7,13 C7,13.5522847 7.44771525,14 8,14 L15,14 C15.5522847,14 16,13.5522847 16,13 C16,12.4477153 15.5522847,12 15,12 L8,12 Z M8,16 C7.44771525,16 7,16.4477153 7,17 C7,17.5522847 7.44771525,18 8,18 L11,18 C11.5522847,18 12,17.5522847 12,17 C12,16.4477153 11.5522847,16 11,16 L8,16 Z"
+                        fill="#000000" fill-rule="nonzero" />
+                </g>
+            </svg>
+            <!--end::Svg Icon--></span>',
 ];
 
 ?>
