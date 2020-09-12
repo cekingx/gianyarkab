@@ -46,7 +46,7 @@ body.pushable, body.pushable > .pusher {
     display: block;
 }
 .pushable, .pusher {
-    background: linear-gradient(180deg, rgb(44 55 50 / 15%) 0%, rgb(183 204 11 / 7%) 53.6%, #0000001f 100%), url('../assets/img/menu.jpg') !important;
+    background: linear-gradient(180deg, rgb(44 55 50 / 15%) 0%, rgb(183 204 11 / 7%) 53.6%, #0000001f 100%), url('../img/menu.jpg') !important;
     background-position: center center;
     background-repeat:  no-repeat;
     background-attachment: fixed;
