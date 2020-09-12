@@ -90,15 +90,14 @@ class Galeri_model extends CI_Model
 				
 	}
 
-	public function tubmnailVideo($id)
+	public function tubmnailVideo()
 	{			
 		$this->db->select('*');
 		$this->db->from('ta_galeri');
 		$this->db->join('ref_galeri_media', 'ref_galeri_media.galeri_media_galeri_id = ta_galeri.galeri_id');
-		$this->db->where('galeri_media_jenis', 0);
-		$this->db->where('galeri_media_galeri_id', $id);		
+		$this->db->where('galeri_media_jenis', 0);			
 		$this->db->group_by('galeri_id');
-		return $this->db->get()->row();		
+		return $this->db->get()->result();		
 			
 	}
 

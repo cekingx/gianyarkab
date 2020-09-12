@@ -36,8 +36,7 @@ class Galeri extends CI_Controller
 	public function index_video_user()
 	{			
 		$data['galeri'] = $this->Galeri_model->showVideoUser();
-		$data['tubmnail'] = $this->Galeri_model->tubmnailVideo(1);		
-				
+		$data['tubmnail'] = $this->Galeri_model->tubmnailVideo();				
 		$data['content'] = 'user-views/galeri/video';		
 		$this->load->view('user-views/layouts/master', $data);
 	}

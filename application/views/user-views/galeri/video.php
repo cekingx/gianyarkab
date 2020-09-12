@@ -44,11 +44,12 @@
                                                         <!--begin::Pic-->
                                                         <div class="flex-shrink-0 mr-7">
                                                             <div class="symbol symbol-150 symbol-lg-150">
-                                                                <?php if($tubmnail == null): ?>
-                                                                    <img alt="Pic" src="<?= base_url('assets/upload/galeri_foto/'.$tubmnail->galeri_media_media) ?>" />
-                                                                <?php else: ?>
-                                                                    <img alt="Pic" src="<?= base_url('assets/upload/galeri_foto/default.png')?>" />
-                                                                <?php endif; ?>
+                                                            <?php foreach($tubmnail as $data2):?>
+                                                                <?php if($data->galeri_id == $data2->galeri_media_galeri_id): ?>   
+                                                                    <img alt="Pic" src="<?= base_url('assets/upload/galeri_foto/'.$data2->galeri_media_media) ?>" />
+                                                                                               
+                                                                <?php endif; ?>  
+                                                            <?php endforeach; ?>                                                           
                                                             </div>
                                                         </div>
                                                         <!--end::Pic-->
