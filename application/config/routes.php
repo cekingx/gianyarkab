@@ -238,3 +238,27 @@ $route['admin/ucapan-perayaan/store'] = 'ucapan_perayaan/store';
 $route['admin/ucapan-perayaan/update'] = 'ucapan_perayaan/update';
 $route['admin/ucapan-perayaan/edit/(:any)'] = 'ucapan_perayaan/edit/$1';
 $route['admin/ucapan-perayaan/delete/(:any)'] = 'ucapan_perayaan/delete/$1';
+
+//statis menu
+//menu profile
+$route['sejarah'] = 'beranda/sejarah';
+$route['petakabupaten'] = 'beranda/petakabupaten';
+$route['artilambang'] = 'beranda/artilambang';
+$route['gianyardalamangka'] = 'beranda/gianyardalamangka';
+
+//menu pemerintahan
+$route['visidanmisi'] = 'beranda/visimisi';
+$route['tujuandansasaran'] = 'beranda/tujuansasaran';
+$route['strukturorganisasi'] = 'beranda/struktur';
+$route['bupati'] = 'beranda/perangkat';
+$route['wakilbupati'] = 'beranda/perangkat';
+$route['sekretariatdaerah'] = 'beranda/perangkat';
+$route['sekretariatdewan'] = 'beranda/perangkat';
+$route['inspektorat'] = 'beranda/perangkat';
+$route['bappenda'] = 'beranda/perangkat';
+$route['dinasdaerah'] = 'beranda/perangkat';
+$route['kecamatan'] = 'beranda/perangkat';
+$route['badan'] = 'beranda/perangkat';
+
+//infogianyar
+$route['teleponpenting'] = 'beranda/telepon';

@@ -21,7 +21,7 @@
                                     style="height: auto; background-position: calc(100% + 0.5rem) 100%; background-size: 100% auto; ">
 
                                     <!--begin::Body-->
-                                    <img src="assets/img/bupati/struktur.jpg" class="d-block w-100 rounded" alt="...">
+                                    <img src="<?= base_url('assets/user-assets/img/bupati/struktur.jpg') ?>" class="d-block w-100 rounded" alt="...">
 
                                     <!--end::Body-->
                                 </div>
@@ -35,7 +35,7 @@
                 </div>
                 <!--end::Card-->
             </div>
-            <?php $this->load->view('layouts/partials/side.php'); ?>
+            <?php $this->load->view('user-views/layouts/partials/side.php'); ?>
 
         </div>
         <!--end::Row-->

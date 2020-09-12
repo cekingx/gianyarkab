@@ -30,19 +30,35 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Tiger</td>
-                                    <td>Nixon</td>
-                                    <td>System Architect</td>
-                                    
-                                   
+                                    <td>1</td>
+                                    <td>POLRES</td>
+                                    <td>0361 - 943079</td>
                                 </tr>
                                 <tr>
-                                    <td>Garrett</td>
-                                    <td>Winters</td>
-                                    <td>Accountant</td>
-                                   
+                                    <td>2</td>
+                                    <td>AMBULANCE</td>
+                                    <td>0361 - 945322</td>                                   
                                 </tr>
-
+                                <tr>
+                                    <td>3</td>
+                                    <td>PMI</td>
+                                    <td>0361 - 942189</td>                                   
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>PPTI</td>
+                                    <td>0361 - 942189</td>                                   
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>PDAM</td>
+                                    <td>0361 - 943233, 942390</td>                                   
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>PLN</td>
+                                    <td>0361 - 943742, 943037</td>                                   
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -50,7 +66,7 @@
                             <!--end::Card-->
 
             </div>
-            <?php $this->load->view('layouts/partials/side.php'); ?>
+            <?php $this->load->view('user-views/layouts/partials/side.php'); ?>
 
         </div>
         <!--end::Row-->

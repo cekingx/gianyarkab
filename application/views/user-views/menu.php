@@ -188,7 +188,7 @@
 		<br>
 		<div class="ui container center aligned">
 			<!-- ubah ke index -->
-			<a target="_blank" href="https://gianyarkab.go.id" class="huge ui white basic button very padded" target="_blank">BERANDA
+			<a target="_blank" href="<?= base_url('home')?>" class="huge ui white basic button very padded" target="_blank">BERANDA
 			</a>
 		</div>
 		<br>

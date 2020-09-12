@@ -29,6 +29,68 @@ class Beranda extends CI_Controller
 		// die;		
 		$data['content'] = 'user-views/dashboard';		
 		$this->load->view('user-views/layouts/master', $data);
+	}
+
+	//menu profile
+	public function sejarah()
+	{
+		$data['content'] = 'user-views/profile/sejarah';		
+		$this->load->view('user-views/layouts/master', $data);
 	}	
+
+	public function petakabupaten()
+	{
+		$data['content'] = 'user-views/profile/petakabupaten';		
+		$this->load->view('user-views/layouts/master', $data);
+	}
+
+	public function artilambang()
+	{
+		$data['content'] = 'user-views/profile/artilambang';		
+		$this->load->view('user-views/layouts/master', $data);
+	}
+
+	public function gianyardalamangka()
+	{
+		$data['content'] = 'user-views/profile/gianyardalamangka';		
+		$this->load->view('user-views/layouts/master', $data);
+	}
+
+	//menu pemerintahan
+	public function visimisi()
+	{
+		$data['content'] = 'user-views/pemerintahan/visidanmisi';		
+		$this->load->view('user-views/layouts/master', $data);
+	}
+
+	public function tujuansasaran()
+	{
+		$data['content'] = 'user-views/pemerintahan/tujuandansasaran';		
+		$this->load->view('user-views/layouts/master', $data);
+	}
+
+	public function struktur()
+	{
+		$data['content'] = 'user-views/pemerintahan/strukturorganisasi';		
+		$this->load->view('user-views/layouts/master', $data);
+	}
+
+	//sub perangkat
+
+	public function perangkat()
+	{
+		$data['content'] = 'user-views/pemerintahan/perangkat';		
+		$this->load->view('user-views/layouts/master', $data);
+	}
+
+	//info gianyar
+
+	public function telepon()
+	{
+		$data['content'] = 'user-views/infogianyar/teleponpenting';		
+		$this->load->view('user-views/layouts/master', $data);
+	}
+	
+
 	
 }

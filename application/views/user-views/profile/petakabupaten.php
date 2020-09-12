@@ -19,7 +19,7 @@
                         </div>
                     </div>
             </div>
-            <?php $this->load->view('layouts/partials/side.php'); ?>
+            <?php $this->load->view('user-views/layouts/partials/side.php'); ?>
 
         </div>
         <!--end::Row-->
@@ -44,7 +44,7 @@
 
 		});
 		// Add remote KMZ files as layers (NB if they are 3rd-party servers, they MUST have CORS enabled)
-		kmzParser.load('assets/gianyar.kmz');
+		kmzParser.load('assets/user-assets/gianyar.kmz');
 		
 
 	  var control = L.control.layers(null, null, { collapsed:true }).addTo(map);
