@@ -25,6 +25,11 @@ class Kegiatan_model extends CI_Model
 		];
 	}
 
+	public function getNumRows()
+	{
+		return $this->db->get($this->_table)->num_rows();
+	}
+
 	public function getLast() 
 	{
 		$this->db->select('*');
