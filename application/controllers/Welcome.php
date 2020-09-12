@@ -20,8 +20,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['content'] = 'admin/pengumuman/index';
-		$this->load->view('admin/index', $data);
+		$this->load->view('user-views/menu');
 	}
 
 	public function data()
