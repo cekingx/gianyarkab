@@ -143,8 +143,10 @@ $route['admin/galeri/media/store/(:any)/(:any)'] = 'Galeri/store_media/$1/$2';
 
 // galeri users
 $route['arsip/artikel'] = 'Artikel_berita/index_artikel_user';
+$route['arsip/artikel/(:num)'] = 'Artikel_berita/index_artikel_user';
 $route['arsip/artikel/(:any)'] = 'Artikel_berita/detail_artikel_user/$1';
 $route['arsip/berita'] = 'Artikel_berita/index_berita_user';
+$route['arsip/berita/(:num)'] = 'Artikel_berita/index_berita_user';
 $route['arsip/berita/(:any)'] = 'Artikel_berita/detail_berita_user/$1';
 
 
@@ -210,6 +212,7 @@ $route['admin/kegiatan/update'] = 'kegiatan/update';
 $route['admin/kegiatan/(:any)'] = 'kegiatan/show/$1';
 //kegiatan user
 $route['arsip/kegiatan'] = 'kegiatan/index_user';
+$route['arsip/kegiatan/(:num)'] = 'kegiatan/index_user';
 $route['arsip/kegiatan/(:any)'] = 'kegiatan/detail_kegiatan/$1';
 
 // kritik saran

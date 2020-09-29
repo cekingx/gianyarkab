@@ -25,6 +25,16 @@ class Kegiatan_model extends CI_Model
 		];
 	}
 
+	public function getKegiatanSegment($number, $offset)
+	{
+		return $this->db->select('*')
+						->from($this->_table)
+						->limit($number, $offset)
+						->order_by('kegiatan_id', 'DESC')
+						->get()
+						->result();
+	}
+
 	public function getNumRows()
 	{
 		return $this->db->get($this->_table)->num_rows();

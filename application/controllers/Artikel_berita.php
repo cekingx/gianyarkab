@@ -11,6 +11,7 @@ class artikel_berita extends CI_Controller
 		$this->load->model('ucapan_perayaan_model');
 		$this->load->model('kritik_saran_model');
 		$this->load->library('form_validation');
+		$this->load->library('pagination');
 	}
 
 	public function index()
@@ -159,18 +160,66 @@ class artikel_berita extends CI_Controller
 	//show berita di user
 	public function index_berita_user()
 	{			
-		$data['artikel_berita'] = $this->Artikel_berita_model->showBeritaUser();
-				
 		$data['content'] = 'user-views/infogianyar/berita';		
+		$berita_count = $this->Artikel_berita_model->getBeritaNumRows();
+		$config['base_url'] 		= base_url('arsip/berita');
+		$config['total_rows'] 		= $berita_count;
+		$config['per_page'] 		= 3;
+        $config['first_link']       = 'First';
+        $config['last_link']        = 'Last';
+        $config['next_link']        = 'Next';
+        $config['prev_link']        = 'Prev';
+        $config['full_tag_open']    = '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
+        $config['full_tag_close']   = '</ul></nav></div>';
+        $config['num_tag_open']     = '<li class="page-item"><span class="page-link">';
+        $config['num_tag_close']    = '</span></li>';
+        $config['cur_tag_open']     = '<li class="page-item active"><span class="page-link">';
+        $config['cur_tag_close']    = '<span class="sr-only">(current)</span></span></li>';
+        $config['next_tag_open']    = '<li class="page-item"><span class="page-link">';
+        $config['next_tagl_close']  = '<span aria-hidden="true">&raquo;</span></span></li>';
+        $config['prev_tag_open']    = '<li class="page-item"><span class="page-link">';
+        $config['prev_tagl_close']  = '</span>Next</li>';
+        $config['first_tag_open']   = '<li class="page-item"><span class="page-link">';
+        $config['first_tagl_close'] = '</span></li>';
+        $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
+		$config['last_tagl_close']  = '</span></li>';
+		
+		$this->pagination->initialize($config);
+		$from = $this->uri->segment(3);
+		$data['artikel_berita'] = $this->Artikel_berita_model->getBeritaSegment($config['per_page'], $from);
 		$this->load->view('user-views/layouts/master', $data);
 	}
 
 	//show Artikel di user
 	public function index_artikel_user()
 	{			
-		$data['artikel_berita'] = $this->Artikel_berita_model->showArtikelUser();
-				
 		$data['content'] = 'user-views/infogianyar/artikel';		
+		$artikel_count = $this->Artikel_berita_model->getArtikelNumRows();
+		$config['base_url'] 		= base_url('arsip/artikel');
+		$config['total_rows'] 		= $artikel_count;
+		$config['per_page'] 		= 3;
+        $config['first_link']       = 'First';
+        $config['last_link']        = 'Last';
+        $config['next_link']        = 'Next';
+        $config['prev_link']        = 'Prev';
+        $config['full_tag_open']    = '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
+        $config['full_tag_close']   = '</ul></nav></div>';
+        $config['num_tag_open']     = '<li class="page-item"><span class="page-link">';
+        $config['num_tag_close']    = '</span></li>';
+        $config['cur_tag_open']     = '<li class="page-item active"><span class="page-link">';
+        $config['cur_tag_close']    = '<span class="sr-only">(current)</span></span></li>';
+        $config['next_tag_open']    = '<li class="page-item"><span class="page-link">';
+        $config['next_tagl_close']  = '<span aria-hidden="true">&raquo;</span></span></li>';
+        $config['prev_tag_open']    = '<li class="page-item"><span class="page-link">';
+        $config['prev_tagl_close']  = '</span>Next</li>';
+        $config['first_tag_open']   = '<li class="page-item"><span class="page-link">';
+        $config['first_tagl_close'] = '</span></li>';
+        $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
+		$config['last_tagl_close']  = '</span></li>';
+		
+		$this->pagination->initialize($config);
+		$from = $this->uri->segment(3);
+		$data['artikel_berita'] = $this->Artikel_berita_model->getArtikelSegment($config['per_page'], $from);
 		$this->load->view('user-views/layouts/master', $data);
 	}
 
@@ -192,5 +241,11 @@ class artikel_berita extends CI_Controller
 				
 		$data['content'] = 'user-views/detail/artikel';		
 		$this->load->view('user-views/layouts/master', $data);
+	}
+
+	public function debug()
+	{
+		// echo $this->Artikel_berita_model->getArtikelNumRows() . PHP_EOL;
+		var_dump($this->Artikel_berita_model->getArtikelSegment(2,2));
 	}
 }

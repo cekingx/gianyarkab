@@ -81,6 +81,27 @@ class artikel_berita_model extends CI_Model
 		return $this->db->get()->result();		
 	}
 
+	public function getBeritaNumRows()
+	{
+		return $this->db->select('*')
+						->from('ta_artikel_berita')
+						->where('artikel_berita_jenis', 1)
+						->get()
+						->num_rows();
+	}
+
+	public function getBeritaSegment($number, $offset)
+	{
+		return $this->db->select('*')
+						->from('ta_artikel_berita')
+						->join('ref_artikel_berita_media', 'ta_artikel_berita.artikel_berita_id = ref_artikel_berita_media.artikel_berita_media_artikel_berita_id')
+						->where('artikel_berita_jenis', 1)
+						->limit($number, $offset)
+						->order_by('artikel_berita_id', 'DESC')
+						->get()
+						->result();
+	}
+
 	public function showArtikelUser()
 	{	
 		$this->db->select('*');
@@ -89,6 +110,27 @@ class artikel_berita_model extends CI_Model
 		$this->db->where('artikel_berita_jenis', 0);
 		$this->db->group_by('artikel_berita_id');
 		return $this->db->get()->result();		
+	}
+
+	public function getArtikelNumRows()
+	{
+		return $this->db->select('*')
+						->from('ta_artikel_berita')
+						->where('artikel_berita_jenis', 0)
+						->get()
+						->num_rows();
+	}
+
+	public function getArtikelSegment($number, $offset)
+	{
+		return $this->db->select('*')
+						->from('ta_artikel_berita')
+						->join('ref_artikel_berita_media', 'ta_artikel_berita.artikel_berita_id = ref_artikel_berita_media.artikel_berita_media_artikel_berita_id')
+						->where('artikel_berita_jenis', 0)
+						->limit($number, $offset)
+						->order_by('artikel_berita_id', 'DESC')
+						->get()
+						->result();
 	}
 
 	public function detailFotoUser($slug)

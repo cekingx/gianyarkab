@@ -28,6 +28,7 @@
                             padding-bottom: 0px;
                         ">
                         <div class="row">
+                            <div class="col-xl-12">
                             <!--begin::Card-->
                             <div class="card card-custom gutter-b">
                                 <div class="card-body" style="
@@ -93,7 +94,7 @@
                                 </div>
                             </div>
                             <!--end::Card-->
-
+                            </div>
 
                         </div>
                     </div>
@@ -101,6 +102,9 @@
                     <!-- end berita 1 -->                    
                 </div>
                 <!--end::Card-->
+                <nav aria-label="Page navigation">
+                    <?= $this->pagination->create_links(); ?>
+                </nav>
             </div>
             <?php $this->load->view('user-views/layouts/partials/side.php'); ?>
         </div>
